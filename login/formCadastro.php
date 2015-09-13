@@ -3,7 +3,7 @@
     
     
 
-    <form onsubmit="validaForm();" class="cadastro" id="formCadastro" name="formCadastro">
+    <form action="" method="GET">
         <label for="nome" class="cadastro">Nome</label><br />
         <input type="text" name="nomeUsuario" size="28" class="campo" id="nomeUsuario"/><br />
         <label for="email" class="cadastro">E-mail</label><br />
