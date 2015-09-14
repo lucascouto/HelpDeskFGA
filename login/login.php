@@ -22,7 +22,7 @@
              setcookie("nome_login", $nomeLogin);
              setcookie("senha_login", $senhaLogin);
              
-             header("Location: ../home.html");
+             header("Location: ../home.php");
          }
      }
      

@@ -15,7 +15,7 @@ and open the template in the editor.
     </head>
     <body>
         <div id="topo">
-            <img src="imagens/logo_helpdesk.png" align="center" />
+            <img src="imagens/banner_helpdesk.jpg" align="center" height="115" width="985"/>
         </div>
         <div id="box">
             <div id="boxconteudo">
@@ -39,6 +39,7 @@ and open the template in the editor.
 
                 <div id="painelesquerdo">
                     <?php include "login/formCadastro.php"; ?>
+                 
                     <div id="criarconta" class="hideCadastro">
                         <h1 class="painelesquerdo">Ainda não possui uma conta?</h1>
                         <button name="criarConta" id = "for-cadastro" class="botaoCadastro botaoCadastro-green">Clique aqui para Criar uma conta</button>
