@@ -22,7 +22,7 @@ and open the template in the editor.
                 <div id="paineldireito">
                     <h1 class="paineldireito">Login</h1>
                     <div id="boxlogin">
-                        <form>
+                        <form action="login/login.php" method="POST">
                             <fieldset>
                                 <p align="center">
                                 <label for="nomeLogin">Nome de usuário</label><br />
