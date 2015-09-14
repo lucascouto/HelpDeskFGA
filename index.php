@@ -41,18 +41,18 @@ and open the template in the editor.
                     <?php include "login/formCadastro.php"; ?>
                     <div id="criarconta" class="hideCadastro">
                         <h1 class="painelesquerdo">Ainda não possui uma conta?</h1>
-                        <button name="criarConta" id = "for-cadastro" class="botaoCadastro botaoCadastro-green">Criar uma conta</button>
+                        <button name="criarConta" id = "for-cadastro" class="botaoCadastro botaoCadastro-green">Clique aqui para Criar uma conta</button>
                     </div>
                     <div id="comofunciona" class="hideCadastro">
-                        <h1 class="painelesquerdo">Como funciona o sistema de helpdesk?</h1>
+                        <h1 class="painelesquerdo">Como funciona o sistema de HelpDesk?</h1>
 
                         <img src="imagens/help.jpg" alt="help" class ="imagemDescricao" style="width: 20%; margin-top: 1%;"/>
                         <h3 style=" width: 86%;">Faça os seus chamados</h3>
-                        <p class="itemDescricao">Você pode fazer chamados ao CPD para relatar problemas com os equipamentos da sala</p><br />
+                        <p class="itemDescricao">Você pode fazer chamados ao CPD para relatar problemas com os equipamentos da sala de aula e do laboratório</p><br />
 
                         <img src="imagens/consulta.png" alt="consulta" class ="imagemDescricao"/>
                         <h3 style=" width: 93%;">Consulte seus chamados</h3>
-                        <p class="itemDescricao">É possivel ter acesso ao hstórico de todos os seus chamados realizados</p><br />
+                        <p class="itemDescricao">É possivel ter acesso ao histórico de todos os seus chamados realizados</p><br />
 
                         <img src="imagens/notifica.png" alt="notifica" class ="imagemDescricao" />
                         <h3 style=" width: 89.8%;">Mantenha-se informado</h3>
