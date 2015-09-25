@@ -3,8 +3,8 @@
         <title>Heldesk FGA</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/formulario.css" rel="stylesheet" type="text/css" />
-        <link href="css/layout.css" rel="stylesheet" type="text/css" />
+        <link href="../stylesheets/formulario.css" rel="stylesheet" type="text/css" />
+        <link href="../stylesheets/layout.css" rel="stylesheet" type="text/css" />
         <style type="text/css">
             h1.painelesquerdo {
                 width: 60%;
@@ -23,6 +23,6 @@
         </style>
     </head>
     <body>
-        <?php include_once 'Chamado/formChamado.php'; ?>
+        <?php include_once 'chamado/formChamado.php'; ?>
     </body>
 </html>

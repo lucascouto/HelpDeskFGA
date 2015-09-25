@@ -4,7 +4,7 @@
      $senhaLogin = $_POST["senhaLogin"];
      
      //acesso ao banco de dados
-     include_once '../conecta.class.php';
+     include_once '../../dao/conecta.class.php';
      $conecta = new ConexaoBD();
      $resultado = $conecta->conectar()->prepare("SELECT * FROM solicitante WHERE username_solicitante='$nomeLogin'");
      $resultado->execute();

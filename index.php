@@ -8,10 +8,10 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>HelpDesk FGA</title>
-        <link href="css/layout.css" rel="stylesheet" type="text/css" />
-        <link href="css/formulario.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/layout.css" rel="stylesheet" type="text/stylesheet" />
+        <link href="stylesheets/formulario.css" rel="stylesheet" type="text/stylesheet" />
         <script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
-        <script type="text/javascript" src="login/js/login.js"></script>
+        <script type="text/javascript" src="view/login/js/login.js"></script>
     </head>
     <body>
         <div id="topo">
@@ -22,7 +22,7 @@ and open the template in the editor.
                 <div id="paineldireito">
                     <h1 class="paineldireito">Login</h1>
                     <div id="boxlogin">
-                        <form action="login/login.php" method="POST">
+                        <form action="view/login/login.php" method="POST">
                             <fieldset>
                                 <p align="center">
                                 <label for="nomeLogin">Nome de usuário</label><br />
@@ -38,7 +38,7 @@ and open the template in the editor.
                 </div>
 
                 <div id="painelesquerdo">
-                    <?php include "login/formCadastro.php"; ?>
+                    <?php include "view/login/formCadastro.php"; ?>
                  
                     <div id="criarconta" class="hideCadastro">
                         <h1 class="painelesquerdo">Ainda não possui uma conta?</h1>
