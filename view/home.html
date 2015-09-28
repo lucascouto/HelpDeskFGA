@@ -16,24 +16,132 @@
         <link rel="stylesheet" href="CSS/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="CSS/layout_home.css">
         <link rel="stylesheet" type="text/css" href="CSS/layout_geral.css">
+        
         <script src="JavaScript/jquery-2.1.4.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+		
+       		$(document).ready(function(){
+			$(".btnContato").click(function(){
+				$("#btnAcoes").fadeOut(5);
+				$("#formContato").fadeIn(300);
+				document.getElementById("titleAcoes").innerHTML = "Contato";
+				$("#visualizarHistorico").animate({height:"530px"}, 250);
+				//document.getElementById("visualizarHistorico").style.height="530px";
+				document.getElementById("iconeAcao").className="fa fa-envelope icons fa-2x";
+				document.getElementById("configurarConta").style.display = "none";
+			});
+			$(".cancelarMensagem").click(function(){
+				$("#formContato").slideUp(1);
+				$("#btnAcoes").slideDown(200);
+				
+				document.getElementById("titleAcoes").innerHTML = "Ações";
+				$("#visualizarHistorico").animate({height:"250px"}, 200);
+				//document.getElementById("visualizarHistorico").style.height="250px";
+				document.getElementById("iconeAcao").className="fa fa-list icons fa-2x";
+				document.getElementById("configurarConta").style.display = "block";
+			});
+			
+		
+		
+		
+		$(".btnChangePassword").click(function(){
+				$("#btnConfigConta").fadeOut(5);
+				$("#formChangePassword").fadeIn(300);
+				
+				document.getElementById("titleConfigConta").innerHTML = "Alterar Senha";
+				document.getElementById("iconConfigConta").class="fa fa-key icons fa-2x";
+				document.getElementById("visualizarHistorico").style.display="none";
+				$("#configurarConta").animate({height:"400px", bottom:"480px"}, 400);
+				//document.getElementById("configurarConta").style.height="400px";
+				//document.getElementById("configurarConta").style.bottom="480px";
+			});
+			
+		  $(".cancelarSenha").click(function(){
+				$("#formChangePassword").fadeOut(5);
+				$("#btnConfigConta").fadeIn(220);
+				
+				document.getElementById("titleConfigConta").innerHTML = "Configurar Conta";
+				document.getElementById("iconConfigConta").class="fa fa-cogs icons fa-2x";
+				document.getElementById("visualizarHistorico").style.display="block";
+				
+				document.getElementById("configurarConta").style.height="250px";
+				document.getElementById("configurarConta").style.bottom="450px";
+			});
+			
+			
+			$("#btnAlterDados").click(function(){
+				$("#btnConfigConta").fadeOut(5);
+				$("#formAlterDados").fadeIn(300);
+				
+				document.getElementById("titleConfigConta").innerHTML = "Alterar Dados";
+				document.getElementById("iconConfigConta").class="fa fa-user icons fa-2x";
+				document.getElementById("visualizarHistorico").style.display="none";
+				$("#configurarConta").animate({height:"529px", bottom:"480px"}, 400);
+				//document.getElementById("configurarConta").style.height="529px";
+				//document.getElementById("configurarConta").style.bottom="480px";
+			});
+			
+		  $(".cancelAlterDados").click(function(){
+				$("#formAlterDados").slideUp(5);
+				$("#btnConfigConta").slideDown(220);
+				
+				document.getElementById("titleConfigConta").innerHTML = "Configurar Conta";
+				document.getElementById("iconConfigConta").class="fa fa-cogs icons fa-2x";
+				document.getElementById("visualizarHistorico").style.display="block";
+				document.getElementById("configurarConta").style.height="250px";
+				document.getElementById("configurarConta").style.bottom="450px";
+			});
+			
+			$(".btnHistorico").click(function(){
+				$("#btnAcoes").hide();
+				$("#historico").show();
+				document.getElementById("titleAcoes").innerHTML = "Historico";
+				document.getElementById("iconeAcao").class="fa fa-history icons fa-2x";
+				document.getElementById("formChamado").style.display="none";
+				document.getElementById("configurarConta").style.display="none";
+				document.getElementById("visualizarHistorico").style.bottom="-50px";
+				document.getElementById("visualizarHistorico").style.left="20px";
+				$("#visualizarHistorico").animate({width:"1180px", height: "530px"}, 500);
+				
+				//document.getElementById("visualizarHistorico").style.width="1180px";
+				//document.getElementById("visualizarHistorico").style.height="530px";
+				
+			});	
+			
+			$(".btnVoltar").click(function(){
+				$("#btnAcoes").fadeIn(800);
+				$("#historico").fadeOut();
+				document.getElementById("titleAcoes").innerHTML = "Ações";
+				document.getElementById("iconeAcao").class="fa fa-list icons fa-2x";
+				document.getElementById("formChamado").style.display="block";
+				document.getElementById("configurarConta").style.display="block";
+				document.getElementById("visualizarHistorico").style.bottom="480px";
+				document.getElementById("visualizarHistorico").style.left="800px";
+				document.getElementById("visualizarHistorico").style.width="400px";
+				document.getElementById("visualizarHistorico").style.height="250px";
+				
+			});	
+		});
+		
+		
+        </script>
           
         <title>HelpDesk FGA &bull; Home</title>
     </head>
-    
-    <header class="w3-green">
+     <body>
+    <header class="w3-teal">
         <span class="fa fa-desktop fa-5x computerIcon">	</span>
         <h1>HelpDesk <span id="fgaName">FGA</span></h1>
     </header>
     
     
     <section id="mainBody" class="w3-container">
-   		<article class="w3-card-8 realizarChamado">
-        	<div class="w3-container w3-green">
+   		<article class="w3-card-8 realizarChamado" id="formChamado">
+        	<div class="w3-container w3-teal">
             	<h2>Realizar Chamado<span class="fa fa-commenting icons"></span></h2>
             </div>
-            <form>
+            <form method="post">
             	<fieldset>
                 	<legend class="sectionChamado">Dados do Patrimônio</legend>
                     <label class="labels labelChamadoLeft">Nome</label>
@@ -55,39 +163,91 @@
                 <fieldset>
                 	<legend class="sectionChamado">Localização e Descrição do Problema</legend>
                     <div class="form-inline">
-                        <label class="labels labelEdificio" for="edificio">Edifício</label>
-                        <input type="text" name="edificio" class="form-control inputLocal" size="3">
+                        <label class="labels labelEdificio">Edifício</label>
+                        <input type="text" name="edificio" class="form-control inputLocal inputChamado" size="3">
                         <br>
-                        <label class="labels labelSala" for="sala">Sala</label>
-                        <input type="text" name="sala" class="form-control inputLocal inputSala" size="3">
+                        <label class="labels labelSala">Sala</label>
+                        <input type="text" name="sala" class="form-control inputLocal inputSala inputChamado" size="3">
                     </div>
                     <label class="labels labelDescricao">Descrição</label>
-                    <textarea class="form-control descricao" rows="5"></textarea>
+                    <textarea class="form-control descricao inputChamado" rows="5"></textarea>
                 </fieldset>
-                <input type="submit" value="Enviar" class="w3-btn w3-green w3-ripple btnEnviar">
+                <input type="submit" value="Enviar" class="w3-btn w3-teal w3-ripple btnEnviar">
             </form>
         </article>
-        <article class="w3-card-8 visualizarHistorico">
-        	<div class="w3-container w3-green">
-            	<h2>Ações<span class="fa fa-list icons"></span></h2>
+        <article class="w3-card-8" id="visualizarHistorico">
+        	<div class="w3-container w3-teal">
+            	<h2 id="titleAcoes" style="float: left;">Ações</h2><span class="fa fa-list icons fa-2x" id="iconeAcao" style="margin-top:22px;"></span>
             </div>
-             <div class="btnConfigConta">
-                <button class="w3-btn w3-green w3-ripple btnAlterDados">Histórico<span class="fa fa-history iconsButtons"></span></button>
-                <button class="w3-btn w3-teal w3-ripple btnAlterSenha">Entrar em Contato<span class="fa fa-mail-forward iconsButtons"></span></button>
+             <div class="btnConfigConta" id="btnAcoes">
+                <button class="w3-btn w3-teal w3-ripple btnAlterDados btnHistorico">Histórico<span class="fa fa-history iconsButtons"></span></button>
+                <button class="w3-btn w3-green w3-ripple btnAlterSenha btnContato">Entrar em Contato<span class="fa fa-mail-forward iconsButtons"></span></button>
+            </div>
+            
+            <div id="formContato">
+                <form method="post">
+                    <fieldset>
+                        <legend class="sectionChamado">Enviar Mensagem ao CPD</legend>
+                        <label class="labels labelContato">Assunto</label>
+                        <input type="text" name="assuntoMsg" class="form-control inputContato">
+                        <label class="labels labelContato" style="margin-top: 5%;">Mensagem</label>
+                        <br>
+                        <textarea class="form-control mensagem inputContato" rows="11"></textarea>
+                        <input type="submit" value="Enviar" class="w3-btn w3-teal btnEnviarMensagem">
+                    </fieldset>
+                </form>
+                <button class="w3-btn w3-green w3-ripple cancelarMensagem">Cancelar</button>
+            </div>
+            <div id="historico">
+            	<button class="w3-btn w3-teal btnVoltar">Voltar<span class="fa fa-chevron-right"></span></button>
             </div>
         </article>
-        <article class="w3-card-8 configurarConta">
-        	<div class="w3-container w3-green">
-            	<h2>Configurar Conta<span class="fa fa-cogs icons"></span></h2>
+        <article class="w3-card-8" id="configurarConta">
+        	<div class="w3-container w3-teal">
+            	<h2 id="titleConfigConta" style="float:left;">Configurar Conta</h2><span id="iconConfigConta" class="fa fa-cogs icons fa-2x" style="margin-top:22px;"></span>
             </div>
-            <div class="btnConfigConta">
-                <button class="w3-btn w3-green w3-ripple btnAlterDados">Alterar Dados<span class="fa fa-cog iconsButtons"></span></button>
-                <button class="w3-btn w3-teal w3-ripple btnAlterSenha">Alterar Senha<span class="fa fa-key iconsButtons"></span></button>
+            <div class="btnConfigConta" id="btnConfigConta">
+                <button class="w3-btn w3-teal w3-ripple btnAlterDados" id="btnAlterDados">Alterar Dados<span class="fa fa-cog iconsButtons"></span></button>
+                <button class="w3-btn w3-green w3-ripple btnAlterSenha btnChangePassword">Alterar Senha<span class="fa fa-key iconsButtons"></span></button>
             </div>
+            <div id="formChangePassword">
+                <form method="post">
+                    <label class="labels labelSenha">Senha Antiga</label>
+                    <input type="password" name="oldPassword" class="form-control inputSenha">
+                    <label class="labels labelSenha">Nova Senha</label>
+                    <input type="password" name="newPassword" class="form-control inputSenha">
+                    <label class="labels labelSenha">Confirmar Nova Senha</label>
+                    <input type="password" name="confirmNewPassword" class="form-control inputSenha">
+                    <input type="submit" value="Enviar" class="w3-btn w3-teal btnEnviarSenha">
+                </form>
+                <button class="w3-btn w3-green cancelarSenha">Cancelar</button>
+             </div>
+             <div id="formAlterDados">
+             	<form method="post">
+                	<fieldset class="sectionChamado">
+                    	<legend>Alterar Dados</legend>
+                            <label class="labels labelAlterDados">Nome Completo</label>
+                            <input type="text" name="novoNome" class="form-control inputAlterDados">
+                            <label class="labels labelAlterDados">Matrícula</label>
+                            <input type="text" name="novaMatricula" class="form-control inputAlterDados">
+                            <label class="labels labelAlterDados">Vinculo com a UnB</label>
+                            <br>
+                            <input type="radio" name="novoVinculo" value="aluno"> <span class="labels" style="font-size:14px;">Aluno</span>
+                            <input type="radio" name="novoVinculo" value="servidor" style="margin-left:60px"> <span class="labels" style="font-size:14px;">Servidor</span>
+                            <br>
+                            <label class="labels labelAlterDados">Email</label>
+                            <input type="text" name="novoEmail" class="form-control inputAlterDados">
+                            <input type="submit" value="Alterar" class="w3-btn w3-teal btnAlter">
+                    </fieldset>
+                </form>
+                <button class="w3-btn w3-green cancelAlterDados">Cancelar</button>
+             </div>
         </article>
     </section>
+    <footer id="rodape" style="margin-top:20px;">
+            <span class="footerContent">sobre &nbsp; &bull; &nbsp; desenvolvedores &nbsp; &bull; &nbsp; termos de serviço &nbsp; &bull; &nbsp; política de privacidade &nbsp; &bull; &nbsp;todos os direitos reservados &copy; 2015</span>
+        </footer>	
     
-    
-    <body>
+   
     </body>
 </html>

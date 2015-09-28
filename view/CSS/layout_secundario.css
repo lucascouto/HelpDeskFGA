@@ -2,7 +2,7 @@
 
 /*********HEADER****************/
 header {
-	border-bottom: 1px solid green;
+	border-bottom: 3px solid #D2D5C1;
 	width: 100%;
 	margin-top: 0;
 	padding: 0px;
@@ -16,7 +16,7 @@ header {
 }
 
 header h1 {
-	font-family: 'roboto condensed';
+	font-family: varela;
 	font-size: 70px;
 	font-weight: 700;
 	margin-left: 250px;
@@ -25,7 +25,7 @@ header h1 {
 
 #fgaName{
 	color:#005B4A; 
-	font-family:'roboto condensed'; 
+	font-family: varela; 
 }
 
 /******************************/

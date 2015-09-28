@@ -1,12 +1,20 @@
 *{
-	font-family: poppin;
+	font-family: proxima-nova;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: varela;	
+}
+
+body{
+	background-color:#F1F0E5;
 }
 
 
 .labels {
 	font-size: 18px;
-	font-family: poppin;
-	font-weight: 300;
+	font-family: varela;
+	font-weight: 100;
 }
 
 /**********FONTES*************/
@@ -21,11 +29,22 @@
 	src: url(../Fonts/google-fonts/roboto-condensed/RobotoCondensed-Bold.ttf);
 	font-weight:700;
 }
+
+@font-face{
+	font-family: varela;
+	src: url(../Fonts/varela-round-regular-webfont.ttf);
+}
+
+@font-face{
+	font-family: proxima-nova;
+	src: url(../Fonts/proximanova-regular-webfont.woff);
+}
+
 /*******************************/
 
 /*************RODAPE*************/
 footer {
-	border-top: 1px solid green;
+	border-top: 2px solid #D2D5C1;
 	position: absolute;
 	top: 680px; 
 	width: 97%;
