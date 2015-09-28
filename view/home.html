@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+         <!-- Adicionando fontes do Google Fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" 
+        type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700" rel="stylesheet" 
+        type="text/css">
+        
+        <!-- Adicionando Folhas de Estilo -->
+        <link rel="stylesheet" type="text/css" href="CSS/w3.css">
+        <link rel="stylesheet" type="text/css" href="CSS/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="CSS/layout_secundario.css">
+        <link rel="stylesheet" href="CSS/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="CSS/layout_home.css">
+        <link rel="stylesheet" type="text/css" href="CSS/layout_geral.css">
+        <script src="JavaScript/jquery-2.1.4.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+          
+        <title>HelpDesk FGA &bull; Home</title>
+    </head>
+    
+    <header class="w3-green">
+        <span class="fa fa-desktop fa-5x computerIcon">	</span>
+        <h1>HelpDesk <span id="fgaName">FGA</span></h1>
+    </header>
+    
+    
+    <section id="mainBody" class="w3-container">
+   		<article class="w3-card-8 realizarChamado">
+        	<div class="w3-container w3-green">
+            	<h2>Realizar Chamado<span class="fa fa-commenting icons"></span></h2>
+            </div>
+            <form>
+            	<fieldset>
+                	<legend class="sectionChamado">Dados do Patrimônio</legend>
+                    <label class="labels labelChamadoLeft">Nome</label>
+                    <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoleft">
+                    <label class="labels labelChamadoRight">Código</label>
+                    <input type="text" name="codPatrimonio" class="form-control inputChamado inputChamadoRight inputCodPatrimonio">
+                    <label class="labels labelChamadoLeft labelMarcaPatrimonio">Marca</label>
+                    <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoleft">
+                    <label class="labels labelChamadoRight">Tipo</label>
+                    <br>
+                   	<select class="form-control inputChamado inputChamadoRight inputTipoPatrimonio" name="tipoPatrimonio">
+                    	<option>Notebook</option>
+                        <option>Peiférico de Computador</option>
+                        <option>Ar-Condicionado</option>
+                        <option>Carteira</option>
+                    </select>
+                </fieldset>
+                <br>
+                <fieldset>
+                	<legend class="sectionChamado">Localização e Descrição do Problema</legend>
+                    <div class="form-inline">
+                        <label class="labels labelEdificio" for="edificio">Edifício</label>
+                        <input type="text" name="edificio" class="form-control inputLocal" size="3">
+                        <br>
+                        <label class="labels labelSala" for="sala">Sala</label>
+                        <input type="text" name="sala" class="form-control inputLocal inputSala" size="3">
+                    </div>
+                    <label class="labels labelDescricao">Descrição</label>
+                    <textarea class="form-control descricao" rows="5"></textarea>
+                </fieldset>
+                <input type="submit" value="Enviar" class="w3-btn w3-green w3-ripple btnEnviar">
+            </form>
+        </article>
+        <article class="w3-card-8 visualizarHistorico">
+        	<div class="w3-container w3-green">
+            	<h2>Ações<span class="fa fa-list icons"></span></h2>
+            </div>
+             <div class="btnConfigConta">
+                <button class="w3-btn w3-green w3-ripple btnAlterDados">Histórico<span class="fa fa-history iconsButtons"></span></button>
+                <button class="w3-btn w3-teal w3-ripple btnAlterSenha">Entrar em Contato<span class="fa fa-mail-forward iconsButtons"></span></button>
+            </div>
+        </article>
+        <article class="w3-card-8 configurarConta">
+        	<div class="w3-container w3-green">
+            	<h2>Configurar Conta<span class="fa fa-cogs icons"></span></h2>
+            </div>
+            <div class="btnConfigConta">
+                <button class="w3-btn w3-green w3-ripple btnAlterDados">Alterar Dados<span class="fa fa-cog iconsButtons"></span></button>
+                <button class="w3-btn w3-teal w3-ripple btnAlterSenha">Alterar Senha<span class="fa fa-key iconsButtons"></span></button>
+            </div>
+        </article>
+    </section>
+    
+    
+    <body>
+    </body>
+</html>

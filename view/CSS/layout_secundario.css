@@ -1,0 +1,32 @@
+
+
+/*********HEADER****************/
+header {
+	border-bottom: 1px solid green;
+	width: 100%;
+	margin-top: 0;
+	padding: 0px;
+}
+
+.computerIcon {
+	float:left; 
+	margin-left:10%;
+	margin-top: 10px;
+	width: 100px;
+}
+
+header h1 {
+	font-family: 'roboto condensed';
+	font-size: 70px;
+	font-weight: 700;
+	margin-left: 250px;
+	margin-top: 0;
+}
+
+#fgaName{
+	color:#005B4A; 
+	font-family:'roboto condensed'; 
+}
+
+/******************************/
+

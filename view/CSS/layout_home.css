@@ -1,0 +1,140 @@
+/* CSS Document */
+.realizarChamado{
+	width: 750px;
+	height: 530px;
+	border: 1px solid lightgreen;
+	position: relative;
+	top: 50px;
+	left: 20px;
+}
+
+.visualizarHistorico{
+	width: 400px;
+	height:250px;
+	border: 1px solid lightgreen;
+	position: relative;
+	bottom:480px;
+	left: 800px;	
+}
+
+.configurarConta{
+	width: 400px;
+	height:250px;
+	border: 1px solid lightgreen;
+	position: relative;
+	bottom:450px;
+	left: 800px;	
+}
+
+#mainBody {
+	height:20px;	
+}
+
+.icons{
+	margin-left: 24px;
+}
+
+.btnConfigConta{
+	width: 50px;
+	position: absolute;
+	left: 120px;
+	bottom: 45px;
+}
+
+.btnAlterSenha{
+	margin-top: 30px;
+	width: 180px;
+}
+
+.btnAlterDados{
+	width:180px;
+}
+
+.iconsButtons{
+	position: absolute;
+	right: 5px;
+
+}
+
+/***** FORM DE CHAMADO *****/
+.inputChamado {
+	width: 42%;
+}
+
+.inputChamadoleft {
+	margin-left: 20px;
+}
+
+.inputChamadoRight {
+	float:right;
+	clear: both;
+	position: absolute;
+	left: 390px;
+}
+
+.inputCodPatrimonio{
+	margin-top: -34px;
+}
+
+.inputTipoPatrimonio{
+	margin-top: -54px;
+}
+
+
+.labelMarcaPatrimonio{
+	margin-top: 30px;
+}
+
+.labelChamadoLeft{
+	margin-left: 20px;
+}
+
+.labelChamadoRight{
+	float:right;
+	clear: both;
+	position: absolute;
+	left: 390px;
+	margin-top: -64px;
+}
+
+.sectionChamado {
+	margin-left: 20px;
+	font-weight: bold;
+}
+
+.inputLocal {
+	margin-left: 30px;
+}
+
+.labelSala{
+	margin-left: 20px;	
+	margin-top: 40px;
+}
+
+.inputSala{
+	margin-left: 52px;	
+}
+
+.labelEdificio{
+	margin-left: 20px;
+}
+
+.labelDescricao{
+	margin-top: -102px;	
+	position: absolute;
+	margin-left: 250px;
+}
+
+.descricao{
+	float: right;
+	width: 380px;
+	margin-top: -104px;
+	margin-right: 20px;
+	resize: none;
+	font-size: 12px;
+}
+
+.btnEnviar{
+	margin-left: 655px;
+	margin-top: 10px;
+}

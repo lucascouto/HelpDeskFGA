@@ -1,0 +1,145 @@
+/*********HEADER_INDEX****************/
+header {
+	border-bottom: 1px solid green;
+	width: 100%;
+	margin-top: 0;
+	padding: 20px;
+}
+
+.computerIcon {
+	float:left; 
+	margin-left:5%;
+}
+
+header h1 {
+	font-family: 'roboto condensed';
+	font-size: 100px;
+	font-weight: 700;
+	margin-left: 250px;
+	margin-top: 0;
+}
+
+#fgaName{
+	color:#005B4A; 
+	font-family:'roboto condensed'; 
+}
+/******************************/
+
+/*************LOGIN************/
+
+.loginCard {
+	width: 400px; 
+	position: relative;
+	left: 35%; 
+	top: 50px; 
+	border: 1px solid lightgreen;
+	padding-bottom: 30px; 
+}
+
+.input-login {
+	width: 70%;
+	margin-left: 14%;
+	margin-top: 10%;
+}
+
+.label-login {
+	position: absolute;
+	top: 85px;
+	left: 57px;
+}
+.label-senha {
+	position: absolute;
+	top: 160px;
+	left: 57px;
+}
+
+.btnLogin {
+	position: absolute;
+	left: 36%;
+	top:25px;
+	width: 100px;
+}
+/********************************/
+
+/**********CRIAR CONTA***********/
+.btnCreateAccount{
+	position: absolute;
+	right: 48%;
+	bottom: 4%;
+	color: #4CAF4F;
+	cursor:pointer;
+}
+
+#createAccount{
+	border-top: 1px solid green;
+	margin: 70px 15px 0px 15px;
+}
+
+.lblCreateAccount{
+	position: relative; 
+	top:-10px; 
+	margin-left:35%; 
+	background-color: #fff; 
+	padding: 0px 10px; 
+	color:#50AE54;
+ }
+/*********************************/
+
+/************CADASTRO*************/
+#formCadastro{
+	display:none;
+}
+
+.inputSubscribeLeft{
+	width: 40%;
+	margin-left: 3%;
+	margin-bottom: 3%;
+}
+
+.labelSubscribeLeft{
+	margin-left: 3%;
+	margin-top:3%;	
+}
+
+.inputSubscribeRight{
+	float: right;
+	clear:left;
+	margin-top: -60px;
+	margin-right: 8%;
+	width: 40%;
+}
+
+.inputSubscribeVinculo {
+	position: relative;
+	top: -80px;
+	margin-left:56px; 
+	margin-top:8px;
+}
+
+.labelSubscribeRight{
+	float:right;
+	clear:both;
+	margin-top: -90px;
+	margin-right: 325px;
+}
+
+.labelSubscribeVinculo {
+	margin-right:221px;
+}
+
+.labelSubscribeConfirmPass {
+	margin-right: 235px;
+}
+
+.btnSubscribe{
+	float: right;
+	width: 100px;
+	margin-right: 38%;
+}
+
+.btnCancelSubscribe{
+	float:left;
+	width: 100px;
+	margin-left: 32%;
+}
+/********************************/
