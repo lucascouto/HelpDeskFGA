@@ -1,6 +1,20 @@
 /* CSS Document */
+body{
+	min-width: 1080px;
+}
+/*@media screen and (max-width: 965px){
+	.inputChamadoRight{
+		float: left;
+		
+	}
+	
+	
+
+}*/
+
 .realizarChamado{
-	width: 750px;
+	width: 60%;
+	
 	height: 530px;
 	border: 1px solid #D2D5C1;
 	position: relative;
@@ -9,21 +23,23 @@
 }
 
 #visualizarHistorico{
-	width: 400px;  /*VALOR ORIGINAL 400PX!!!*/
+	width: 32%;  /*VALOR ORIGINAL 400PX!!!*/
 	height:250px;   /*VALOR ORIGINAL 250PX!!!*/
 	border: 1px solid #D2D5C1;
+	float: right;
+	margin-right: 2%;
+	margin-top: -480px;
 	position: relative;
-	bottom:480px; 
-	left: 800px;	  /*VALOR ORIGINAL 800PX!!!*/
 }
 
 #configurarConta{
-	width: 400px;
+	width: 32%;
 	height:250px;  
 	border: 1px solid #D2D5C1;
+	float: right;
 	position: relative;
-	bottom:450px;   
-	left: 800px;	
+	top: -200px;
+	right: 2%;
 }
 
 #mainBody {
@@ -37,8 +53,16 @@
 .btnConfigConta{
 	width: 50px;
 	position: absolute;
-	left: 110px;
-	bottom: 45px;
+	bottom: 18%;
+	left: 25%;
+	
+}
+
+.btnAcoes{
+	width: 30%;
+	position: absolute;
+	top: 42%;
+	left: 26%;	
 }
 
 .btnAlterSenha{
@@ -70,7 +94,7 @@
 	float:right;
 	clear: both;
 	position: absolute;
-	left: 390px;
+	left: 55%;
 }
 
 .inputCodPatrimonio{
@@ -94,7 +118,7 @@
 	float:right;
 	clear: both;
 	position: absolute;
-	left: 390px;
+	left: 55%;
 	margin-top: -64px;
 }
 
@@ -106,38 +130,48 @@
 
 .inputLocal {
 	margin-left: 30px;
+	max-width: 10%;
+	float: left;
+	clear: right;
 }
 
 .labelSala{
 	margin-left: 20px;	
 	margin-top: 40px;
+	float: left;
+	clear: both;
 }
 
 .inputSala{
-	margin-left: 60px;	
+	margin-left: 58px;
+	margin-top: 30px;	
 }
 
 .labelEdificio{
 	margin-left: 20px;
+	float: left;
+	clear: both;
 }
 
+
+
 .labelDescricao{
-	margin-top: -102px;	
-	position: absolute;
-	margin-left: 250px;
+	float: right;
+	margin-right: 55%;
+	margin-top: -35px;
 }
 
 .descricao{
 	float: right;
-	width: 380px;
-	margin-top: -104px;
-	margin-right: 20px;
+	width: 50%;
+	margin-top: -30px;
+	margin-right: 2%;
 	resize: none;
 	font-size: 12px;
 }
 
 .btnEnviar{
-	margin-left: 655px;
+	margin-left: 85%;
 	margin-top: 10px;
 }
 
@@ -226,9 +260,9 @@
 }
 
 .btnVoltar{
-	position: relative;
-	top: 414px;
-	left: 1060px;
+	position: absolute;
+	top: 90%;
+	right: 2%;
 }
 
 #historico{

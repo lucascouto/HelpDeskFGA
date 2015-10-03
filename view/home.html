@@ -3,13 +3,7 @@
     <head>
         <meta charset="UTF-8">
         
-         <!-- Adicionando fontes do Google Fonts-->
-		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" 
-        type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700" rel="stylesheet" 
-        type="text/css">
-        
-        <!-- Adicionando Folhas de Estilo -->
+        <!-- Adicionando Folhas de Estilo CSS -->
         <link rel="stylesheet" type="text/css" href="CSS/w3.css">
         <link rel="stylesheet" type="text/css" href="CSS/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="CSS/layout_secundario.css">
@@ -17,115 +11,10 @@
         <link rel="stylesheet" type="text/css" href="CSS/layout_home.css">
         <link rel="stylesheet" type="text/css" href="CSS/layout_geral.css">
         
+        <!-- Adicionando scripts JavaScript -->
         <script src="JavaScript/jquery-2.1.4.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-		
-       		$(document).ready(function(){
-			$(".btnContato").click(function(){
-				$("#btnAcoes").fadeOut(5);
-				$("#formContato").fadeIn(300);
-				document.getElementById("titleAcoes").innerHTML = "Contato";
-				$("#visualizarHistorico").animate({height:"530px"}, 250);
-				//document.getElementById("visualizarHistorico").style.height="530px";
-				document.getElementById("iconeAcao").className="fa fa-envelope icons fa-2x";
-				document.getElementById("configurarConta").style.display = "none";
-			});
-			$(".cancelarMensagem").click(function(){
-				$("#formContato").slideUp(1);
-				$("#btnAcoes").slideDown(200);
-				
-				document.getElementById("titleAcoes").innerHTML = "Ações";
-				$("#visualizarHistorico").animate({height:"250px"}, 200);
-				//document.getElementById("visualizarHistorico").style.height="250px";
-				document.getElementById("iconeAcao").className="fa fa-list icons fa-2x";
-				document.getElementById("configurarConta").style.display = "block";
-			});
-			
-		
-		
-		
-		$(".btnChangePassword").click(function(){
-				$("#btnConfigConta").fadeOut(5);
-				$("#formChangePassword").fadeIn(300);
-				
-				document.getElementById("titleConfigConta").innerHTML = "Alterar Senha";
-				document.getElementById("iconConfigConta").class="fa fa-key icons fa-2x";
-				document.getElementById("visualizarHistorico").style.display="none";
-				$("#configurarConta").animate({height:"400px", bottom:"480px"}, 400);
-				//document.getElementById("configurarConta").style.height="400px";
-				//document.getElementById("configurarConta").style.bottom="480px";
-			});
-			
-		  $(".cancelarSenha").click(function(){
-				$("#formChangePassword").fadeOut(5);
-				$("#btnConfigConta").fadeIn(220);
-				
-				document.getElementById("titleConfigConta").innerHTML = "Configurar Conta";
-				document.getElementById("iconConfigConta").class="fa fa-cogs icons fa-2x";
-				document.getElementById("visualizarHistorico").style.display="block";
-				
-				document.getElementById("configurarConta").style.height="250px";
-				document.getElementById("configurarConta").style.bottom="450px";
-			});
-			
-			
-			$("#btnAlterDados").click(function(){
-				$("#btnConfigConta").fadeOut(5);
-				$("#formAlterDados").fadeIn(300);
-				
-				document.getElementById("titleConfigConta").innerHTML = "Alterar Dados";
-				document.getElementById("iconConfigConta").class="fa fa-user icons fa-2x";
-				document.getElementById("visualizarHistorico").style.display="none";
-				$("#configurarConta").animate({height:"529px", bottom:"480px"}, 400);
-				//document.getElementById("configurarConta").style.height="529px";
-				//document.getElementById("configurarConta").style.bottom="480px";
-			});
-			
-		  $(".cancelAlterDados").click(function(){
-				$("#formAlterDados").slideUp(5);
-				$("#btnConfigConta").slideDown(220);
-				
-				document.getElementById("titleConfigConta").innerHTML = "Configurar Conta";
-				document.getElementById("iconConfigConta").class="fa fa-cogs icons fa-2x";
-				document.getElementById("visualizarHistorico").style.display="block";
-				document.getElementById("configurarConta").style.height="250px";
-				document.getElementById("configurarConta").style.bottom="450px";
-			});
-			
-			$(".btnHistorico").click(function(){
-				$("#btnAcoes").hide();
-				$("#historico").show();
-				document.getElementById("titleAcoes").innerHTML = "Historico";
-				document.getElementById("iconeAcao").class="fa fa-history icons fa-2x";
-				document.getElementById("formChamado").style.display="none";
-				document.getElementById("configurarConta").style.display="none";
-				document.getElementById("visualizarHistorico").style.bottom="-50px";
-				document.getElementById("visualizarHistorico").style.left="20px";
-				$("#visualizarHistorico").animate({width:"1180px", height: "530px"}, 500);
-				
-				//document.getElementById("visualizarHistorico").style.width="1180px";
-				//document.getElementById("visualizarHistorico").style.height="530px";
-				
-			});	
-			
-			$(".btnVoltar").click(function(){
-				$("#btnAcoes").fadeIn(800);
-				$("#historico").fadeOut();
-				document.getElementById("titleAcoes").innerHTML = "Ações";
-				document.getElementById("iconeAcao").class="fa fa-list icons fa-2x";
-				document.getElementById("formChamado").style.display="block";
-				document.getElementById("configurarConta").style.display="block";
-				document.getElementById("visualizarHistorico").style.bottom="480px";
-				document.getElementById("visualizarHistorico").style.left="800px";
-				document.getElementById("visualizarHistorico").style.width="400px";
-				document.getElementById("visualizarHistorico").style.height="250px";
-				
-			});	
-		});
-		
-		
-        </script>
+        <script src="JavaScript/home_scripts.js"></script>
           
         <title>HelpDesk FGA &bull; Home</title>
     </head>
@@ -179,7 +68,7 @@
         	<div class="w3-container w3-teal">
             	<h2 id="titleAcoes" style="float: left;">Ações</h2><span class="fa fa-list icons fa-2x" id="iconeAcao" style="margin-top:22px;"></span>
             </div>
-             <div class="btnConfigConta" id="btnAcoes">
+             <div class="btnAcoes" id="btnAcoes">
                 <button class="w3-btn w3-teal w3-ripple btnAlterDados btnHistorico">Histórico<span class="fa fa-history iconsButtons"></span></button>
                 <button class="w3-btn w3-green w3-ripple btnAlterSenha btnContato">Entrar em Contato<span class="fa fa-mail-forward iconsButtons"></span></button>
             </div>

@@ -35,7 +35,6 @@
                         <input class="form-control input-login" name="pass" type="password">
                         <input type="submit" value="Entrar" class="w3-btn w3-teal w3-ripple btnLogin">
                      </form>
-                    <span style="w3-teal">ir para home</span>
                      <div id="createAccount">
                         <span class="lblCreateAccount">Criar Conta</span>               	
                         <span class="fa fa-angle-down btnCreateAccount" style="font-size: 38px"></span>
@@ -43,24 +42,29 @@
                 </div> <!-- Fim da tela de login -->
                 <div id="formCadastro">
                     <form>
-                        <label class="labels labelSubscribeLeft" for="txtName">Nome Completo</label>
-                        <input type="text" name="txtName" class="form-control inputSubscribeLeft">
-                        <label class="labels labelSubscribeRight" for="txtEmail">E-mail</label>
-                        <input type="text" name="txtEmail" class="form-control inputSubscribeRight">
-                        <label class="labels labelSubscribeLeft" for="txtUserName">Matrícula</label>
-                        <input type="text" name="txtUserName" class="form-control inputSubscribeLeft">
-                        <label class="labels labelSubscribeRight labelSubscribeVinculo">Vínculo com a UnB</label>
-                        <br>
-                        <div class="inputSubscribeRight inputSubscribeVinculo">
-                            <input type="radio" name="vinculo" value="estudante" checked> Aluno &nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="vinculo" value="estudante"> Servidor
+                        <div id="formCadastroLeft">
+                            <label class="labels labelSubscribeLeft">Nome Completo</label>
+                            <input type="text" name="txtName" class="form-control inputSubscribeLeft">
+                            <label class="labels labelSubscribeLeft">Matrícula</label>
+                            <input type="text" name="txtUserName" class="form-control inputSubscribeLeft">
+                            <label class="labels labelSubscribeLeft">Nome de Usuário</label>
+                            <input type="text" name="txtUserName" class="form-control inputSubscribeLeft">
+                            <label class="labels labelSubscribeLeft">Senha</label>
+                            <input type="password" name="txtSenha" class="form-control inputSubscribeLeft">  
                         </div>
-                        <label class="labels labelSubscribeLeft" for="txtUserName">Nome de Usuário</label>
-                        <input type="text" name="txtUserName" class="form-control inputSubscribeLeft">
-                        <label class="labels labelSubscribeLeft" for="txtSenha">Senha</label>
-                        <input type="password" name="txtSenha" class="form-control inputSubscribeLeft">
-                        <label class="labels labelSubscribeRight labelSubscribeConfirmPass" for="txtConfirmaSenha">Confirmar Senha</label>
-                        <input type="password" name="txtConfirmaSenha" class="form-control inputSubscribeRight">
+                        <div id="formCadastroRight">
+                            <label class="labels labelSubscribeRight lblEmail">E-mail</label>
+                            <input type="text" name="txtEmail" class="form-control inputSubscribeRight">
+
+                            <label class="labels labelSubscribeRight labelSubscribeVinculo">Vínculo com a UnB</label>
+                            <br>
+                            <div class="inputSubscribeRight inputSubscribeVinculo">
+                                <input type="radio" name="vinculo" value="estudante" checked> Aluno &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="vinculo" value="estudante"> Servidor
+                            </div>
+                            <label class="labels labelSubscribeRight labelSubscribeConfirmPass">Confirmar Senha</label>
+                            <input type="password" name="txtConfirmaSenha" class="form-control inputSubscribeRight">
+                        </div>
                         <input type="submit" value="Cadastrar" class="w3-btn w3-teal w3-ripple btnSubscribe">
                     </form>
                     <button class="btnCancelSubscribe w3-btn w3-green">Cancelar</button>
