@@ -2,7 +2,7 @@ body{
     min-width: 1080px;
 }
 
-.realizarChamado{
+#card-chamado{
     width: 60%;
     height: 530px;
     border: 1px solid #D2D5C1;
@@ -11,7 +11,7 @@ body{
     left: 20px;
 }
 
-#visualizarHistorico{
+#card-acoes{
     width: 32%;  
     height:250px;  
     border: 1px solid #D2D5C1;
@@ -21,7 +21,7 @@ body{
     position: relative;
 }
 
-#configurarConta{
+#card-config-conta{
     width: 32%;
     height:250px;  
     border: 1px solid #D2D5C1;
@@ -31,7 +31,7 @@ body{
     right: 2%;
 }
 
-.icons{
+.icones{
     margin-left: 24px;
 }
 
@@ -249,7 +249,7 @@ body{
 /**********************************************/
 
 /************** HISTORICO *********************/
-#historico{
+#card-historico{
     display: none;
 }
 
