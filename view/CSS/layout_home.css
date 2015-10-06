@@ -1,5 +1,5 @@
 body{
-    min-width: 1080px;
+    min-width: 1160px;
 }
 
 #card-chamado{
@@ -32,7 +32,9 @@ body{
 }
 
 .icones{
-    margin-left: 24px;
+    float: left;
+    margin-right: 3%;
+    margin-top: 10px;
 }
 
 .btnConfigConta{
@@ -40,7 +42,7 @@ body{
     position: absolute;
     bottom: 18%;
     left: 25%;
-	
+
 }
 
 .btnAlterSenha{
@@ -55,13 +57,19 @@ body{
 .btnAcoes{
     width: 30%;
     position: absolute;
-    top: 42%;
+    top: 35%;
     left: 26%;	
 }
 
 .iconsButtons{
     position: absolute;
     right: 5px;
+}
+
+.btnMensagens{
+    width: 180px;
+    margin-top: 20px;
+    margin-bottom: -10px;
 }
 
 /***** FORM DE CHAMADO - DADOS DO PATRIMONIO ***********/
@@ -127,7 +135,7 @@ body{
 
 .labelLocal{
     margin-left: 10%;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 #chamadoDescricao{
@@ -146,12 +154,12 @@ body{
     width: 75%;
     margin-right: 3%;
     resize: none;
-    font-size: 12px;
+    font-size: 14px;
 }
 /*********************************************/
 
 /*** FORM CHAMADO - BOTAO ENVIAR *************/
-.btnEnviar{
+.botao-enviar-chamado{
     margin-left: 86%;
     margin-top: 1px;
 }
@@ -188,7 +196,7 @@ body{
 .cancelarMensagem{
     position: absolute;
     bottom: 32px;
-    left: 180px;	
+    left: 45%;	
 }
 /***********************************************/
 
@@ -256,6 +264,20 @@ body{
 .btnVoltar{
     position: absolute;
     top: 90%;
-    right: 2%;
+    left: 2%;
 }
+/**********************************************/
+
+/**************** MENSAGENS *******************/
+
+#caixa-mensagens{
+    display:none;
+}
+
+.botao-voltar-mensagens{ 
+    position: absolute;
+    top:490px;
+    left: 2%; 
+}
+
 /**********************************************/
