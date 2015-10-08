@@ -1,0 +1,42 @@
+/*********HEADER****************/
+header {
+	border-bottom: 3px solid #D2D5C1;
+	width: 100%;
+	margin-top: 0;
+	padding: 0px;
+}
+
+.icone-computador {
+	float:left; 
+	margin-left:10%;
+	margin-top: 10px;
+	width: 100px;
+}
+
+header h1 {
+	font-family: varela;
+	font-size: 70px;
+	font-weight: 700;
+	margin-left: 250px;
+	margin-top: 0;
+}
+
+#fga-logo{
+	color:#005B4A; 
+	font-family: varela; 
+}
+
+#titulo-bemvindo{
+    float: right;
+    font-size: 20px;
+    margin-top: -55px;
+    margin-right: 14%;
+}
+
+#sair-conta{
+    float:right;
+    margin-right: -48%;
+}
+
+/******************************/
+

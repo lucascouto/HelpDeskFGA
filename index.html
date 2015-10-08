@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+		<!-- Metadados -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width:device-width, initial-scale:1">
+             
+      	<!-- Adicionando Folhas de Estilo -->
+        <link rel="stylesheet" type="text/css" href="view/CSS/w3.css">
+        <link rel="stylesheet" type="text/css" href="view/CSS/bootstrap/bootstrap.min.css">    
+        <link rel="stylesheet" href="view/CSS/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="view/CSS/layout_index.css">
+        <link rel="stylesheet" type="text/css" href="view/CSS/layout_geral.css">
+        
+       	<!-- Adicionando scripts JavaScript -->
+        <script src="view/JavaScript/jquery-2.1.4.min.js"></script>
+        <script src="view/JavaScript/index-scripts.js"></script>
+        
+        <title>HepDesk FGA</title>
+    </head>
+    <body>
+        <header class="w3-teal">
+            <span class="fa fa-desktop fa-5x icone-computador" style="font-size:130px"></span>
+            <h1>HelpDesk <span id="fga-logo">FGA</span></h1>
+        </header>
+        <div class="loginCard w3-card-24" id="cardLogin">
+                <div class="w3-container w3-teal w3-padding-4">
+                    <h2 id="loginTitle">Login</h2>
+                </div>
+                <div id="formLogin">
+                    <form>
+                        <label class="labels label-login" for="login">Login</label>
+                        <input class="form-control input-login" name="login" type="text">
+                        <label class="labels label-senha" for="pass">Senha</label>
+                        <input class="form-control input-login" name="pass" type="password">
+                        <input type="submit" value="Entrar" class="w3-btn w3-teal w3-ripple btnLogin">
+                     </form>
+                     <div id="createAccount">
+                        <span class="lblCreateAccount">Criar Conta</span>               	
+                        <span class="fa fa-angle-down btnCreateAccount" style="font-size: 38px"></span>
+                     </div>
+                </div> <!-- Fim da tela de login -->
+                <div id="formCadastro">
+                    <form>
+                        <div id="formCadastroLeft">
+                            <label class="labels labelSubscribeLeft">Nome Completo</label>
+                            <input type="text" name="txtName" class="form-control inputSubscribeLeft">
+                            <label class="labels labelSubscribeLeft">Matrícula</label>
+                            <input type="text" name="txtUserName" class="form-control inputSubscribeLeft">
+                            <label class="labels labelSubscribeLeft">Nome de Usuário</label>
+                            <input type="text" name="txtUserName" class="form-control inputSubscribeLeft">
+                            <label class="labels labelSubscribeLeft">Senha</label>
+                            <input type="password" name="txtSenha" class="form-control inputSubscribeLeft">  
+                        </div>
+                        <div id="formCadastroRight">
+                            <label class="labels labelSubscribeRight lblEmail">E-mail</label>
+                            <input type="text" name="txtEmail" class="form-control inputSubscribeRight">
+
+                            <label class="labels labelSubscribeRight labelSubscribeVinculo">Vínculo com a UnB</label>
+                            <br>
+                            <div class="inputSubscribeRight inputSubscribeVinculo">
+                                <input type="radio" name="vinculo" value="estudante" checked> Aluno &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="vinculo" value="estudante"> Servidor
+                            </div>
+                            <label class="labels labelSubscribeRight labelSubscribeConfirmPass">Confirmar Senha</label>
+                            <input type="password" name="txtConfirmaSenha" class="form-control inputSubscribeRight">
+                        </div>
+                        <input type="submit" value="Cadastrar" class="w3-btn w3-teal w3-ripple btnSubscribe">
+                    </form>
+                    <button class="btnCancelSubscribe w3-btn w3-green">Cancelar</button>
+               </div> <!-- Fim da tela de Cadastro -->
+            </div> <!-- Fim do card que mostra Login e Cadastro-->
+        <footer id="rodape">
+            <span class="footerContent">sobre &nbsp; &bull; &nbsp; desenvolvedores &nbsp; &bull; &nbsp; termos de serviço &nbsp; &bull; &nbsp; política de privacidade &nbsp; &bull; &nbsp;todos os direitos reservados &copy; 2015</span>
+        </footer>	
+    </body>
+</html>

@@ -1,0 +1,68 @@
+*{
+	font-family: proxima-nova;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: varela;	
+}
+
+body{
+	background-color:#F1F0E5;
+}
+
+
+.labels {
+	font-size: 18px;
+	font-family: varela;
+	font-weight: 100;
+}
+
+a, a:hover, a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/**********FONTES*************/
+@font-face{
+	font-family: poppin;
+	src: url(../Fonts/google-fonts/poppins/Poppins-light.ttf);
+	font-weight: 300;
+}
+
+@font-face{
+	font-family: 'roboto condensed';
+	src: url(../Fonts/google-fonts/roboto-condensed/RobotoCondensed-Bold.ttf);
+	font-weight:700;
+}
+
+@font-face{
+	font-family: varela;
+	src: url(../Fonts/varela-round-regular-webfont.ttf);
+}
+
+@font-face{
+	font-family: proxima-nova;
+	src: url(../Fonts/proximanova-regular-webfont.woff);
+}
+
+/*******************************/
+
+/*************RODAPE*************/
+footer {
+	border-top: 2px solid #D2D5C1;
+	position: absolute;
+	top: 680px; 
+	width: 97%;
+	margin-left: 20px;
+	margin-right: 40px;
+	font-size: 13px;
+	padding-top: 15px;
+}
+
+.footerContent {
+	margin-left:38%; 
+	color: #A4A4A4;
+}
+/********************************/
+
