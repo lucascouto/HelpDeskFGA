@@ -10,19 +10,19 @@ class ChamadoController {
         
     }
 
-    public function _criarChamado() {
+    public function criarChamado() {
         $this->chamado = new Chamado;
     }
 
-    public function _enviarChamado() {
+    public function enviarChamado() {
         
     }
 
-    public function _atenderChamado() {
+    public function atenderChamado() {
         
     }
 
-    public function _homologarChamado() {
+    public function homologarChamado() {
         
     }
 

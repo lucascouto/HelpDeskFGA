@@ -18,7 +18,7 @@ class ChamadoDAO {
                            . "'{$chamado->__getTecnico( )}',"
                            . "'{$chamado->__getPatrimonio( )}' )";
                            
-		$resultado = $this->conexao->Execute( $sql );
+		$resultado = $this->conexao->conectar()->Execute( $sql );
 		return $resultado;
 	}
 }
