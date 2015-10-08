@@ -18,7 +18,7 @@
         }
 
         public function __setDescricao ($descricao){
-                $this->$descricao = $descricao;
+                $this->descricao = $descricao;
         }
 
         public function __getDescricao( ){
