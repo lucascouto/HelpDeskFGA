@@ -8,10 +8,10 @@ class CadastroController {
     
     private $solicitante;
 
+    public function cadastrar($nomeCompleto, $email, $matricula, $nomeUsuario, $vinculoUnb, $senha) {
 
-    public function __cadastrar(Solicitante $solicitante) {
-        $this->solicitante = new Solicitante($nomeCompleto, $matricula, $nomeUsuario, $vinculoUnb, $senha);
-        
+        $this->solicitante = new Solicitante($nomeCompleto, $email, $matricula, $nomeUsuario, $vinculoUnb, $senha);
+        $solicitante = new ConexaoBD();
     }
      
 
