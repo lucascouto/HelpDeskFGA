@@ -17,6 +17,12 @@ body{
 	font-weight: 100;
 }
 
+a, a:hover, a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
+
 /**********FONTES*************/
 @font-face{
 	font-family: poppin;
