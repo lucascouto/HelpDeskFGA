@@ -4,11 +4,11 @@ class Chamado {
 
     private $descricao;
     
-    public function __construct($local, $tecnico, $patrimonio, $descricao = "") {
+    public function __construct(Tecnico $tecnico, Patrimonio $patrimonio, $descricao = "") {
         $this->descricao = $descricao;
-        $this->local = $local;
         $this->tecnico = $tecnico;
         $this->patrimonio = $patrimonio;
+        $this->local = new Local;
     }
 
     public function inserirChamado($chamado);

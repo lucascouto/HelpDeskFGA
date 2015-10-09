@@ -7,25 +7,11 @@ include_once "/model/Patrimonio.php";
 class ChamadoController {
 
     private $chamado;
-    private $local;
-    private $patrimonio;
-
-    public function __construct() {
-        $this->chamado = new Chamado;
-        $this->local = new Local;
-        $this->patrimonio = new patrimonio;
+    
+    public function __construct(Patrimonio $patrimonio, Solicitante $solicitante, Tecnico $tecnico, $descricao="") {
+        $this->chamado = new Chamado($patrimonio, $solicitante, $tecnico, $descricao);
     }
-
-    public function criarChamado() {
-        $chamado->setDescricao($_POST['chamadoDescricao']);
-        $local->setEdificio($_POST['edificio']);
-        $local->setSala($_POST['sala']);
-        $patrimonio->nome($_POST['nomePatrimonio']);
-        $patrimonio->marca($_POST['marcaPatrimonio']);
-        $patrimonio->codigo($_POST['codPatrimonio']);
-        $patrimonio->tipo($_POST['tipoPatrimonio']);
-        
-    }
+    
 
     public function enviarChamado() {
         
