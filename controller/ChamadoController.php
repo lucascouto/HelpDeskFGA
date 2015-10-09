@@ -8,7 +8,7 @@ class ChamadoController {
 
     private $chamado;
     
-    public function __construct(Patrimonio $patrimonio, Solicitante $solicitante, Tecnico $tecnico, $descricao="") {
+    public function __construct(Patrimonio $patrimonio, $descricao="") {
         $this->chamado = new Chamado($patrimonio, $solicitante, $tecnico, $descricao);
     }
     
