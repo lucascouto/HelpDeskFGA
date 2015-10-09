@@ -12,12 +12,13 @@ class ChamadoController {
     private $patrimonioDAO;
     private $chamadoDAO;
             
-    public function __construct(Local $local, Patrimonio $patrimonio,$descricao) {
+    public function __construct(Local $local, Patrimonio $patrimonio,$descricao){
         
-        $this->chamado = new Chamado($local,$patrimonio, $descricao);
-        $this->chamadoDAO = new ChamadoDAO($chamado);
         $this->local = new LocalDAO($local);
         $this->patrimonio = new PatrimonioDAO($patrimonio);
-        header("Location: ../view/home.html");
+        $this->chamado = new Chamado($local,$patrimonio, $descricao);
+        $this->chamadoDAO = new ChamadoDAO;
+        $chamadoDAO->inserirChamado($chamado);
+        header("Location: ../home.html");
     }
 }

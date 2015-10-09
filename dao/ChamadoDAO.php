@@ -12,10 +12,9 @@ class ChamadoDAO {
 	}
         
     public function inserirChamado(Chamado $chamado){
-		$sql = "INSERT INTO chamado (local,descricao,tecnico,patrimonio)
+		$sql = "INSERT INTO chamado (local,descricao,patrimonio)
                         VALUES ('{$chamado->__getLocal( )}',"
                            . "'{$chamado->__getDescricao( )}',"
-                           . "'{$chamado->__getTecnico( )}',"
                            . "'{$chamado->__getPatrimonio( )}' )";
                            
 		$resultado = $this->conexao->conectar()->Execute( $sql );

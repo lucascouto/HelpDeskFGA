@@ -3,6 +3,7 @@
 include_once "../model/Local.php";
 include_once "../model/Patrimonio.php";
 include_once "../dao/ChamadoDAO.php";
+include_once '../controller/ChamadoController';
 
 class Chamado {
 
@@ -17,12 +18,29 @@ class Chamado {
         
     }
     
-    public function __setDescricao($descricao) {
+    function getDescricao() {
+        return $this->descricao;
+    }
+
+    function getPatrimonio() {
+        return $this->patrimonio;
+    }
+
+    function getLocal() {
+        return $this->local;
+    }
+
+    function setDescricao($descricao) {
         $this->descricao = $descricao;
     }
 
-    public function __getDescricao() {
-        return $this->descricao;
+    function setPatrimonio($patrimonio) {
+        $this->patrimonio = $patrimonio;
     }
+
+    function setLocal($local) {
+        $this->local = $local;
+    }
+
 
 }

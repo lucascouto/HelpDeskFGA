@@ -7,14 +7,14 @@ class Patrimonio {
     private $marca;
     private $tipo;
 
-    public function __construct($nome, $codigo, $marca, $tipo) {
+    function __construct($nome, $codigo, $marca, $tipo) {
         $this->nome = $nome;
         $this->codigo = $codigo;
         $this->marca = $marca;
         $this->tipo = $tipo;
     }
 
-    public function __setNome($nome) {
+        public function __setNome($nome) {
         $this->nome = $nome;
     }
 
