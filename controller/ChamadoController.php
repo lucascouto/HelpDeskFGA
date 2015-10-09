@@ -17,13 +17,13 @@ class ChamadoController {
     }
 
     public function criarChamado() {
-        $chamado->setDescricao = $_POST['chamadoDescricao'];
-        $local->setEdificio = $_POST['edificio'];
-        $local->setSala = $_POST['sala'];
-        $patrimonio->nome = $_POST['nomePatrimonio'];
-        $patrimonio->marca = $_POST['marcaPatrimonio'];
-        $patrimonio->codigo = $_POST['codPatrimonio'];
-        $patrimonio->tipo = $_POST['tipoPatrimonio'];
+        $chamado->setDescricao($_POST['chamadoDescricao']);
+        $local->setEdificio($_POST['edificio']);
+        $local->setSala($_POST['sala']);
+        $patrimonio->nome($_POST['nomePatrimonio']);
+        $patrimonio->marca($_POST['marcaPatrimonio']);
+        $patrimonio->codigo($_POST['codPatrimonio']);
+        $patrimonio->tipo($_POST['tipoPatrimonio']);
         
     }
 
