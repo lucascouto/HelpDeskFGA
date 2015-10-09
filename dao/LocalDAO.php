@@ -1,14 +1,14 @@
 <?php
 
-include_once "/model/Local";
-include_once "/dao/conecta.class.php";
+include_once "../model/Local";
+include_once "../dao/conecta.class.php";
 
 class LocalDAO {
     
     private $conexao;
     
     public function __construct( ){
-		$this->conexao = new Conexao( );
+		$this->conexao = new ConexaoBD( );
 	}
         
     public function inserirLocal(Local $local){

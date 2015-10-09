@@ -9,11 +9,8 @@ class Chamado {
     private $descricao;
     private $patrimonio;
     private $local;
-    private $chamadoDAO;
     
     public function __construct(Patrimonio $patrimonio, $descricao = "") {
-        $chamadoDAO = new ChamadoDAO;
-        $chamadoDAO->inserirChamado($chamado);
         $this->descricao = $descricao;
         $this->patrimonio = $patrimonio;
         $this->local = new Local;

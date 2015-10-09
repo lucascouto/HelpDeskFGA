@@ -5,29 +5,25 @@ class Local {
     private $edificio;
     private $sala;
 
-    public function __construct() {
-        
-    }
-
-    public function __constructOverload($sala, $edificio) {
+    public function __construct($sala, $edificio) {
         $this->edificio = $edificio;
         $this->sala = $sala;
     }
 
-    public function __setSala($sala) {
-        $this->sala = $_POST['sala'];
+    function getEdificio() {
+        return $this->edificio;
     }
 
-    public function __getSala() {
+    function getSala() {
         return $this->sala;
     }
 
-    public function __setEdificio($edificio) {
-        $this->edificio = $_POST['edificio'];
+    function setEdificio($edificio) {
+        $this->edificio = $edificio;
     }
 
-    public function __getEdificio() {
-        return $this->edificio;
+    function setSala($sala) {
+        $this->sala = $sala;
     }
 
 }

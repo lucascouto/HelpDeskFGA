@@ -8,7 +8,7 @@ class ChamadoDAO {
     private $conexao;
     
     public function __construct( ){
-		$this->conexao = new Conexao( );
+		$this->conexao = new ConexaoBD( );
 	}
         
     public function inserirChamado(Chamado $chamado){

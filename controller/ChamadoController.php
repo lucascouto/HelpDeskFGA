@@ -3,33 +3,21 @@
 include_once "../model/Chamado.php";
 include_once "../model/Local.php";
 include_once "../model/Patrimonio.php";
+include_once "../dao/ChamadoDAO.php";
 
 class ChamadoController {
 
     private $chamado;
     private $descricao;
-    private $patrimonio;
+    private $patrimonioDAO;
+    private $chamadoDAO;
             
-    public function __construct(Patrimonio $patrimonio) {
-        $descricao = $_POST['descricaoChamado'];
-        $patrimonio->nome = $_POST['nomePatrimonio'];
-        $patrimonio->codigo = $_POST['codPatrimonio'];
-        $patrimonio->tipo = $_POST['tipoPatrimonio'];
-        $patrimonio->marca = $_POST['marcaPatrimonio'];
-        $this->chamado = new Chamado($patrimonio, $descricao);
-        header();
-    }
-
-    public function enviarChamado() {
+    public function __construct(Local $local, Patrimonio $patrimonio,$descricao) {
         
+        $this->chamado = new Chamado($local,$patrimonio, $descricao);
+        $this->chamadoDAO = new ChamadoDAO($chamado);
+        $this->local = new LocalDAO($local);
+        $this->patrimonio = new PatrimonioDAO($patrimonio);
+        header("Location: ../view/home.html");
     }
-
-    public function atenderChamado() {
-        
-    }
-
-    public function homologarChamado() {
-        
-    }
-
 }
