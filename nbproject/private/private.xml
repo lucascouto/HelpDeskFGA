@@ -2,15 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/HelpDeskFGA/model/Solicitante.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/HelpDeskFGA/model/Tecnico.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/HelpDeskFGA/DAO/SolicitanteDAO.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/HelpDeskFGA/DAO/tecnicoDAO.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/HelpDeskFGA/view/formLogin/login.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/HelpDeskFGA/index.html</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/HelpDeskFGA/model/Usuario.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/HelpDeskFGA/Controller/loginController.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
