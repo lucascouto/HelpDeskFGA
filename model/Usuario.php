@@ -4,50 +4,61 @@
         
         private $nome;
         private $username;
+        private $email;
         private $senha;
         private $matricula;
         
-        function __construct($nome, $username, $senha, $matricula) {
+        function __construct($nome, $username, $email, $senha, $matricula) {
             $this->nome = $nome;
             $this->username = $username;
+            $this->email = $email;
             $this->senha = $senha;
             $this->matricula = $matricula;
         }
         
-        function getNome() {
+        public function getNome() {
             return $this->nome;
         }
 
-        function getUsername() {
+        public function getUsername() {
             return $this->username;
         }
 
-        function getSenha() {
+        public function getEmail() {
+            return $this->email;
+        }
+
+        public function getSenha() {
             return $this->senha;
         }
 
-        function getMatricula() {
+        public function getMatricula() {
             return $this->matricula;
         }
 
-        function setNome($nome) {
+        public function setNome($nome) {
             $this->nome = $nome;
         }
 
-        function setUsername($username) {
+        public function setUsername($username) {
             $this->username = $username;
         }
 
-        function setSenha($senha) {
+        public function setEmail($email) {
+            $this->email = $email;
+        }
+
+        public function setSenha($senha) {
             $this->senha = $senha;
         }
 
-        function setMatricula($matricula) {
+        public function setMatricula($matricula) {
             $this->matricula = $matricula;
         }
 
 
 
+        
     }
     
 

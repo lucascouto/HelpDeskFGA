@@ -5,7 +5,7 @@ include_once 'conecta.class.php';
 class SolicitanteDAO {
     
     private $conexao;
-   
+       
     
     public function __construct() {
         $this->conexao = new ConexaoBD();
@@ -22,5 +22,22 @@ class SolicitanteDAO {
     
         return $resultado;
     }
+    
+    public function cadastrar(Socilitante $solicitante) {
+        $nome = $solicitante->getNome();
+        $email = $solicitante->getEmail();
+        $matricula = $solicitante->getMatricula();
+        $nomeUsuario = $solicitante->getUsername();
+        $vinculoUnb = $solicitante->getVinculo();
+        $senha = $solicitante->getSenha();
+        
+        $sql = "INSERT INTO solicitante (username_solicitante, nome_solicitante, "
+                . "senha_solicitante, vinculo, matricula_solicitante)"
+                . "VALUES ({$nome}, {$email}, {$matricula}, {$nomeUsuario}, {$vinculoUnb}, {$senha})";
+                
+        $registro = $this->conexao->conectar()->exec($sql);
+       
+    }
 
 }
+
