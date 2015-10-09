@@ -1,7 +1,7 @@
 <?php
 
-include_once "/model/Chamado.php";
-include_once "/dao/conecta.class.php";
+include_once "../model/Chamado.php";
+include_once "../dao/conecta.class.php";
 
 class ChamadoDAO {
     
