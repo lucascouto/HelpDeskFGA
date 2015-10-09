@@ -1,13 +1,12 @@
 <?php
 
 include_once 'Usuario.php';
-include_once '../../DAO/SolicitanteDAO.php';
 
 class Solicitante extends Usuario{
     private $vinculo;
     
-    function __construct($nome, $username, $email, $senha, $matricula, $vinculo) {
-        parent::__construct($nome, $username, $email, $senha, $matricula);
+    function __construct($nome, $email, $matricula, $username, $vinculo, $senha) {
+        parent::__construct($nome, $email, $matricula, $username, $senha);
         $this->vinculo = $vinculo;
         
         

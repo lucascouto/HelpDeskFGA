@@ -8,7 +8,7 @@
         private $senha;
         private $matricula;
         
-        function __construct($nome, $username, $email, $senha, $matricula) {
+        function __construct($nome, $email, $matricula, $username, $senha) {
             $this->nome = $nome;
             $this->username = $username;
             $this->email = $email;

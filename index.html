@@ -44,26 +44,26 @@
                     <form action="view/formCadastroSolicitante/Cadastro.php" method="post">
                         <div id="formCadastroLeft">
                             <label class="labels labelSubscribeLeft">Nome Completo</label>
-                            <input type="text" name="txtName" class="form-control inputSubscribeLeft">
+                            <input type="text" name="txtName" class="form-control inputSubscribeLeft" tabindex="1">
                             <label class="labels labelSubscribeLeft">Matrícula</label>
-                            <input type="text" name="txtMatricula" class="form-control inputSubscribeLeft">
+                            <input type="text" name="txtMatricula" class="form-control inputSubscribeLeft" tabindex="3">
                             <label class="labels labelSubscribeLeft">Nome de Usuário</label>
-                            <input type="text" name="txtUserName" class="form-control inputSubscribeLeft">
+                            <input type="text" name="txtUserName" class="form-control inputSubscribeLeft" tabindex="5">
                             <label class="labels labelSubscribeLeft">Senha</label>
-                            <input type="password" name="txtSenha" class="form-control inputSubscribeLeft">  
+                            <input type="password" name="txtSenha" class="form-control inputSubscribeLeft" tabindex="6">  
                         </div>
                         <div id="formCadastroRight">
                             <label class="labels labelSubscribeRight lblEmail">E-mail</label>
-                            <input type="text" name="txtEmail" class="form-control inputSubscribeRight">
+                            <input type="text" name="txtEmail" class="form-control inputSubscribeRight" tabindex="2">
 
                             <label class="labels labelSubscribeRight labelSubscribeVinculo">Vínculo com a UnB</label>
                             <br>
-                            <div class="inputSubscribeRight inputSubscribeVinculo">
+                            <div class="inputSubscribeRight inputSubscribeVinculo" tabindex="4">
                                 <input type="radio" name="vinculo" value="aluno" checked> Aluno &nbsp;&nbsp;&nbsp;&nbsp;
                                 <input type="radio" name="vinculo" value="servidor"> Servidor
                             </div>
                             <label class="labels labelSubscribeRight labelSubscribeConfirmPass">Confirmar Senha</label>
-                            <input type="password" name="txtConfirmaSenha" class="form-control inputSubscribeRight">
+                            <input type="password" name="txtConfirmaSenha" class="form-control inputSubscribeRight" tabindex="7">
                         </div>
                         <input type="submit" value="Cadastrar" name="cadastrar" class="w3-btn w3-teal w3-ripple btnSubscribe">
                     </form>
