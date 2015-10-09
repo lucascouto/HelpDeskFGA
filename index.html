@@ -41,12 +41,12 @@
                      </div>
                 </div> <!-- Fim da tela de login -->
                 <div id="formCadastro">
-                    <form>
+                    <form action="view/formCadastroSolicitante/Cadastro.php" method="post">
                         <div id="formCadastroLeft">
                             <label class="labels labelSubscribeLeft">Nome Completo</label>
                             <input type="text" name="txtName" class="form-control inputSubscribeLeft">
                             <label class="labels labelSubscribeLeft">Matrícula</label>
-                            <input type="text" name="txtUserName" class="form-control inputSubscribeLeft">
+                            <input type="text" name="txtMatricula" class="form-control inputSubscribeLeft">
                             <label class="labels labelSubscribeLeft">Nome de Usuário</label>
                             <input type="text" name="txtUserName" class="form-control inputSubscribeLeft">
                             <label class="labels labelSubscribeLeft">Senha</label>
@@ -59,13 +59,13 @@
                             <label class="labels labelSubscribeRight labelSubscribeVinculo">Vínculo com a UnB</label>
                             <br>
                             <div class="inputSubscribeRight inputSubscribeVinculo">
-                                <input type="radio" name="vinculo" value="estudante" checked> Aluno &nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="vinculo" value="estudante"> Servidor
+                                <input type="radio" name="vinculo" value="aluno" checked> Aluno &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="vinculo" value="servidor"> Servidor
                             </div>
                             <label class="labels labelSubscribeRight labelSubscribeConfirmPass">Confirmar Senha</label>
                             <input type="password" name="txtConfirmaSenha" class="form-control inputSubscribeRight">
                         </div>
-                        <input type="submit" value="Cadastrar" class="w3-btn w3-teal w3-ripple btnSubscribe">
+                        <input type="submit" value="Cadastrar" name="cadastrar" class="w3-btn w3-teal w3-ripple btnSubscribe">
                     </form>
                     <button class="btnCancelSubscribe w3-btn w3-green">Cancelar</button>
                </div> <!-- Fim da tela de Cadastro -->
