@@ -1,50 +1,24 @@
 <?php
-    class Chamado{
 
-        private $descricao;
-        private $local;
-        private $tecnico;
-        private $patrimonio;
+class Chamado {
 
-        public function __construct( ){
-
-        }
-
-        public function __constructOverload( $local,$tecnico,$patrimonio,$descricao){
-                $this->descricao = $descricao;
-                $this->local = $local;
-                $this->tecnico = $tecnico;
-                $this->patrimonio = $patrimonio;       
-        }
-
-        public function __setDescricao ($descricao){
-                $this->descricao = $descricao;
-        }
-
-        public function __getDescricao( ){
-                return $this->descricao;
-        }
-        public function __setLocal ($local){
-                $this->local = $local;
-        }
-
-        public function __getLocal( ){
-                return $this->local;
-        }
-        
-        public function __setTecnico ($tecnico){
-                $this->tecnico = $tecnico;
-        }
-
-        public function __getTecnico( ){
-                return $this->tecnico;
-        }
-        
-        public function __setPatrimonio ($patrimonio){
-                $this->patrimonio = $patrimonio;
-        }
-
-        public function __getPatrimonio( ){
-                return $this->patrimonio;
-        }
+    private $descricao;
+    
+    public function __construct($local, $tecnico, $patrimonio, $descricao = "") {
+        $this->descricao = $descricao;
+        $this->local = $local;
+        $this->tecnico = $tecnico;
+        $this->patrimonio = $patrimonio;
     }
+
+    public function inserirChamado($chamado);
+    
+    public function __setDescricao($descricao) {
+        $this->descricao = $_POST['chamadoDescricao'];
+    }
+
+    public function __getDescricao() {
+        return $this->descricao;
+    }
+
+}

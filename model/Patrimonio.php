@@ -17,7 +17,7 @@ class Patrimonio{
         }
 
         public function __setNome ($nome){
-                $this->nome = $nome;
+                $this->nome = $_POST['nomePatrimonio'];
         }
 
         public function __getNome( ){
@@ -25,7 +25,7 @@ class Patrimonio{
         }
         
         public function __setCodigo ($codigo){
-                $this->codigo = $codigo;
+                $this->codigo = $_POST['codPatrimonio'];
         }
 
         public function __getCodigo( ){
@@ -33,7 +33,7 @@ class Patrimonio{
         }
         
         public function __setMarca ($marca){
-                $this->marca = $marca;
+                $this->marca = $_POST['marcaPatrimonio'];
         }
 
         public function __getMarca( ){
@@ -41,7 +41,7 @@ class Patrimonio{
         }
         
         public function __setTipo ($tipo){
-                $this->tipo = $tipo;
+                $this->tipo = $_POST['tipoPatrimonio'];
         }
 
         public function __getTipo( ){
