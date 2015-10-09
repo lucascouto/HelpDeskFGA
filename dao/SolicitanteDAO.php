@@ -23,7 +23,7 @@ class SolicitanteDAO {
         return $resultado;
     }
     
-    public function cadastrar(Socilitante $solicitante) {
+    public function cadastrar(Solicitante $solicitante) {
         $nome = $solicitante->getNome();
         $email = $solicitante->getEmail();
         $matricula = $solicitante->getMatricula();
@@ -33,9 +33,11 @@ class SolicitanteDAO {
         
         $sql = "INSERT INTO solicitante (username_solicitante, nome_solicitante, "
                 . "senha_solicitante, vinculo, matricula_solicitante)"
-                . "VALUES ({$nome}, {$email}, {$matricula}, {$nomeUsuario}, {$vinculoUnb}, {$senha})";
+                . "VALUES ('{$nome}', '{$email}', '{$matricula}', '{$nomeUsuario}', '{$vinculoUnb}', '{$senha}')";
                 
-        $registro = $this->conexao->conectar()->exec($sql);
+        $registro = $this->conexao->conectar()->query($sql);
+        
+        return $registro;
        
     }
 

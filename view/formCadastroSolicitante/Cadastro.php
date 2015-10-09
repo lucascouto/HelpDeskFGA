@@ -3,15 +3,22 @@
 include_once '../../controller/CadastroController.php';
 
     if(isset($_POST['cadastrar'])) {
-        $nomeCompleto = $_POST['txtName'];
+        $nome = $_POST['txtName'];
         $email = $_POST['txtEmail'];
         $matricula = $_POST['txtMatricula'];
-        $nomeUsuario = $_POST['txtUserName'];
-        $vinculoUnb = $_POST['vinculo'];
+        $username = $_POST['txtUserName'];
+        $vinculo = $_POST['vinculo'];
         $senha = $_POST['txtSenha'];
         
+        if($_POST['vinculo'] == 'aluno'){
+            $vinculo = 0;
+        }
+        elseif($_POST['vinculo'] == 'servidor'){
+            $vinculo = 1;
+        }
+        
         $cadastro = new CadastroController();
-        $cadastro->cadastrar($nomeCompleto, $email, $matricula, $nomeUsuario, $vinculoUnb, $senha);
+        $cadastro->cadastrar($nome, $email, $matricula, $username, $vinculo, $senha);
         
     }
     
