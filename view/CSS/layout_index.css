@@ -1,91 +1,91 @@
 /*********HEADER_INDEX****************/
 header {
-	border-bottom: 3px solid #D2D5C1;
-	width: 100%;
-	margin-top: 0;
-	padding: 20px;
+    border-bottom: 3px solid #D2D5C1;
+    width: 100%;
+    margin-top: 0;
+    padding: 20px;
 }
 
 .icone-computador {
-	float:left; 
-	margin-left:5%;
+    float:left; 
+    margin-left:5%;
 }
 
 header h1 {
-	font-family: varela;
-	font-size: 100px;
-	font-weight: 700;
-	margin-left: 250px;
-	margin-top: 0;
+    font-family: varela;
+    font-size: 100px;
+    font-weight: 700;
+    margin-left: 250px;
+    margin-top: 0;
 }
 
 #fga-logo{
-	color:#005B4A; 
-	font-family: varela; 
+    color:#005B4A; 
+    font-family: varela; 
 }
 /******************************/
 
 /*************LOGIN************/
 
 .loginCard {
-	width: 35%; 
-	position: relative;
-        top: 50px;
-	margin-left: 33%; 
-        margin-right: auto;
-	border: 1px solid #D2D5C1;
-	padding-bottom: 30px; 
+    width: 35%; 
+    position: relative;
+    top: 50px;
+    margin-left: 33%; 
+    margin-right: auto;
+    border: 1px solid #D2D5C1;
+    padding-bottom: 30px; 
 }
 
 .input-login {
-	width: 70%;
-	margin-left: 14%;
-	margin-top: 10%;
-	border: 2px solid #D2D5C1;
+    width: 70%;
+    margin-left: 14%;
+    margin-top: 10%;
+    border: 2px solid #D2D5C1;
 }
 
 .label-login {
-	position: absolute;
-	top: 22%;
-	left: 15%;
+    position: absolute;
+    top: 22%;
+    left: 15%;
 }
 .label-senha {
-	position: absolute;
-	top: 41%;
-	left: 15%;
+    position: absolute;
+    top: 41%;
+    left: 15%;
 }
 
 .btnLogin {
-	position: absolute;
-	left: 36%;
-	top:25px;
-	width: 100px;
+    position: absolute;
+    left: 36%;
+    top:25px;
+    width: 100px;
 }
 /********************************/
 
 /**********CRIAR CONTA***********/
 .btnCreateAccount{
-	position: absolute;
-	bottom: 4%;
-        margin-left:-13%;
-        margin-right: auto;
-	color: #009588;
-	cursor:pointer;
+    position: absolute;
+    bottom: 4%;
+    margin-left:-13%;
+    margin-right: auto;
+    color: #009588;
+    cursor:pointer;
 }
 
 #createAccount{
-	border-top: 1px solid #009588;
-	margin: 70px 15px 0px 15px;
+    border-top: 1px solid #009588;
+    margin: 70px 15px 0px 15px;
 }
 
 .lblCreateAccount{
-	position: relative; 
-	top:-10px; 
-	margin-left:37%; 
-	background-color: #F1F0E5; 
-	padding: 0px 10px; 
-	color:#009588;
- }
+    position: relative; 
+    top:-10px; 
+    margin-left:37%; 
+    background-color: #F1F0E5; 
+    padding: 0px 10px; 
+    color:#009588;
+}
 /*********************************/
 
 /************CADASTRO*************/
@@ -98,7 +98,7 @@ header h1 {
     float: left;
     width: 50%;
     height: 350px;
-   
+
 }
 
 #formCadastroRight{
@@ -120,34 +120,34 @@ header h1 {
 }
 
 .inputSubscribeRight{
-	margin-top: 0px;
-        margin-bottom: 72px;
-	margin-left: 3%;
-	width: 90%;
-	border: 2px solid #D2D5C1;
+    margin-top: 0px;
+    margin-bottom: 72px;
+    margin-left: 3%;
+    width: 90%;
+    border: 2px solid #D2D5C1;
 }
 
 .inputSubscribeVinculo {
-	border: none;
+    border: none;
 }
 
 .labelSubscribeRight{
-	margin-left: 2%;
-        margin-top: 3%;
+    margin-left: 2%;
+    margin-top: 3%;
 }
 
 .btnSubscribe{
-	float: right;
-	width: 20%;
-	margin-right: 27%;
-        margin-top: 15px;
+    float: right;
+    width: 20%;
+    margin-right: 27%;
+    margin-top: 15px;
 }
 
 .btnCancelSubscribe{
-	float:left;
-	width: 20%;
-	margin-left: 27%;
-        margin-top: 15px;
+    float:left;
+    width: 20%;
+    margin-left: 27%;
+    margin-top: 15px;
 }
 /********************************/
 

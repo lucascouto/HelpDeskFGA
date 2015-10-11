@@ -16,6 +16,6 @@ $(document).ready(function(){
             $("#formCadastro").fadeOut(5);
             $("#formLogin").fadeIn(500);
             $("#rodape").animate({top: "680px"}, 50);
-            $("#cardLogin").animate({width: "400px", height: "383.188px", position: "relative", left: "2%", paddingBottom:"30px"}, 350);
+            $("#cardLogin").animate({width:"35%", height:"383.188px", position:"relative", left:"0.02em", paddingBottom:"30px"}, 350);
 	});
 });
