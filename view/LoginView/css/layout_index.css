@@ -25,44 +25,6 @@ header h1 {
 }
 /******************************/
 
-/*************LOGIN************/
-
-.loginCard {
-    width: 35%; 
-    position: relative;
-    top: 50px;
-    margin-left: 33%; 
-    margin-right: auto;
-    border: 1px solid #D2D5C1;
-    padding-bottom: 30px; 
-}
-
-.input-login {
-    width: 70%;
-    margin-left: 14%;
-    margin-top: 10%;
-    border: 2px solid #D2D5C1;
-}
-
-.label-login {
-    position: absolute;
-    top: 22%;
-    left: 15%;
-}
-.label-senha {
-    position: absolute;
-    top: 41%;
-    left: 15%;
-}
-
-.btnLogin {
-    position: absolute;
-    left: 36%;
-    top:25px;
-    width: 100px;
-}
-/********************************/
-
 /**********CRIAR CONTA***********/
 .btnCreateAccount{
     position: absolute;
@@ -87,69 +49,6 @@ header h1 {
     color:#009588;
 }
 /*********************************/
-
-/************CADASTRO*************/
-#formCadastro{
-    display:none;
-    position: relative;
-}
-
-#formCadastroLeft{
-    float: left;
-    width: 50%;
-    height: 350px;
-
-}
-
-#formCadastroRight{
-    float: right;
-    width: 50%;
-    height: 350px;
-}
-
-.inputSubscribeLeft{
-    width: 90%;
-    margin-left: 3%;
-    margin-bottom: 20px;
-    border: 2px solid #D2D5C1;
-}
-
-.labelSubscribeLeft{
-    margin-left: 3%;
-    margin-top: 3%;	
-}
-
-.inputSubscribeRight{
-    margin-top: 0px;
-    margin-bottom: 72px;
-    margin-left: 3%;
-    width: 90%;
-    border: 2px solid #D2D5C1;
-}
-
-.inputSubscribeVinculo {
-    border: none;
-}
-
-.labelSubscribeRight{
-    margin-left: 2%;
-    margin-top: 3%;
-}
-
-.btnSubscribe{
-    float: right;
-    width: 20%;
-    margin-right: 27%;
-    margin-top: 15px;
-}
-
-.btnCancelSubscribe{
-    float:left;
-    width: 20%;
-    margin-left: 27%;
-    margin-top: 15px;
-}
-/********************************/
 
 body {
     min-width: 979px;

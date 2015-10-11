@@ -1,0 +1,27 @@
+/*********** FORM PARA MUDAR SENHA *************/
+.inputSenha{
+    width:60%;
+    margin-left: 20%;
+    border: 2px solid #D2D5C1;
+}
+
+.labelSenha{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.btnEnviarSenha{
+    float: right;
+    margin-right: 20%;
+    margin-top: 4%;
+}
+
+.cancelarSenha{
+    margin-left: 32%;
+    margin-top: 4%;	
+}
+
+#formChangePassword{
+    display:none;
+}
+/***********************************************/

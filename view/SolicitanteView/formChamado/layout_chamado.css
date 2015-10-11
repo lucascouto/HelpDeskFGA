@@ -1,0 +1,130 @@
+/***** FORM DE CHAMADO - DADOS DO PATRIMONIO ***********/
+#formChamadoLeftUpper {
+    float: left;
+    width: 50%;
+    height: 160px;
+    position: relative;
+}
+
+#formChamadoRightUpper {
+    float: right;
+    width: 50%;
+    height: 160px;
+    position: relative;
+}
+
+.inputChamado {
+    width: 85%;
+    border: 2px solid #D2D5C1;
+}
+
+.inputChamadoleftUpper{
+    margin-left: 5%;
+    margin-bottom: 20px;
+}
+
+.inputChamadoRightUpper{
+    margin-left: 10%;
+    margin-bottom: 24px;
+}
+
+.labelChamadoLeftUpper{
+    margin-left: 5%;
+    margin-top: 5px;     
+}
+
+.labelChamadoRightUpper{
+    margin-left: 10%;
+    margin-top: 3px;	
+}
+/*******************************************************/
+
+
+.sectionChamado {
+    margin-left: 20px;
+    font-weight: bold;
+    width: 97%;
+}
+
+/***FORM CHAMADO - LOCALIZACAO E DESCRICAO DO PROBLEMA***/
+#chamadoLocalizacao{
+    float: left;
+    width: 20%;
+    height: 140px; 
+}
+
+.inputLocal {
+    width: 54%;
+    margin-left: 10%;
+    margin-top: -21px;
+}
+
+.labelLocal{
+    margin-left: 10%;
+    margin-bottom: 25px;
+}
+
+#chamadoDescricao{
+    float: right;
+    width: 80%;
+    position: relative;
+    height: 140px;
+}
+
+.labelDescricao{
+    margin-left: 3%;
+}
+
+.descricao{
+    float: right;
+    width: 75%;
+    margin-right: 3%;
+    resize: none;
+    font-size: 14px;
+}
+/*********************************************/
+
+/*** FORM CHAMADO - BOTAO ENVIAR *************/
+.botao-enviar-chamado{
+    margin-left: 86%;
+    margin-top: 1px;
+}
+/*********************************************/
+
+/******* FORM - ENTRAR EM CONTATO ************/
+#formContato{
+    display: none;
+}
+
+.inputAssunto{
+    width: 90%;
+    margin-left: 5%;
+    border: 2px solid #D2D5C1;
+}
+
+.labelContato{
+    margin-left: 5%;	
+}
+
+.mensagem{
+    width: 90%;
+    margin-left: 5%;	
+    resize:none;
+    font-size:12px;
+}
+
+.btnEnviarMensagem{
+    float:right;
+    margin-top: 4%;
+    margin-right: 5%;	
+}
+
+.cancelarMensagem{
+    position: absolute;
+    bottom: 32px;
+    left: 45%;	
+}
+/***********************************************/
+
+
+

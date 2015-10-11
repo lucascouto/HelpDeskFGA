@@ -4,15 +4,18 @@
         <meta charset="UTF-8">
 
         <!-- Adicionando Folhas de Estilo CSS -->
-        <link rel="stylesheet" type="text/css" href="CSS/w3.css">
-        <link rel="stylesheet" type="text/css" href="CSS/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="CSS/layout_secundario.css">
-        <link rel="stylesheet" href="CSS/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="CSS/layout_home.css">
-        <link rel="stylesheet" type="text/css" href="CSS/layout_geral.css">
+        <link rel="stylesheet" type="text/css" href="../_CSS/w3.css">
+        <link rel="stylesheet" type="text/css" href="../_CSS/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../_CSS/layout_secundario.css">
+        <link rel="stylesheet" href="../_CSS/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="formChamado/layout_chamado.css">
+        <link rel="stylesheet" type="text/css" href="formAlterarDados/layout_alterar_dados.css">
+        <link rel="stylesheet" type="text/css" href="formMudarSenha/layout_mudar_senha.css">
+        <link rel="stylesheet" type="text/css" href="css/layout_home.css">
+        <link rel="stylesheet" type="text/css" href="../_CSS/layout_geral.css">
 
         <!-- Adicionando scripts JavaScript -->
-        <script src="JavaScript/jquery-2.1.4.min.js"></script>
+        <script src="../_JavaScript/jquery-2.1.4.min.js"></script>
         <script src="JavaScript/home_scripts.js"></script>
 
         <title>HelpDesk FGA &bull; Home</title>
@@ -25,7 +28,7 @@
                 <span class="msg-bemvindo">Bem-Vindo, Fulano!</span>
                 &nbsp;&nbsp;<span class="fa fa-bell-o"></span>
                 <div id="sair-conta">
-                    <a href="../index.php">sair&nbsp;<span class="fa fa-sign-out"></span></a>
+                    <a href="../../index.php">sair&nbsp;<span class="fa fa-sign-out"></span></a>
                 </div>
             </div>
 

@@ -1,0 +1,27 @@
+/******* FORM PARA ALTERAR OS DADOS ************/
+#formAlterDados{
+    display:none;
+}
+
+.inputAlterDados{
+    width:85%;
+    border: 2px solid #D2D5C1;
+}
+
+.labelAlterDados{
+    margin-top: 3%;
+}
+
+.btnAlter{
+    float:right;
+    margin-right: 15%;
+    margin-top: 10%;
+}
+
+.cancelAlterDados{
+    float: right;
+    margin-right: 40%;
+    margin-top:-8%;	
+}
+/**********************************************/
+

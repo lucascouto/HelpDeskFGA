@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../Controller/loginController.php';
+require_once '../../../Controller/loginController.php';
 
 if(isset($_POST['entrar'])){
     $username = $_POST['login'];

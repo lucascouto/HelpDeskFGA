@@ -1,6 +1,6 @@
 <?php
 
-include_once '../../DAO/SolicitanteDAO.php';
+include_once '../../../dao/SolicitanteDAO.php';
 
 class loginController {
     
@@ -19,7 +19,7 @@ class loginController {
                 else{
                     setcookie("nome_usuario", $username);
                     setcookie("senha_usuario", $senha);
-                    header("Location: ../home.php");
+                    header("Location: ../../SolicitanteView/home.php");
                 }
                 
             }

@@ -29,24 +29,24 @@ a, a:hover, a:visited{
 /**********FONTES*************/
 @font-face{
 	font-family: poppin;
-	src: url(../Fonts/google-fonts/poppins/Poppins-light.ttf);
+	src: url(../_Fonts/google-fonts/poppins/Poppins-Light.ttf);
 	font-weight: 300;
 }
 
 @font-face{
 	font-family: 'roboto condensed';
-	src: url(../Fonts/google-fonts/roboto-condensed/RobotoCondensed-Bold.ttf);
+	src: url(../_Fonts/google-fonts/roboto-condensed/RobotoCondensed-Bold.ttf);
 	font-weight:700;
 }
 
 @font-face{
 	font-family: varela;
-	src: url(../Fonts/varela-round-regular-webfont.ttf);
+	src: url(../_Fonts/varela-round-regular-webfont.ttf);
 }
 
 @font-face{
 	font-family: proxima-nova;
-	src: url(../Fonts/proximanova-regular-webfont.woff);
+	src: url(../_Fonts/proximanova-regular-webfont.woff);
 }
 
 /*******************************/
@@ -55,7 +55,7 @@ a, a:hover, a:visited{
 footer {
 	border-top: 2px solid #D2D5C1;
 	position: absolute;
-	top: 680px; 
+	top: 700px; 
 	width: 97%;
 	margin-left: 20px;
 	margin-right: 40px;
