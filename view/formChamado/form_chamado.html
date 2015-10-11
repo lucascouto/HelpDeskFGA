@@ -1,0 +1,40 @@
+<form method="post" action="formChamado/chamado.php">
+    <fieldset>
+        <legend class="sectionChamado">Dados do Patrimônio</legend>
+        <div id="formChamadoLeftUpper">
+            <label class="labels labelChamadoLeftUpper">Nome</label>
+            <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoleftUpper">
+            <label class="labels labelChamadoLeftUpper labelMarcaPatrimonio">Marca</label>
+            <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoleftUpper">
+        </div>
+        <div id="formChamadoRightUpper">
+            <label class="labels labelChamadoRightUpper">Código</label>
+            <input type="text" name="codPatrimonio" class="form-control inputChamado inputChamadoRightUpper inputCodPatrimonio">
+
+            <label class="labels labelChamadoRightUpper">Tipo</label>
+            <br>
+            <select class="form-control inputChamado inputChamadoRightUpper inputTipoPatrimonio" name="tipoPatrimonio">
+                <option>Notebook</option>
+                <option>Peiférico de Computador</option>
+                <option>Ar-Condicionado</option>
+                <option>Carteira</option>
+            </select>
+        </div>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend class="sectionChamado">Localização e Descrição do Problema</legend>
+        <div id="chamadoLocalizacao">
+            <label class="labels labelEdificio labelLocal">Edifício</label>
+            <input type="text" name="edificio" class="form-control inputLocal inputChamado">
+            <br>
+            <label class="labels labelSala labelLocal">Sala</label>
+            <input type="text" name="sala" class="form-control inputLocal inputSala inputChamado">
+        </div>
+        <div id="chamadoDescricao">
+            <label class="labels labelDescricao">Descrição</label>
+            <textarea class="form-control descricao inputChamado" rows="6"></textarea>
+        </div>
+    </fieldset>
+    <input type="submit" value="Enviar" class="w3-btn w3-teal w3-ripple botao-enviar-chamado">
+</form>
