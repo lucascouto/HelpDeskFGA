@@ -1,17 +1,17 @@
-<form action="view/formCadastroSolicitante/cadastro.php" method="post">
+<form action="" method="post">
     <div id="formCadastroLeft">
         <label class="labels labelSubscribeLeft">Nome Completo</label>
-        <input type="text" name="txtName" class="form-control inputSubscribeLeft" tabindex="1">
+        <input type="text" name="txtName" class="form-control inputSubscribeLeft" tabindex="1" required>
         <label class="labels labelSubscribeLeft">Matrícula</label>
-        <input type="text" name="txtMatricula" class="form-control inputSubscribeLeft" tabindex="3">
+        <input type="text" name="txtMatricula" class="form-control inputSubscribeLeft" tabindex="3" required>
         <label class="labels labelSubscribeLeft">Nome de Usuário</label>
-        <input type="text" name="txtUserName" class="form-control inputSubscribeLeft" tabindex="5">
+        <input type="text" name="txtUserName" class="form-control inputSubscribeLeft" tabindex="5" required>
         <label class="labels labelSubscribeLeft">Senha</label>
-        <input type="password" name="txtSenha" class="form-control inputSubscribeLeft" tabindex="6">  
+        <input type="password" name="txtSenha" class="form-control inputSubscribeLeft" tabindex="6" required>  
     </div>
     <div id="formCadastroRight">
         <label class="labels labelSubscribeRight lblEmail">E-mail</label>
-        <input type="text" name="txtEmail" class="form-control inputSubscribeRight" tabindex="2">
+        <input type="text" name="txtEmail" class="form-control inputSubscribeRight" tabindex="2" required>
 
         <label class="labels labelSubscribeRight labelSubscribeVinculo">Vínculo com a UnB</label>
         <br>
@@ -20,7 +20,7 @@
             <input type="radio" name="vinculo" value="servidor"> Servidor
         </div>
         <label class="labels labelSubscribeRight labelSubscribeConfirmPass">Confirmar Senha</label>
-        <input type="password" name="txtConfirmaSenha" class="form-control inputSubscribeRight" tabindex="7">
+        <input type="password" name="txtConfirmaSenha" class="form-control inputSubscribeRight" tabindex="7" required>
     </div>
     <input type="submit" value="Cadastrar" name="cadastrar" class="w3-btn w3-teal w3-ripple btnSubscribe">
 </form>

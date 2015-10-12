@@ -17,6 +17,7 @@
        	<!-- Adicionando scripts JavaScript -->
         <script src="view/_JavaScript/jquery-2.1.4.min.js"></script>
         <script src="view/LoginView/JavaScript/index-scripts.js"></script>
+        <script src="view/_JavaScript/bootstrap-js/bootstrap.min.js"></script>
         
         <title>HepDesk FGA</title>
     </head>
@@ -25,6 +26,10 @@
             <span class="fa fa-desktop fa-5x icone-computador" style="font-size:130px"></span>
             <h1>HelpDesk <span id="fga-logo">FGA</span></h1>
         </header>
+        <?php 
+            include_once './view/LoginView/formCadastroSolicitante/cadastro_solicitante.php'; 
+            
+        ?>
         <div class="loginCard w3-card-24" id="cardLogin">
                 <div class="w3-container w3-teal w3-padding-4">
                     <h2 id="loginTitle">Login</h2>
