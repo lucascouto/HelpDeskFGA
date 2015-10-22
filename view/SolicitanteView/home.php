@@ -4,18 +4,18 @@
         <meta charset="UTF-8">
 
         <!-- Adicionando Folhas de Estilo CSS -->
-        <link rel="stylesheet" type="text/css" href="../_CSS/w3.css">
-        <link rel="stylesheet" type="text/css" href="../_CSS/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../_CSS/layout_secundario.css">
-        <link rel="stylesheet" href="../_CSS/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../_css/w3.css">
+        <link rel="stylesheet" type="text/css" href="../_css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../_css/layout_secundario.css">
+        <link rel="stylesheet" type="text/css" href="../_css/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="formChamado/layout_chamado.css">
         <link rel="stylesheet" type="text/css" href="formAlterarDados/layout_alterar_dados.css">
         <link rel="stylesheet" type="text/css" href="formMudarSenha/layout_mudar_senha.css">
         <link rel="stylesheet" type="text/css" href="css/layout_home.css">
-        <link rel="stylesheet" type="text/css" href="../_CSS/layout_geral.css">
+        <link rel="stylesheet" type="text/css" href="../_css/layout_geral.css">
 
         <!-- Adicionando scripts JavaScript -->
-        <script src="../_JavaScript/jquery-2.1.4.min.js"></script>
+        <script src="../_js/jquery-2.1.4.min.js"></script>
         <script src="JavaScript/home_scripts.js"></script>
 
         <title>HelpDesk FGA &bull; Home</title>
@@ -34,13 +34,13 @@
 
         </header>
         <section id="corpo-principal" class="w3-container">
-            <div class="w3-card-8" id="card-chamado">
+            <div class="w3-card-2" id="card-chamado">
                 <div class="w3-container w3-teal">
                     <span class="fa fa-commenting fa-3x icones"></span><h2>Realizar Chamado</h2>
                 </div>
                 <?php include_once './formChamado/form_chamado.html'; ?>
             </div>
-            <div class="w3-card-8" id="card-acoes">
+            <div class="w3-card-2" id="card-acoes">
                 <div class="w3-container w3-teal">
                     <span id="iconeAcao" class="fa fa-list fa-3x icones"></span><h2 id="titleAcoes">Ações</h2>
                 </div>
@@ -61,7 +61,7 @@
                     <button class="w3-btn w3-teal btnVoltar"><span class="fa fa-chevron-left"></span>&nbsp;&nbsp;Voltar</button>
                 </div>
             </div>
-            <div class="w3-card-8" id="card-config-conta">
+            <div class="w3-card-2" id="card-config-conta">
                 <div class="w3-container w3-teal">
                     <span id="iconConfigConta" class="fa fa-cogs fa-3x icones"></span><h2 id="titleConfigConta">Configurar Conta</h2>
                 </div>

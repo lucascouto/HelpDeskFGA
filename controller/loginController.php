@@ -1,6 +1,6 @@
 <?php
 
-include_once '../../../dao/SolicitanteDAO.php';
+include_once './dao/SolicitanteDAO.php';
 
 class loginController {
     
@@ -10,11 +10,11 @@ class loginController {
             $resultado = $login->buscar($username);
             
             if($resultado == NULL){
-                echo "Usuario nao encontrado!";
+                return "Usuario nao encontrado.";
             }else{
                
                 if($senha != $resultado->senha_solicitante){
-                    echo "senha errada!";
+                    return "senha errada.";
                 }
                 else{
                     setcookie("nome_usuario", $username);

@@ -1,4 +1,4 @@
-<form action="view/LoginView/formLogin/login.php" method="post">
+<form action="" method="post">
     <label class="labels label-login">Login</label>
     <input class="form-control input-login" name="login" type="text">
     <label class="labels label-senha">Senha</label>
