@@ -19,7 +19,7 @@ class loginController {
                 else{
                     setcookie("nome_usuario", $username);
                     setcookie("senha_usuario", $senha);
-                    header("Location: ../../SolicitanteView/home.php");
+                    header("Location: ./View/SolicitanteView/home.php");
                 }
                 
             }
