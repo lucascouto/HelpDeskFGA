@@ -1,19 +1,31 @@
 <?php
 
-include_once '/model/Solicitante.php';
+include_once '../../model/Solicitante.php';
+include_once '../../dao/SolicitanteDAO.php';
 
 class SolicitanteController {
     
-    public function __alterarDados() {
+    private $solicitante;
+    
+    public function __construct() {
+        $this->solicitante = new SolicitanteDAO();
+    }
+
+
+    public function alterarDados() {
         
     }
     
-    public function __excluirSolicitante() {
+    public function excluirSolicitante() {
         
     }
     
-    public function __alterarSenha() {
+    public function alterarSenha() {
         
+    }
+    
+    public function buscarSolicitante($username){
+        return $this->solicitante->buscar($username);
     }
   
 }

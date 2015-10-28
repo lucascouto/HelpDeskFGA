@@ -31,7 +31,7 @@
 
 .inputSubscribeRight{
     margin-top: 0px;
-    margin-bottom: 72px;
+    margin-bottom: 73px;
     margin-left: 3%;
     width: 90%;
     border: 2px solid #D2D5C1;
@@ -50,13 +50,13 @@
     float: right;
     width: 20%;
     margin-right: 27%;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .btnCancelSubscribe{
     float:left;
     width: 20%;
     margin-left: 27%;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 /********************************/

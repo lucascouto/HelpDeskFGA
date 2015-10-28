@@ -1,7 +1,18 @@
+<?php
+include_once '../../lib/valida_cookies.php';
+if(!isset($_COOKIE['nome_usuario']) or !isset($_COOKIE['senha_usuario'])){
+    header("Location:../../index.php");
+}
+?>
 <!doctype html>
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="pragma" content="no-cache" />
 
         <!-- Adicionando Folhas de Estilo CSS -->
         <link rel="stylesheet" type="text/css" href="../_css/w3.css">
@@ -25,10 +36,10 @@
             <span class="fa fa-desktop fa-5x icone-computador"></span>
             <h1>HelpDesk <span id="fga-logo">FGA</span></h1>
             <div id="titulo-bemvindo">
-                <span class="msg-bemvindo">Bem-Vindo, Fulano!</span>
+                <span class="msg-bemvindo">Bem-Vindo, <?php echo $_COOKIE['nome_completo']; ?></span>
                 &nbsp;&nbsp;<span class="fa fa-bell-o"></span>
                 <div id="sair-conta">
-                    <a href="../../index.php">sair&nbsp;<span class="fa fa-sign-out"></span></a>
+                    <a href="../../lib/logout.php">sair&nbsp;<span class="fa fa-sign-out"></span></a>
                 </div>
             </div>
 
