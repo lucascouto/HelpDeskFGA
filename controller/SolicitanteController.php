@@ -17,8 +17,13 @@ class SolicitanteController {
         $senha = $solicitanteDAO->senha_solicitante;
         
         $solicitante = new Solicitante($nome, $email, $matricula, $user, $vinculo, $senha);
+
         
         return $solicitante;
+    }
+    
+    public function buscarSolicitante($username){
+        return $this->solicitante->buscar($username);
     }
   
 }
