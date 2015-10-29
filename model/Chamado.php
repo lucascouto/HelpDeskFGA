@@ -1,11 +1,12 @@
 <?php
 
-include_once "../../../model/Local.php";
-include_once "../../../model/Patrimonio.php";
-include_once "../../../model/Solicitante.php";
-include_once "../../../model/Tecnico.php";
-include_once "../../../dao/ChamadoDAO.php";
-include_once '../../../controller/ChamadoController.php';
+require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Local.php");
+require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Patrimonio.php");
+require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Solicitante.php");
+require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Tecnico.php");
+require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/dao/ChamadoDAO.php");
+require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/ChamadoController.php");
+
 
 class Chamado {
 
@@ -16,7 +17,7 @@ class Chamado {
     private $tecnico;
     
     public function __construct(Patrimonio $patrimonio, Local $local, 
-            Solicitante $solicitante, Tecnico $tecnico = NULL, $descricao = "")
+            Solicitante $solicitante, $tecnico, $descricao = "")
     {
         $this->descricao = $descricao;
         $this->patrimonio = $patrimonio;

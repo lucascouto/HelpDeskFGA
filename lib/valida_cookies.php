@@ -12,9 +12,9 @@ if(isset($_COOKIE['senha_usuario'])){
 }
 
 if(!(empty($nome_usuario) or empty($senha_usuario))){
-    $resultado = $solicitante->buscarSolicitante($nome_usuario);
+    $resultado = $solicitante->buscar($nome_usuario);
     if($resultado != NULL){
-        if($senha_usuario != $resultado->senha_solicitante){
+        if($senha_usuario != $resultado->getSenha()){
             setcookie('nome_usuario', '', time()-3600);
             setcookie('senha_usuario', '', time()-3600);
             echo "Voce ainda nao efetuou o login!";

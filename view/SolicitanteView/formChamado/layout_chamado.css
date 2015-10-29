@@ -11,6 +11,7 @@
     width: 50%;
     height: 160px;
     position: relative;
+    display: none;
 }
 
 .inputChamado {
@@ -126,5 +127,13 @@
 }
 /***********************************************/
 
+.btn-registrar{
+    float: right;
+    margin-top: -53px;
+    margin-right: -70px;
+}
 
+#local-problema{
+    display: none;
+}
 

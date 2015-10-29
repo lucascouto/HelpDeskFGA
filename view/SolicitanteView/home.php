@@ -1,6 +1,6 @@
 <?php
 include_once '../../lib/valida_cookies.php';
-if(!isset($_COOKIE['nome_usuario']) or !isset($_COOKIE['senha_usuario'])){
+if (!isset($_COOKIE['nome_usuario']) or ! isset($_COOKIE['senha_usuario'])) {
     header("Location:../../index.php");
 }
 ?>
@@ -28,15 +28,27 @@ if(!isset($_COOKIE['nome_usuario']) or !isset($_COOKIE['senha_usuario'])){
         <!-- Adicionando scripts JavaScript -->
         <script src="../_js/jquery-2.1.4.min.js"></script>
         <script src="JavaScript/home_scripts.js"></script>
+        <script src="../_js/bootstrap-js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(".alert").alert();
+            window.setTimeout(function () {
+                $(".alert").alert('close');
+            }, 5000);
+        </script>
 
         <title>HelpDesk FGA &bull; Home</title>
     </head>
     <body>
         <header class="w3-teal">
+            <?php
+            $partes = explode(" ", $_COOKIE['nome_completo']);
+            $ultimo_nome = array_pop($partes);
+            $primeiro_nome = array_shift($partes);
+            ?>
             <span class="fa fa-desktop fa-5x icone-computador"></span>
             <h1>HelpDesk <span id="fga-logo">FGA</span></h1>
             <div id="titulo-bemvindo">
-                <span class="msg-bemvindo">Bem-Vindo, <?php echo $_COOKIE['nome_completo']; ?></span>
+                <span class="msg-bemvindo">Bem-Vind@, <?php echo $primeiro_nome . " " . $ultimo_nome; ?>!</span>
                 &nbsp;&nbsp;<span class="fa fa-bell-o"></span>
                 <div id="sair-conta">
                     <a href="../../lib/logout.php">sair&nbsp;<span class="fa fa-sign-out"></span></a>
@@ -45,6 +57,7 @@ if(!isset($_COOKIE['nome_usuario']) or !isset($_COOKIE['senha_usuario'])){
 
         </header>
         <section id="corpo-principal" class="w3-container">
+            <?php include_once '../SolicitanteView/formChamado/chamado.php'; ?>
             <div class="w3-card-2" id="card-chamado">
                 <div class="w3-container w3-teal">
                     <span class="fa fa-commenting fa-3x icones"></span><h2>Realizar Chamado</h2>

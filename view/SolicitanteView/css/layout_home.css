@@ -4,8 +4,9 @@ body{
 
 #card-chamado{
     width: 60%;
-    height: 530px;
+    height: 300px;  /*VALOR ORIGINAL: 530PX!!!*/
     border: 1px solid #D2D5C1;
+    float: left;
     position: relative;
     top: 50px;
     left: 20px;
@@ -17,7 +18,7 @@ body{
     border: 1px solid #D2D5C1;
     float: right;
     margin-right: 2%;
-    margin-top: -480px;
+    margin-top: 50px;
     position: relative;
 }
 
@@ -27,7 +28,7 @@ body{
     border: 1px solid #D2D5C1;
     float: right;
     position: relative;
-    top: -200px;
+    top: 30px;
     right: 2%;
 }
 
@@ -97,3 +98,13 @@ body{
 }
 
 /**********************************************/
+
+.alert{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: -40px;
+}

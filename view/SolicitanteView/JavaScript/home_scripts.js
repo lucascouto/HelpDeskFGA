@@ -47,7 +47,7 @@ $(".btnChangePassword").click(function(){
 	document.getElementById("titleConfigConta").innerHTML = "Alterar Senha";
 	document.getElementById("iconConfigConta").className="fa fa-key icones fa-3x";
 	document.getElementById("card-acoes").style.display="none";
-        $("#card-config-conta").animate({height:"400px", top: "-480px"}, 200);
+        $("#card-config-conta").animate({height:"400px", top: "30px"}, 200);
 });
 
 $(".cancelarSenha").click(function(){
@@ -57,7 +57,7 @@ $(".cancelarSenha").click(function(){
 	
 	document.getElementById("titleConfigConta").innerHTML = "Configurar Conta";
 	document.getElementById("iconConfigConta").className="fa fa-cogs icones fa-3x";
-        $("#card-config-conta").animate({height:"250px", top: "-200px"}, 100);
+        $("#card-config-conta").animate({height:"250px", top: "30px"}, 100);
 });
 
 /**************************SCRIPTS PARA ALTERAR OS DADOS*********************************/
@@ -68,7 +68,7 @@ $("#btnAlterDados").click(function(){
 	document.getElementById("titleConfigConta").innerHTML = "Alterar Dados";
 	document.getElementById("iconConfigConta").className="fa fa-user icones fa-3x";
 	document.getElementById("card-acoes").style.display="none";
-	$("#card-config-conta").animate({height:"529px", top: "-480px"}, 200);
+	$("#card-config-conta").animate({height:"529px", top: "30px"}, 200);
 });
 
 $(".cancelAlterDados").click(function(){
@@ -78,7 +78,7 @@ $(".cancelAlterDados").click(function(){
 	
 	document.getElementById("titleConfigConta").innerHTML = "Configurar Conta";
 	document.getElementById("iconConfigConta").className="fa fa-cogs icones fa-3x";
-        $("#card-config-conta").animate({height:"250px", top: "-200px"}, 100);
+        $("#card-config-conta").animate({height:"250px", top: "30px"}, 100);
 });
 
 /**************************SCRIPTS PARA VISUALIZAR HISTÓRICO***************************/
@@ -102,7 +102,7 @@ $(".btnVoltar").click(function(){
 	document.getElementById("iconeAcao").className="fa fa-list icones fa-3x";
 	document.getElementById("card-chamado").style.display="block";
 	document.getElementById("card-config-conta").style.display="block";
-	document.getElementById("card-acoes").style.marginTop="-480px";
+	document.getElementById("card-acoes").style.marginTop="50px";
 	document.getElementById("card-acoes").style.marginRight="2%";
 	document.getElementById("card-acoes").style.width="32%";
 	document.getElementById("card-acoes").style.height="250px";

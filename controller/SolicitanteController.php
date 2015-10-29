@@ -1,12 +1,15 @@
 <?php
 
-include_once '/model/Solicitante.php';
-include_once '../dao/SolicitanteDAO.php';
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Solicitante.php");
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/dao/SolicitanteDAO.php");
 
 class SolicitanteController {
     
     
-    public function buscar ($username){
+    
+    
+    public function buscar($username){
+        
         $dao = new SolicitanteDAO();
         $solicitanteDAO = $dao->buscar($username);
         $nome = $solicitanteDAO->nome_solicitante;
@@ -18,13 +21,7 @@ class SolicitanteController {
         
         $solicitante = new Solicitante($nome, $email, $matricula, $user, $vinculo, $senha);
 
-        
         return $solicitante;
     }
-    
-    public function buscarSolicitante($username){
-        return $this->solicitante->buscar($username);
-    }
-  
 }
     
