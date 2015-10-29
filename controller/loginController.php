@@ -7,13 +7,13 @@ class loginController {
     public function obterUsuario($username, $senha){
         try{
             $login = new SolicitanteDAO();
-            $resultado = $login->buscar($username);
+            $solicitante = $login->buscar($username);
             
-            if($resultado == NULL){
+            if($solicitante == NULL){
                 return "Usuario nao encontrado.";
             }else{
                
-                if($senha != $resultado->senha_solicitante){
+                if($senha != $solicitante->senha_solicitante){
                     return "senha errada.";
                 }
                 else{

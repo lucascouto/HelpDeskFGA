@@ -23,10 +23,10 @@ class SolicitanteDAO {
     
     public function cadastrar(Solicitante $solicitante) {
         
-        $sql = "INSERT INTO solicitante (username_solicitante, nome_solicitante, "
-                . "senha_solicitante, vinculo, matricula_solicitante)"
-                . "VALUES (:username_solicitante, :nome_solicitante, :senha_solicitante"
-                . ", :vinculo, :matricula_solicitante)";
+        $sql = "INSERT INTO solicitante (matricula_solicitante, username_solicitante, nome_solicitante, "
+                . "senha_solicitante, vinculo,email_solicitante)"
+                . "VALUES (:matricula_solicitante, :username_solicitante, :nome_solicitante, :senha_solicitante"
+                . ", :vinculo, :email_solicitante)";
         
         $preparar = $this->conexao->conectar()->prepare($sql);
         
@@ -35,10 +35,10 @@ class SolicitanteDAO {
         $preparar->bindValue(":senha_solicitante", $solicitante->getSenha());
         $preparar->bindValue(":vinculo", $solicitante->getVinculo());
         $preparar->bindValue(":matricula_solicitante", $solicitante->getMatricula());
+        $preparar->bindValue(":email_solicitante", $solicitante->getEmail());
                
         $registro = $preparar->execute();
         
         return $registro;
     }
 }
-

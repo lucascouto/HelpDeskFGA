@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14
+-- version 4.4.12
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 09, 2015 at 08:48 AM
--- Server version: 5.6.26
--- PHP Version: 5.6.12
+-- Host: localhost:3306
+-- Tempo de geração: 29/10/2015 às 01:43
+-- Versão do servidor: 5.6.25
+-- Versão do PHP: 5.6.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,35 +17,40 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `helpdesk`
+-- Banco de dados: `helpdesk`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chamado`
+-- Estrutura para tabela `chamado`
 --
 
 CREATE TABLE IF NOT EXISTS `chamado` (
+  `id_chamado` int(5) NOT NULL,
   `descricao` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `cod_patrimonio` int(10) NOT NULL
+  `cod_patrimonio` int(10) NOT NULL,
+  `local` int(4) NOT NULL,
+  `solicitante` int(11) NOT NULL,
+  `tecnico` int(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `local`
+-- Estrutura para tabela `local`
 --
 
 CREATE TABLE IF NOT EXISTS `local` (
-  `edificio` varchar(5) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `sala` varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
+  `id` int(4) NOT NULL,
+  `edificio` varchar(10) NOT NULL,
+  `sala` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `patrimonio`
+-- Estrutura para tabela `patrimonio`
 --
 
 CREATE TABLE IF NOT EXISTS `patrimonio` (
@@ -58,64 +63,89 @@ CREATE TABLE IF NOT EXISTS `patrimonio` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `solicitante`
+-- Estrutura para tabela `solicitante`
 --
 
 CREATE TABLE IF NOT EXISTS `solicitante` (
+  `matricula_solicitante` int(11) NOT NULL,
   `username_solicitante` varchar(40) NOT NULL,
   `nome_solicitante` varchar(40) NOT NULL,
   `senha_solicitante` varchar(40) NOT NULL,
-  `vinculo` int(11) DEFAULT '1',
-  `matricula_solicitante` int(11) NOT NULL
+  `vinculo` int(11) DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tecnico`
+--
+
+CREATE TABLE IF NOT EXISTS `tecnico` (
+  `matricula_tecnico` int(15) NOT NULL,
+  `nome_tecnico` varchar(30) NOT NULL,
+  `senha_tecnico` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `solicitante`
---
-
-INSERT INTO `solicitante` (`username_solicitante`, `nome_solicitante`, `senha_solicitante`, `vinculo`, `matricula_solicitante`) VALUES
-('lucascouto', 'Lucas Couto', '123456', 1, 100112048),
-('mileneserrano', 'Milene', '12345', 1, 11102048),
-('tamarabarbosa', 'Tamara', '54321', 1, 11102048);
-
---
--- Indexes for dumped tables
+-- Índices de tabelas apagadas
 --
 
 --
--- Indexes for table `chamado`
+-- Índices de tabela `chamado`
 --
 ALTER TABLE `chamado`
-  ADD KEY `cod_patrimonio` (`cod_patrimonio`);
+  ADD PRIMARY KEY (`id_chamado`),
+  ADD KEY `fk_chamado_patrimonio` (`cod_patrimonio`),
+  ADD KEY `fk_chamado_local` (`local`),
+  ADD KEY `fk_chamado_solicitante` (`solicitante`),
+  ADD KEY `fk_chamado_tecnico` (`tecnico`);
 
 --
--- Indexes for table `local`
+-- Índices de tabela `local`
 --
 ALTER TABLE `local`
-  ADD PRIMARY KEY (`edificio`,`sala`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `patrimonio`
+-- Índices de tabela `patrimonio`
 --
 ALTER TABLE `patrimonio`
   ADD PRIMARY KEY (`cod`);
 
 --
--- Indexes for table `solicitante`
+-- Índices de tabela `solicitante`
 --
 ALTER TABLE `solicitante`
-  ADD PRIMARY KEY (`username_solicitante`),
+  ADD PRIMARY KEY (`matricula_solicitante`),
   ADD UNIQUE KEY `username_solicitante` (`username_solicitante`);
 
 --
--- Constraints for dumped tables
+-- Índices de tabela `tecnico`
+--
+ALTER TABLE `tecnico`
+  ADD PRIMARY KEY (`matricula_tecnico`);
+
+--
+-- AUTO_INCREMENT de tabelas apagadas
 --
 
 --
--- Constraints for table `chamado`
+-- AUTO_INCREMENT de tabela `chamado`
 --
 ALTER TABLE `chamado`
-  ADD CONSTRAINT `fk_chamado_patrimonio` FOREIGN KEY (`cod_patrimonio`) REFERENCES `patrimonio` (`cod`);
+  MODIFY `id_chamado` int(5) NOT NULL AUTO_INCREMENT;
+--
+-- Restrições para dumps de tabelas
+--
+
+--
+-- Restrições para tabelas `chamado`
+--
+ALTER TABLE `chamado`
+  ADD CONSTRAINT `fk_chamado_local` FOREIGN KEY (`local`) REFERENCES `local` (`id`),
+  ADD CONSTRAINT `fk_chamado_patrimonio` FOREIGN KEY (`cod_patrimonio`) REFERENCES `patrimonio` (`cod`),
+  ADD CONSTRAINT `fk_chamado_solicitante` FOREIGN KEY (`solicitante`) REFERENCES `solicitante` (`matricula_solicitante`),
+  ADD CONSTRAINT `fk_chamado_tecnico` FOREIGN KEY (`tecnico`) REFERENCES `tecnico` (`matricula_tecnico`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
