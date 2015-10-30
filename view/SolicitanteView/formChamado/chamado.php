@@ -5,17 +5,25 @@ include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/SolicitanteCo
 include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Local.php");
 include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Patrimonio.php");
 
+if(isset($_POST['registrar'])){
+    $codigo = $_POST['codPatrimonio'];
+    $patrimonioControl = new PatrimonioController();
+    $patrimonio = $patrimonioControl->buscarPatrimonio($codigo);
+    if($patrimonio == NULL){
+        echo "codigo de patrimonio invalido!";
+    }else{
+        echo "ok";
+    }
+}
+
+
 if (isset($_POST['enviar'])) {
     $descricao = $_POST['descricaoChamado'];
-    $nome = $_POST['nomePatrimonio'];
-    $codigo = $_POST['codPatrimonio'];
-    $tipo = $_POST['tipoPatrimonio'];
-    $marca = $_POST['marcaPatrimonio'];
+    
     $edificio = $_POST['edificio'];
     $sala = $_POST['sala'];
     $username = $_COOKIE['nome_usuario'];
-
-    $patrimonio = new Patrimonio($nome, $codigo, $marca, $tipo);
+    
     $local = new Local($sala, $edificio);
     $solicitanteControl = new SolicitanteController();
     $solicitante = $solicitanteControl->buscar($username);

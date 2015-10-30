@@ -2,48 +2,38 @@
 
 class Patrimonio {
 
-    private $nome;
+    private $descricao;
     private $codigo;
     private $marca;
-    private $tipo;
+   
 
-    function __construct($nome, $codigo, $marca, $tipo) {
-        $this->nome = $nome;
+    function __construct($descricao, $codigo, $marca) {
+        $this->descricao = $descricao;
         $this->codigo = $codigo;
         $this->marca = $marca;
-        $this->tipo = $tipo;
     }
 
-        public function __setNome($nome) {
-        $this->nome = $nome;
+        public function setDescricao($descricao) {
+        $this->descricao = $descricao;
     }
 
-    public function __getNome() {
-        return $this->nome;
+    public function getDescricao() {
+        return $this->descricao;
     }
 
-    public function __setCodigo($codigo) {
+    public function setCodigo($codigo) {
         $this->codigo = $codigo;
     }
 
-    public function __getCodigo() {
+    public function getCodigo() {
         return $this->codigo;
     }
 
-    public function __setMarca($marca) {
+    public function setMarca($marca) {
         $this->marca = $marca;
     }
 
-    public function __getMarca() {
+    public function getMarca() {
         return $this->marca;
     }
-
-    public function __setTipo($tipo) {
-        $this->tipo = $tipo;
-    }
-
-    public function __getTipo() {
-        return $this->tipo;
-    }
-
 }

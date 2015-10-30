@@ -7,8 +7,8 @@ class PatrimonioDAO {
     
     private $conexao;
     
-    public function __construct( ){
-		$this->conexao = new ConexaoBD( );
+    public function __construct(){
+		$this->conexao = new ConexaoBD();
 	}
         
     public function inserirLocal(Patrimonio $patrimonio){
@@ -21,4 +21,11 @@ class PatrimonioDAO {
 		$resultado = $this->conexao->conectar()->Execute( $sql );
 		return $resultado;
 	}
+        
+    public function buscarPatrimonio($codigo){
+        $sql = "SELECT * FROM patrimonio WHERE cod={$codigo}";
+        $resultado = $this->conexao->conectar()->query($sql);
+        $patrimonio = $resultado->fetch(PDO::FETCH_OBJ);
+        return $patrimonio;
+    }
 }

@@ -13,16 +13,17 @@ class ChamadoDAO {
     }
 
     public function inserirChamado(Chamado $chamado) {
-        $sql = "INSERT INTO chamado (descricao, solicitante)
-                        VALUES (:descricao, :solicitante)";
+        $sql = "INSERT INTO chamado (descricao, cod_patrimonio, solicitante)
+                        VALUES (:descricao, :cod_patrimonio , :solicitante)";
 
         
-       $solicitante = new SolicitanteController();
+        $solicitante = new SolicitanteController();
+        $patrimonio = new PatrimonioController();
 
         $preparar = $this->conexao->conectar()->prepare($sql);
 
         $preparar->bindValue(":descricao", $chamado->getDescricao());
-        //$preparar->bindValue(":cod_patrimonio", $chamado->getPatrimonio());
+        $preparar->bindValue(":cod_patrimonio", $chamado->getPatrimonio()->getCodigo());
         //$preparar->bindValue(":local", $chamado->getLocal());
         $preparar->bindValue(":solicitante", $solicitante->buscar($_COOKIE['nome_usuario'])->getMatricula());
         //$preparar->bindValue(":tecnico", $chamado->getTecnico());

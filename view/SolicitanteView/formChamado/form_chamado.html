@@ -1,18 +1,18 @@
-<form method="post" action="">
-    <fieldset>
-        <legend class="sectionChamado">Dados do Patrimônio</legend>
+<form method="post" action="">   
         <div id="formChamadoLeftUpper">
             <label class="labels labelChamadoLeftUpper">Código de Patrimônio</label>
             <input type="text" name="codPatrimonio" class="form-control inputChamado inputChamadoleftUpper">
-            <button class="w3-btn w3-teal btn-registrar">Registrar</button>
-        </div>
+            <input type="submit" class="w3-btn w3-teal btn-registrar" value="Registrar" name="registrar">
+        </div> 
+</form>
+<form method="post" action="">
         <div id="formChamadoRightUpper">
             <label class="labels labelChamadoRightUpper">Descrição</label>
             <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoRightUpper">
             <label class="labels labelChamadoRightUpper">Marca</label>
             <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper">
         </div>
-    </fieldset>
+    
     <br>
     <div id="local-problema">
         <fieldset>
@@ -20,10 +20,10 @@
             <div id="chamadoLocalizacao">
                 <label class="labels labelLocal">Edifício</label>
                 <select class="form-control inputLocal inputChamado" name="edificio">
-                    <option selected>...</option>
-                    <option>UAC</option>
-                    <option>UED</option>
-                    <option>MESP</option>
+                    <option value="" selected>...</option>
+                    <option value="UAC">UAC</option>
+                    <option value="UED">UED</option>
+                    <option >MESP</option>
                 </select>
                 <br>
                 <label class="labels labelLocal">Sala</label>

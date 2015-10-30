@@ -57,6 +57,7 @@ if (!isset($_COOKIE['nome_usuario']) or ! isset($_COOKIE['senha_usuario'])) {
 
         </header>
         <section id="corpo-principal" class="w3-container">
+            <?php include_once '../SolicitanteView/formChamado/verifica_cod_patrimonio.php'; ?>
             <?php include_once '../SolicitanteView/formChamado/chamado.php'; ?>
             <div class="w3-card-2" id="card-chamado">
                 <div class="w3-container w3-teal">
