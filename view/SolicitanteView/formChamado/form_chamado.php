@@ -1,7 +1,7 @@
 <form id="form-codigo-patrimonio">   
         <div id="formChamadoLeftUpper">
             <label class="labels labelChamadoLeftUpper">Código de Patrimônio</label>
-            <input type="text" name="codPatrimonio" id="codPatrimonio" class="form-control inputChamado inputChamadoleftUpper">
+            <input type="text" name="codPatrimonio" id="codPatrimonio" class="form-control inputChamado inputChamadoleftUpper" maxlength="9">
             <input type="submit" class="w3-btn w3-teal btn-registrar" value="Registrar" name="registrar" onclick="mostrarDadosPatrimonio()">
         </div> 
 </form>
@@ -15,7 +15,7 @@
     
     <br>
     <div id="local-problema">
-        <fieldset>
+        
             <legend class="sectionChamado">Localização e Descrição do Problema</legend>
             <div id="chamadoLocalizacao">
                 <label class="labels labelLocal">Edifício</label>
@@ -31,9 +31,9 @@
             </div>
             <div id="chamadoDescricao">
                 <label class="labels labelDescricao">Problemas</label>
-                <textarea  name="descricaoChamado" class="form-control descricao inputChamado" rows="6"></textarea>
+                <textarea  name="descricaoChamado" class="form-control descricao inputChamado" rows="9"></textarea>
             </div>
-        </fieldset>
+        
         <input type="submit" value="Enviar" name="enviar" class="w3-btn w3-teal w3-ripple botao-enviar-chamado">
     </div>
 </form>

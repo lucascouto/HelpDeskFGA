@@ -4,7 +4,7 @@ body{
 
 #card-chamado{
     width: 60%;
-    height: 300px;  /*VALOR ORIGINAL: 530PX!!!*/
+    height: 530px;  /*VALOR ORIGINAL: 530PX!!!* NOVO VALOR: 300PX*/
     border: 1px solid #D2D5C1;
     float: left;
     position: relative;
