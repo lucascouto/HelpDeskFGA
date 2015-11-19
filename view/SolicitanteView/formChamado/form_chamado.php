@@ -1,16 +1,16 @@
-<form method="post" action="">   
+<form id="form-codigo-patrimonio">   
         <div id="formChamadoLeftUpper">
             <label class="labels labelChamadoLeftUpper">Código de Patrimônio</label>
-            <input type="text" name="codPatrimonio" class="form-control inputChamado inputChamadoleftUpper">
-            <input type="submit" class="w3-btn w3-teal btn-registrar" value="Registrar" name="registrar">
+            <input type="text" name="codPatrimonio" id="codPatrimonio" class="form-control inputChamado inputChamadoleftUpper">
+            <input type="submit" class="w3-btn w3-teal btn-registrar" value="Registrar" name="registrar" onclick="mostrarDadosPatrimonio()">
         </div> 
 </form>
 <form method="post" action="">
         <div id="formChamadoRightUpper">
             <label class="labels labelChamadoRightUpper">Descrição</label>
-            <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoRightUpper">
+            <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoRightUpper" value="<?php $descricao_patrimonio ?>">
             <label class="labels labelChamadoRightUpper">Marca</label>
-            <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper">
+            <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper" value="<?php $marca_patrimonio ?>">
         </div>
     
     <br>
@@ -23,7 +23,7 @@
                     <option value="" selected>...</option>
                     <option value="UAC">UAC</option>
                     <option value="UED">UED</option>
-                    <option >MESP</option>
+                    <option value="MESP">MESP</option>
                 </select>
                 <br>
                 <label class="labels labelLocal">Sala</label>

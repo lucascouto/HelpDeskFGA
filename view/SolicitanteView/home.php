@@ -29,11 +29,13 @@ if (!isset($_COOKIE['nome_usuario']) or ! isset($_COOKIE['senha_usuario'])) {
         <script src="../_js/jquery-2.1.4.min.js"></script>
         <script src="JavaScript/home_scripts.js"></script>
         <script src="../_js/bootstrap-js/bootstrap.min.js"></script>
+        <script src="formChamado/chamado-scripts.js"></script>
         <script type="text/javascript">
             $(".alert").alert();
             window.setTimeout(function () {
                 $(".alert").alert('close');
             }, 5000);
+            
         </script>
 
         <title>HelpDesk FGA &bull; Home</title>
@@ -63,7 +65,7 @@ if (!isset($_COOKIE['nome_usuario']) or ! isset($_COOKIE['senha_usuario'])) {
                 <div class="w3-container w3-teal">
                     <span class="fa fa-commenting fa-3x icones"></span><h2>Realizar Chamado</h2>
                 </div>
-                <?php include_once './formChamado/form_chamado.html'; ?>
+                <?php include_once './formChamado/form_chamado.php'; ?>
             </div>
             <div class="w3-card-2" id="card-acoes">
                 <div class="w3-container w3-teal">

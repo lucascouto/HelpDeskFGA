@@ -7,13 +7,7 @@ class PatrimonioController {
     
     public function buscarPatrimonio($codigo){
         $dao = new PatrimonioDAO();
-        $patrimonioDAO = $dao->buscarPatrimonio($codigo);
-        
-        $cod = $patrimonioDAO->codigo;
-        $descricao = $patrimonioDAO->descricao;
-        $marca = $patrimonioDAO->marca;
-        
-        $patrimonio = new Patrimonio($descricao, $cod, $marca);
+        $patrimonio = $dao->buscarPatrimonio($codigo);
         
         return $patrimonio;
     }

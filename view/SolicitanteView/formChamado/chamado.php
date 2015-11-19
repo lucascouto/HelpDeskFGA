@@ -5,6 +5,9 @@ include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/SolicitanteCo
 include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Local.php");
 include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Patrimonio.php");
 
+$descricao_patrimonio = "";
+$marca_patrimonio = "";
+
 if(isset($_POST['registrar'])){
     $codigo = $_POST['codPatrimonio'];
     $patrimonioControl = new PatrimonioController();
@@ -12,7 +15,8 @@ if(isset($_POST['registrar'])){
     if($patrimonio == NULL){
         echo "codigo de patrimonio invalido!";
     }else{
-        echo "ok";
+        $descricao_patrimonio = $patrimonio->descricao;
+        $marca_patrimonio = $patrimonio->marca;
     }
 }
 
