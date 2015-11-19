@@ -25,7 +25,7 @@ class PatrimonioDAO {
     public function buscarPatrimonio($codigo){
         $sql = "SELECT * FROM patrimonio WHERE cod='$codigo'";
         $resultado = $this->conexao->conectar()->query($sql);
-        $patrimonio = $resultado->fetch(PDO::FETCH_OBJ);
+        $patrimonio = $resultado->fetch(PDO::FETCH_ASSOC);
         return $patrimonio;
     }
 }
