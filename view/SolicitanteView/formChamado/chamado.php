@@ -9,21 +9,23 @@ include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Patrimonio.php");
 $descricao_patrimonio = "";
 $marca_patrimonio = "";
 
+$patrimonioControl = new PatrimonioController();
+$codigo = "";
 
 if (isset($_POST['registrar'])){
     $codigo = $_POST['codPatrimonio'];
-    $patrimonioControl = new PatrimonioController();
+}
     $patrimonio = $patrimonioControl->buscarPatrimonio($codigo);
-    if(($patrimonio->getCodigo()) != NULL){
-        $descricao_patrimonio = $patrimonio->getDescricao();
-        $marca_patrimonio = $patrimonio->getMarca();
-    }else{
-        
-          echo "<div class='alert alert-danger alert-dismissible' role='alert'>
-            <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-            <strong>Codigo Invalido!</strong> O codigo do patrimonio é inválido
-          </div>";
-    }
+    
+if(($patrimonio->getCodigo()) != NULL){
+    $descricao_patrimonio = $patrimonio->getDescricao();
+    $marca_patrimonio = $patrimonio->getMarca();
+}elseif ($codigo != NULL){
+
+      echo "<div class='alert alert-danger alert-dismissible' role='alert'>
+        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+        <strong>Codigo Invalido!</strong> O codigo do patrimonio é inválido
+      </div>";
 }
 
 
@@ -33,6 +35,9 @@ if (isset($_POST['enviar'])) {
     $edificio = $_POST['edificio'];
     $sala = $_POST['sala'];
     $username = $_COOKIE['nome_usuario'];
+    
+    $codigo = $_POST['codPatrimonio'];
+    $patrimonio = $patrimonioControl->buscarPatrimonio($codigo);
     
     $local = new Local($sala, $edificio);
     $solicitanteControl = new SolicitanteController();

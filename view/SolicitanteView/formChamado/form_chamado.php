@@ -2,7 +2,7 @@
         <div id="formChamadoLeftUpper">
             <label class="labels labelChamadoLeftUpper">Código de Patrimônio</label>
             <input type="text" name="codPatrimonio" id="codPatrimonio" class="form-control inputChamado inputChamadoleftUpper" maxlength="9" value="<?php if(isset($codigo)){echo $codigo;} ?>">
-            <button class="w3-btn w3-teal btn-registrar" name="registrar" id="registrar" onclick="enviarCodPatrimonio()">Buscar Patrimônio</button>
+            <input type="submit" class="w3-btn w3-teal btn-registrar" value="Buscar Patrimônio" name="registrar" id="registrar">
         </div> 
         <div id="formChamadoRightUpper">
             <label class="labels labelChamadoRightUpper">Descrição</label>
@@ -37,6 +37,9 @@
                 <textarea  name="descricaoChamado" class="form-control descricao inputChamado" rows="9"></textarea>
             </div>
         
+            <input type="hidden" name="codPatrimonio" value="<?php echo $codigo?>">
+            <input type="hidden" name="" value="<?php echo $marca_patrimonio?>">
+            <input type="hidden" name="" value="<?php echo $descricao_patrimonio?>">
         <input type="submit" value="Enviar" name="enviar" class="w3-btn w3-teal w3-ripple botao-enviar-chamado">
     </div>
 </form>

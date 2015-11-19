@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     $(".btn-registrar").click(function(){
         $("#local-problema").fadeIn(300);
         $("#card-chamado").animate({height:"530px"});
@@ -21,7 +21,7 @@ $(document).ready(function(){
        }).done(function(data){
            alert(data);
        });
-    });*/
+    });
 });
 
 function enviarCodPatrimonio() {
@@ -30,5 +30,5 @@ function enviarCodPatrimonio() {
   xhttp.open("POST", "chamado.php", true);
   xhttp.send();
 }
-
+*/
 
