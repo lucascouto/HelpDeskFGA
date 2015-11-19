@@ -1,7 +1,7 @@
 <?php
 
-include_once "../model/Local";
-include_once "../dao/conecta.class.php";
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Local.php");
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/dao/conecta.class.php");
 
 class PatrimonioDAO {
     
@@ -23,7 +23,7 @@ class PatrimonioDAO {
 	}
         
     public function buscarPatrimonio($codigo){
-        $sql = "SELECT * FROM patrimonio WHERE cod={$codigo}";
+        $sql = "SELECT * FROM patrimonio WHERE cod='$codigo'";
         $resultado = $this->conexao->conectar()->query($sql);
         $patrimonio = $resultado->fetch(PDO::FETCH_OBJ);
         return $patrimonio;

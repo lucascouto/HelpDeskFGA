@@ -1,17 +1,20 @@
-<form id="form-codigo-patrimonio">   
+<form id="form-codigo-patrimonio" method="post" action="">   
         <div id="formChamadoLeftUpper">
             <label class="labels labelChamadoLeftUpper">Código de Patrimônio</label>
-            <input type="text" name="codPatrimonio" id="codPatrimonio" class="form-control inputChamado inputChamadoleftUpper" maxlength="9">
-            <input type="submit" class="w3-btn w3-teal btn-registrar" value="Registrar" name="registrar" onclick="mostrarDadosPatrimonio()">
+            <input type="text" name="codPatrimonio" id="codPatrimonio" class="form-control inputChamado inputChamadoleftUpper" maxlength="9" value="<?php if(isset($codigo)){echo $codigo;} ?>">
+            <button class="w3-btn w3-teal btn-registrar" name="registrar" id="registrar" onclick="enviarCodPatrimonio()">Buscar Patrimônio</button>
         </div> 
-</form>
-<form method="post" action="">
         <div id="formChamadoRightUpper">
             <label class="labels labelChamadoRightUpper">Descrição</label>
-            <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoRightUpper" value="<?php $descricao_patrimonio ?>">
+            <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoRightUpper" value="<?php echo $descricao_patrimonio; ?>" disabled>
             <label class="labels labelChamadoRightUpper">Marca</label>
-            <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper" value="<?php $marca_patrimonio ?>">
+            <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper" value="<?php echo $marca_patrimonio; ?>" disabled>
         </div>
+</form>
+
+
+<form method="post" action="">
+      
     
     <br>
     <div id="local-problema">

@@ -1,6 +1,6 @@
 <?php
 
-include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/dao/PatrimonioDAO");
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/dao/PatrimonioDAO.php");
 
 
 class PatrimonioController {

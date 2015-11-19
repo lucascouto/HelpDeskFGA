@@ -1,5 +1,6 @@
 <?php
 
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/PatrimonioController.php");
 include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/ChamadoController.php");
 include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/SolicitanteController.php");
 include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Local.php");
@@ -8,15 +9,18 @@ include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Patrimonio.php");
 $descricao_patrimonio = "";
 $marca_patrimonio = "";
 
-if(isset($_POST['registrar'])){
+if (isset($_POST['registrar'])){
     $codigo = $_POST['codPatrimonio'];
     $patrimonioControl = new PatrimonioController();
     $patrimonio = $patrimonioControl->buscarPatrimonio($codigo);
     if($patrimonio == NULL){
-        echo "codigo de patrimonio invalido!";
+        echo "<div class='alert alert-danger alert-dismissible' role='alert'>
+            <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+            <strong>Codigo Invalido!</strong> O codigo do patrimonio é inválido
+          </div>";
     }else{
-        $descricao_patrimonio = $patrimonio->descricao;
-        $marca_patrimonio = $patrimonio->marca;
+         $descricao_patrimonio = $patrimonio->descricao;
+         $marca_patrimonio = $patrimonio->marca;
     }
 }
 

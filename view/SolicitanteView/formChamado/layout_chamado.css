@@ -2,7 +2,7 @@
 #formChamadoLeftUpper {
     float: left;
     width: 50%;
-    height: 160px;
+    height: 100px;
     position: relative;
 }
 
@@ -87,8 +87,8 @@
 
 /*** FORM CHAMADO - BOTAO ENVIAR *************/
 .botao-enviar-chamado{
-    margin-left: 86%;
-    margin-top: 1px;
+    margin-left: 88%;
+    margin-top: 65px;
 }
 /*********************************************/
 
@@ -128,12 +128,13 @@
 /***********************************************/
 
 .btn-registrar{
-    float: right;
-    margin-top: -53px;
-    margin-right: -70px;
+  float: left;
+  margin-bottom: -20px;
+  margin-left: 52%;
+  
 }
 
 #local-problema{
-    //display: none;
+    //display: none; 
 }
 

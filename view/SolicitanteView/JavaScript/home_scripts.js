@@ -4,7 +4,7 @@ $(".btnContato").click(function(){
 	$("#btnAcoes").fadeOut(5);
 	$("#formContato").fadeIn(220);
 	
-	document.getElementById("titleAcoes").innerHTML = "Contato"
+	document.getElementById("titleAcoes").innerHTML = "Contato";
 	document.getElementById("card-config-conta").style.display = "none";
 	$("#card-acoes").animate({height:"530px"}, 250);
         document.getElementById("iconeAcao").className="fa fa-envelope fa-3x icones";
