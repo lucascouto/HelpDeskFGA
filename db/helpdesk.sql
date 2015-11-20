@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.12
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:3306
--- Tempo de geração: 19/11/2015 às 19:58
--- Versão do servidor: 5.6.25
--- Versão do PHP: 5.6.11
+-- Host: 127.0.0.1
+-- Generation Time: 20-Nov-2015 às 14:38
+-- Versão do servidor: 5.6.26
+-- PHP Version: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,31 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `helpdesk`
+-- Database: `helpdesk`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `chamado`
+-- Estrutura da tabela `administrador`
+--
+
+CREATE TABLE IF NOT EXISTS `administrador` (
+  `username_admin` varchar(20) NOT NULL,
+  `senha_admin` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `administrador`
+--
+
+INSERT INTO `administrador` (`username_admin`, `senha_admin`) VALUES
+('admin', 'admin123');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `chamado`
 --
 
 CREATE TABLE IF NOT EXISTS `chamado` (
@@ -33,54 +51,24 @@ CREATE TABLE IF NOT EXISTS `chamado` (
   `local` int(4) DEFAULT NULL,
   `solicitante` int(11) DEFAULT NULL,
   `tecnico` int(15) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `chamado`
+-- Extraindo dados da tabela `chamado`
 --
 
 INSERT INTO `chamado` (`id_chamado`, `descricao`, `cod_patrimonio`, `local`, `solicitante`, `tecnico`) VALUES
-(38, '', NULL, NULL, 110112088, NULL),
-(39, 'Meu teclado estÃ¡ intermitente!', NULL, NULL, 100203040, NULL),
-(40, 'meu monitor teste', NULL, NULL, 10101010, NULL),
-(41, 'meu monitor teste', NULL, NULL, 10101010, NULL),
-(42, 'meu monitor teste', NULL, NULL, 10101010, NULL),
-(43, 'meu monitor teste', NULL, NULL, 10101010, NULL),
-(44, 'meu monitor teste', NULL, NULL, 10101010, NULL),
-(45, 'meu monitor teste', NULL, NULL, 10101010, NULL),
-(46, 'meu monitor teste', NULL, NULL, 10101010, NULL),
-(47, 'meu monitor teste', NULL, NULL, 10101010, NULL),
-(48, 'meu monitor teste', NULL, NULL, 10101010, NULL),
-(49, 'meu monitor teste', NULL, NULL, 10101010, NULL),
-(50, '', NULL, NULL, 10101010, NULL),
-(51, '', NULL, NULL, 10101010, NULL),
-(52, '', NULL, NULL, 10101010, NULL),
-(53, '', NULL, NULL, 10101010, NULL),
-(54, '', NULL, NULL, 10101010, NULL),
-(55, '', NULL, NULL, 10101010, NULL),
-(56, '', NULL, NULL, 10101010, NULL),
-(57, '', NULL, NULL, 10101010, NULL),
-(58, '', NULL, NULL, 10101010, NULL),
-(59, '', NULL, NULL, 10101010, NULL),
-(60, '', NULL, NULL, 10101010, NULL),
-(61, '', NULL, NULL, 10101010, NULL),
-(62, '', NULL, NULL, 10101010, NULL),
-(63, '', NULL, NULL, 10101010, NULL),
-(64, '', NULL, NULL, 10101010, NULL),
-(65, '', NULL, NULL, 10101010, NULL),
-(66, '', NULL, NULL, 10101010, NULL),
-(67, '', NULL, NULL, 10101010, NULL),
-(68, '', NULL, NULL, 10101010, NULL),
-(69, '', NULL, NULL, 10101010, NULL),
-(70, '', NULL, NULL, 10101010, NULL),
-(71, '', NULL, NULL, 10101010, NULL),
-(72, '', NULL, NULL, 10101010, NULL),
-(73, 'meu monitor teste', NULL, NULL, 10101010, NULL);
+(79, 'dsasdfhg', 123456789, NULL, 110112088, NULL),
+(80, 'fegrdthyjuyiu', NULL, NULL, 110112088, NULL),
+(81, 'sem buscar', NULL, NULL, 110112088, NULL),
+(82, 'sdafgh', NULL, NULL, 110112088, NULL),
+(83, 'awesrdtgfy rewred', 123456789, NULL, 110112088, NULL),
+(84, 'AGORA VAI', 123456789, NULL, 110112088, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `local`
+-- Estrutura da tabela `local`
 --
 
 CREATE TABLE IF NOT EXISTS `local` (
@@ -92,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `local` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `patrimonio`
+-- Estrutura da tabela `patrimonio`
 --
 
 CREATE TABLE IF NOT EXISTS `patrimonio` (
@@ -102,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `patrimonio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `patrimonio`
+-- Extraindo dados da tabela `patrimonio`
 --
 
 INSERT INTO `patrimonio` (`cod`, `descricao`, `marca`) VALUES
@@ -111,7 +99,7 @@ INSERT INTO `patrimonio` (`cod`, `descricao`, `marca`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `solicitante`
+-- Estrutura da tabela `solicitante`
 --
 
 CREATE TABLE IF NOT EXISTS `solicitante` (
@@ -124,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `solicitante` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `solicitante`
+-- Extraindo dados da tabela `solicitante`
 --
 
 INSERT INTO `solicitante` (`matricula_solicitante`, `username_solicitante`, `nome_solicitante`, `senha_solicitante`, `vinculo`, `email_solicitante`) VALUES
@@ -136,7 +124,7 @@ INSERT INTO `solicitante` (`matricula_solicitante`, `username_solicitante`, `nom
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tecnico`
+-- Estrutura da tabela `tecnico`
 --
 
 CREATE TABLE IF NOT EXISTS `tecnico` (
@@ -146,11 +134,17 @@ CREATE TABLE IF NOT EXISTS `tecnico` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Índices de tabelas apagadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `chamado`
+-- Indexes for table `administrador`
+--
+ALTER TABLE `administrador`
+  ADD PRIMARY KEY (`username_admin`);
+
+--
+-- Indexes for table `chamado`
 --
 ALTER TABLE `chamado`
   ADD PRIMARY KEY (`id_chamado`),
@@ -160,45 +154,45 @@ ALTER TABLE `chamado`
   ADD KEY `fk_chamado_tecnico` (`tecnico`);
 
 --
--- Índices de tabela `local`
+-- Indexes for table `local`
 --
 ALTER TABLE `local`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `patrimonio`
+-- Indexes for table `patrimonio`
 --
 ALTER TABLE `patrimonio`
   ADD PRIMARY KEY (`cod`);
 
 --
--- Índices de tabela `solicitante`
+-- Indexes for table `solicitante`
 --
 ALTER TABLE `solicitante`
   ADD PRIMARY KEY (`matricula_solicitante`),
   ADD UNIQUE KEY `username_solicitante` (`username_solicitante`);
 
 --
--- Índices de tabela `tecnico`
+-- Indexes for table `tecnico`
 --
 ALTER TABLE `tecnico`
   ADD PRIMARY KEY (`matricula_tecnico`);
 
 --
--- AUTO_INCREMENT de tabelas apagadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `chamado`
+-- AUTO_INCREMENT for table `chamado`
 --
 ALTER TABLE `chamado`
-  MODIFY `id_chamado` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
+  MODIFY `id_chamado` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=85;
 --
--- Restrições para dumps de tabelas
+-- Constraints for dumped tables
 --
 
 --
--- Restrições para tabelas `chamado`
+-- Limitadores para a tabela `chamado`
 --
 ALTER TABLE `chamado`
   ADD CONSTRAINT `fk_chamado_local` FOREIGN KEY (`local`) REFERENCES `local` (`id`),

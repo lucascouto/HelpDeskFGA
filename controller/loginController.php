@@ -1,6 +1,7 @@
 <?php
 
 include_once './dao/SolicitanteDAO.php';
+include_once './dao/AdministradorDAO.php';
 
 class loginController {
     
@@ -8,9 +9,18 @@ class loginController {
         try{
             $login = new SolicitanteDAO();
             $solicitante = $login->buscar($username);
+            $loginAdmin = new AdministradorDAO();
+            $admin = $loginAdmin->buscar($username);
             
-            if($solicitante == NULL){
+            if(($solicitante == NULL) && ($admin == NULL)){
                 return "Usuario nao encontrado.";
+                
+            }elseif ($solicitante == NULL) {
+                unset ($_COOKIE['nome_usuario']);
+                unset ($_COOKIE['senha_usuario']);
+                setcookie("nome_completo", "Administrador");
+                header("Location: ./View/SolicitanteView/home.php");
+
             }else{
                
                 if($senha != $solicitante->senha_solicitante){
@@ -22,7 +32,6 @@ class loginController {
                     setcookie("nome_completo", $solicitante->nome_solicitante);
                     header("Location: ./View/SolicitanteView/home.php");
                 }
-                
             }
         } catch (Exception $e) {
 
