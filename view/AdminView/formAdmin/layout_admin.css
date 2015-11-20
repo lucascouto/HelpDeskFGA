@@ -1,0 +1,49 @@
+#cadastrar{
+    float: left;
+    position: relative;
+    width: 20%;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 10%
+}
+
+#relatorio{
+    float: left;
+    position: relative;
+    width: 20%;
+    text-align: center;
+    margin-top: 100px;
+    
+    
+}
+
+#bloquear{
+    float: left;
+    position: relative;
+    width: 20%;
+    text-align: center;
+    margin-top: 100px;
+    
+    
+}
+
+#gerenciar{
+    float: left;
+    position: relative;
+    width: 20%;
+    text-align: center;
+    margin-top: 100px;
+    
+    
+    
+}
+
+.opcoes-icons{
+       
+    
+}
+
+.menu-text{
+    font-size: 30px;
+    font-family: cursive;
+}

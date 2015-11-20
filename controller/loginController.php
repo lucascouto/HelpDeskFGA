@@ -19,7 +19,7 @@ class loginController {
                 unset ($_COOKIE['nome_usuario']);
                 unset ($_COOKIE['senha_usuario']);
                 setcookie("nome_completo", "Administrador");
-                header("Location: ./View/SolicitanteView/home.php");
+                header("Location: ./View/AdminView/home.php");
 
             }else{
                
