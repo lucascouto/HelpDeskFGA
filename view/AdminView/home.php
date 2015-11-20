@@ -60,6 +60,7 @@ if (!isset($_COOKIE['nome_usuario']) or ! isset($_COOKIE['senha_usuario'])) {
         <section id="corpo-principal" class="w3-container">
             <div class="w3-card-2" id="card-admin">
                 <div class="w3-container w3-teal">
+                    <?php include_once './formAdmin/admin.php'; ?>
                     <span class="fa fa-commenting fa-3x icones"></span><h2>Administração</h2>
                 </div>
                 <?php include_once './formAdmin/form_admin.php'; ?>

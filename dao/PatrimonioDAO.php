@@ -1,6 +1,6 @@
 <?php
 
-include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Local.php");
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Patrimonio.php");
 include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/dao/conecta.class.php");
 
 class PatrimonioDAO {
@@ -12,8 +12,8 @@ class PatrimonioDAO {
 	}
         
     public function inserirPatrimonio(Patrimonio $patrimonio){
-		$sql = "INSERT INTO local (cod,descricao,marca)
-                        VALUES (:cod, :descricao,:marca)";
+        $sql = "INSERT INTO patrimonio(cod, descricao, marca)
+                        VALUES (:cod, :descricao, :marca)";
                 
         $preparar = $this->conexao->conectar()->prepare($sql);
 
@@ -21,7 +21,7 @@ class PatrimonioDAO {
         $preparar->bindValue(":descricao", $patrimonio->getDescricao());
         $preparar->bindValue(":marca", $patrimonio->getMarca());
                            
-		$resultado = $this->conexao->conectar()->Execute( $sql );
+		$resultado = $preparar->execute();
 		return $resultado;
 	}
         

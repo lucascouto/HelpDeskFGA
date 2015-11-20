@@ -18,7 +18,6 @@ class ChamadoDAO {
 
         
         $solicitante = new SolicitanteController();
-        $patrimonio = new PatrimonioController();
 
         $preparar = $this->conexao->conectar()->prepare($sql);
 

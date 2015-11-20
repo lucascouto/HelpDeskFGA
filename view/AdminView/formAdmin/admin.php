@@ -15,12 +15,12 @@ if (isset($_POST['cadastrarPatrimonio'])) {
     if ($registrado == TRUE) {
         echo "<div class='alert alert-success alert-dismissible feedback-login' role='alert'>
                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                <strong>Oba!</strong> Seu chamado foi enviado com sucesso ao CPD.
+                <strong>Sucesso!</strong> Patrimônio cadastrado.
                 </div>";
     } elseif ($registrado == FALSE) {
         echo "<div class='alert alert-danger alert-dismissible feedback-login' role='alert'>
                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                <strong>Ah não...</strong> Seu chamado não pode ser enviado. Verifique as informações inseridas, ou entre em contato com o administrador.
+                <strong>Erro.</strong> Patrimônio não cadastrado.
                 </div>";
     }
 }
