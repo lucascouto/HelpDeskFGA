@@ -11,12 +11,15 @@ class PatrimonioDAO {
 		$this->conexao = new ConexaoBD();
 	}
         
-    public function inserirLocal(Patrimonio $patrimonio){
-		$sql = "INSERT INTO local (nome,cod,marca,tipo)
-                        VALUES ('{$patrimonio->__getNome( )}',"
-                            . "'{$patrimonio->__getCodigo( )}',"
-                           . "'{$patrimonio->__getMarca( )}',"
-                           . "'{$patrimonio->__getTipo()}')";
+    public function inserirPatrimonio(Patrimonio $patrimonio){
+		$sql = "INSERT INTO local (cod,descricao,marca)
+                        VALUES (:cod, :descricao,:marca)";
+                
+        $preparar = $this->conexao->conectar()->prepare($sql);
+
+        $preparar->bindValue(":cod", $patrimonio->getCodigo());
+        $preparar->bindValue(":descricao", $patrimonio->getDescricao());
+        $preparar->bindValue(":marca", $patrimonio->getMarca());
                            
 		$resultado = $this->conexao->conectar()->Execute( $sql );
 		return $resultado;

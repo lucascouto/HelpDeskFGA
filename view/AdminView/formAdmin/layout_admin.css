@@ -4,7 +4,7 @@
     width: 20%;
     text-align: center;
     margin-top: 100px;
-    margin-left: 10%
+    margin-left: 10%;
 }
 
 #relatorio{
@@ -39,11 +39,15 @@
 }
 
 .opcoes-icons{
-       
+     color: transparent;
+     font-size: 100px;
+     -webkit-text-stroke-width: 3px;
+     -webkit-text-stroke-color: #26a69a  ;
     
 }
 
 .menu-text{
     font-size: 30px;
-    font-family: cursive;
+    font-family: varela;
+    color: #005B4A;
 }
