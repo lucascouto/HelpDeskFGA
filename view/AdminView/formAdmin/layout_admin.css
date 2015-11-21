@@ -2,6 +2,7 @@
     float: left;
     position: relative;
     width: 20%;
+    height: 200px;
     text-align: center;
     margin-top: 100px;
     margin-left: 10%;
@@ -11,6 +12,7 @@
     float: left;
     position: relative;
     width: 20%;
+    height: 200px;
     text-align: center;
     margin-top: 100px;
     
@@ -21,6 +23,7 @@
     float: left;
     position: relative;
     width: 20%;
+    height: 200px;
     text-align: center;
     margin-top: 100px;
     
@@ -31,12 +34,31 @@
     float: left;
     position: relative;
     width: 20%;
+    height: 200px;
     text-align: center;
     margin-top: 100px;
     
     
     
 }
+
+.divButton{
+                background: -moz-linear-gradient(top, #ebeff2, #ccd5df); 
+                border: 1px solid #ACBECF;
+                cursor: pointer;
+            }
+             
+            .divButton:hover{
+                -o-box-shadow: 2px 2px 19px #CCC;
+                -webkit-box-shadow: 2px 2px 19px #CCC;
+                -moz-box-shadow: 2px 2px 19px #CCC;
+            }
+             
+            .divButton:active{
+                -o-box-shadow: 2px 2px 19px #FFCC00;
+                -webkit-box-shadow: 2px 2px 19px #FFCC00;
+                -moz-box-shadow: 2px 2px 19px #FFCC00;
+            }
 
 .opcoes-icons{
      color: transparent;
@@ -51,3 +73,4 @@
     font-family: varela;
     color: #005B4A;
 }
+

@@ -12,12 +12,12 @@ class SolicitanteController {
         
         $dao = new SolicitanteDAO();
         $solicitanteDAO = $dao->buscar($username);
-        $nome = $solicitanteDAO->nome_solicitante;
-        $email = $solicitanteDAO->email_solicitante;
-        $matricula = $solicitanteDAO->matricula_solicitante;
-        $user = $solicitanteDAO->username_solicitante;
-        $vinculo = $solicitanteDAO->vinculo;
-        $senha = $solicitanteDAO->senha_solicitante;
+        $nome = $solicitanteDAO['nome_solicitante'];
+        $email = $solicitanteDAO['email_solicitante'];
+        $matricula = $solicitanteDAO['matricula_solicitante'];
+        $user = $solicitanteDAO['username_solicitante'];
+        $vinculo = $solicitanteDAO['vinculo'];
+        $senha = $solicitanteDAO['senha_solicitante'];
         
         $solicitante = new Solicitante($nome, $email, $matricula, $user, $vinculo, $senha);
 

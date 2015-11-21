@@ -1,6 +1,7 @@
 <?php
 
 include_once './dao/SolicitanteDAO.php';
+include_once './model/Solicitante.php';
 include_once './dao/AdministradorDAO.php';
 
 class loginController {
@@ -36,6 +37,6 @@ class loginController {
         } catch (Exception $e) {
 
         }
-    }
+    }    
 }
 
