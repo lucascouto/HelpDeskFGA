@@ -13,7 +13,7 @@ class AdministradorDAO {
     public function buscar($username) {
         $sql = "SELECT * FROM administrador WHERE username_admin = '{$username}' ";
         $registro = $this->conexao->conectar()->query($sql);
-        $resultado = $registro->fetch(PDO::FETCH_OBJ);
+        $resultado = $registro->fetch(PDO::FETCH_ASSOC);
        
         return $resultado;
     }
