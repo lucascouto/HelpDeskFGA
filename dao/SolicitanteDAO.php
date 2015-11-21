@@ -14,9 +14,17 @@ class SolicitanteDAO {
     public function buscar($username) {
         $sql = "SELECT * FROM solicitante WHERE username_solicitante = '{$username}' ";
         $registro = $this->conexao->conectar()->query($sql);
-        $resultado = $registro->fetch(PDO::FETCH_OBJ);
+        $resultado = $registro->fetch(PDO::FETCH_ASSOC);
        
         return $resultado;
+    }
+    
+    public function buscarMatricula($matricula) {
+        $sql = "SELECT * FROM solicitante WHERE matricula_solicitante = '$matricula' ";
+        $resultado = $this->conexao->conectar()->query($sql);
+        $usuario = $resultado->fetch(PDO::FETCH_ASSOC);
+       
+        return $usuario;
     }
     
     public function cadastrar(Solicitante $solicitante) {
@@ -35,6 +43,17 @@ class SolicitanteDAO {
         $preparar->bindValue(":matricula_solicitante", $solicitante->getMatricula());
         $preparar->bindValue(":email_solicitante", $solicitante->getEmail());
                
+        $registro = $preparar->execute();
+        
+        return $registro;
+    }
+    
+    public function excluirSolicitante($matricula) {
+        
+        $sql = "DELETE FROM solicitante WHERE matricula_solicitante = '{$matricula}' ";
+        
+        $preparar = $this->conexao->conectar()->prepare($sql);
+                    
         $registro = $preparar->execute();
         
         return $registro;

@@ -1,22 +1,23 @@
-<div id="cadastrar" data-toggle="modal" data-target="#cadastroModal">
+<div id="cadastrar" data-toggle="modal" data-target="#cadastroModal" class="divButton">
    <span class="fa fa-laptop fa-5x opcoes-icons"></span>
    <br>
    <span class="menu-text">Cadastrar Patrimônio</span>
 </div>
 
-<div id="relatorio" data-toggle="modal" data-target="#relatorioModal">
+<div id="relatorio" data-toggle="modal" data-target="#relatorioModal" class="divButton">
+    <p></p>
     <span class="fa fa-file-text fa-5x opcoes-icons"></span>
-    <br>
+    <p></p>
     <span class="menu-text">Relatórios</span>
 </div>
 
-<div id="bloquear" data-toggle="modal" data-target="#bloquearModal">
-    <span class="fa fa-lock fa-5x opcoes-icons"></span>
+<div id="bloquear" data-toggle="modal" data-target="#bloquearModal" class="divButton">
+    <span class="fa fa-ban fa-5x opcoes-icons"></span>
     <br>
-    <span class="menu-text">Bloquear Acesso</span>
+    <span class="menu-text">Remover Acesso</span>
 </div>
 
-<div id="gerenciar" data-toggle="modal" data-target="#gerenciarModal">
+<div id="gerenciar" data-toggle="modal" data-target="#gerenciarModal" class="divButton">
     <span class="fa fa-user fa-5x opcoes-icons"></span>
     <br>
     <span class="menu-text">Gerenciar Técnico</span>
@@ -79,32 +80,49 @@
   </div>
 </div>
 
-<!-- Modal Bloquear Acesso -->
-<div class="modal fade" id="bloquearModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!-- Modal Remover Acesso -->
+<div class="modal fade " id="bloquearModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+        
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Bloquear Acesso</h4>
+        <h4 class="modal-title" id="myModalLabel">Remover Acesso</h4>
       </div>
+        <form method="post" action="" id="Bloquear">
       <div class="modal-body">
-                <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Tipo de Usuário
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Solicitante</a></li>
-                    <li><a href="#">Técnico</a></li>
-                </ul>
-                </div>
-             <label class="labels labelChamadoRightUpper">Matrícula</label>
-            <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoRightUpper">
+          
+          <p><label class="labels labelChamadoRightUpper">Tipo de Usuário</label></p>
+          <p><div class="btn-group" data-toggle="buttons">
+                        <label class="btn w3-teal active">
+                          <input type="radio" name="options" id="solicitante" autocomplete="off" checked> Solicitante
+                        </label>
+                        <label class="btn w3-teal">
+                          <input type="radio" name="options" id="tecnico" autocomplete="off"> Técnico
+                        </label>
+          </div></p>          
+          <p> <label class="labels labelChamadoRightUpper">Matrícula</label>
+              <input type="text" name="matricula_busca" class="form-control inputChamado inputChamadoRightUpper"></p>
+          <p><button type="submit" class="w3-btn w3-teal btn-registrar" id="buscarUsuario" name="buscarUsuario" data-target="bloquearModal">Buscar</button>
+          </p></div></form><form method="post" action="" id="Confirmar"><div class="modal-body">
+            <table class="table table-condensed">
+           
+                <tr>
+                  <td>Nome:</td>
+                  <td><input type="text" disabled name="nome" class="form-control inputChamado inputChamadoRightUpper" value="<?php if($nome_busca!=NULL) echo $nome_busca ?>"></td>
+                </tr>
+                <tr>
+                  <td>Email:</td>
+                  <td><input type="text" disabled name="email" class="form-control inputChamado inputChamadoRightUpper" value="<?php if($email_busca!=NULL) echo $email_busca ?>"></td>
+                </tr>                
+          </table>
+                  <input type="hidden" name="excluirMatricula" value="<?php echo $matricula ?>"> 
        </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="w3-btn w3-teal btn-registrar">Buscar</button>
+        <button type="submit" class="w3-btn w3-teal btn-registrar" id="excluirUsuario" name="excluirUsuario">Excluir</button>
       </div>
+        </form>
     </div>
   </div>
 </div>
