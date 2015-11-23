@@ -4,13 +4,22 @@ class Local {
 
     private $edificio;
     private $sala;
+    private $id;
 
-    public function __construct($sala, $edificio) {
+    public function __construct($id, $sala, $edificio) {
         $this->edificio = $edificio;
         $this->sala = $sala;
+        $this->id = $id;
+    }
+    public function getId() {
+        return $this->id;
     }
 
-    function getEdificio() {
+    public function setId($id) {
+        $this->id = $id;
+    }
+
+        function getEdificio() {
         return $this->edificio;
     }
 

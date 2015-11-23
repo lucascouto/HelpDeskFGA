@@ -4,16 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/HelpDeskFGA/dao/SolicitanteDAO.php</file>
-            <file>file:/C:/xampp/htdocs/HelpDeskFGA/view/SolicitanteView/formChamado/form_chamado.php</file>
-            <file>file:/C:/xampp/htdocs/HelpDeskFGA/controller/HistoricoUsuarioController.php</file>
-            <file>file:/C:/xampp/htdocs/HelpDeskFGA/controller/HistoricoTecnicoController.php</file>
-            <file>file:/C:/xampp/htdocs/HelpDeskFGA/controller/CadastroController.php</file>
-            <file>file:/C:/xampp/htdocs/HelpDeskFGA/controller/SolicitanteController.php</file>
+            <file>file:/C:/xampp/htdocs/HelpDeskFGA/dao/ChamadoDAO.php</file>
             <file>file:/C:/xampp/htdocs/HelpDeskFGA/view/AdminView/formAdmin/form_admin.php</file>
             <file>file:/C:/xampp/htdocs/HelpDeskFGA/controller/HistoricoGeralController.php</file>
+            <file>file:/C:/xampp/htdocs/HelpDeskFGA/view/LoginView/formLogin/form_login.php</file>
             <file>file:/C:/xampp/htdocs/HelpDeskFGA/controller/RelatorioController.php</file>
-            <file>file:/C:/xampp/htdocs/HelpDeskFGA/controller/ChamadoController.php</file>
+            <file>file:/C:/xampp/htdocs/HelpDeskFGA/view/LoginView/formLogin/login.php</file>
             <file>file:/C:/xampp/htdocs/HelpDeskFGA/view/AdminView/formAdmin/admin.php</file>
+            <file>file:/C:/xampp/htdocs/HelpDeskFGA/controller/loginController.php</file>
+            <file>file:/C:/xampp/htdocs/HelpDeskFGA/model/Tecnico.php</file>
         </group>
     </open-files>
 </project-private>

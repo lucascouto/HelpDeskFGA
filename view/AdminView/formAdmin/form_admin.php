@@ -66,6 +66,9 @@
             <label class="labels labelChamadoRightUpper">Dado 2</label>
             <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoRightUpper">
             <label class="labels labelChamadoRightUpper">Histórico Geral</label>
+            <table>
+                <?php ?>
+            </table>
             <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper">
             <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper">
             <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper">
@@ -95,10 +98,10 @@
           <p><label class="labels labelChamadoRightUpper">Tipo de Usuário</label></p>
           <p><div class="btn-group" data-toggle="buttons">
                         <label class="btn w3-teal active">
-                          <input type="radio" name="options" id="solicitante" autocomplete="off" checked> Solicitante
+                          <input type="radio" name="tipo_usuario" id="solicitante" value="0" checked> Solicitante
                         </label>
                         <label class="btn w3-teal">
-                          <input type="radio" name="options" id="tecnico" autocomplete="off"> Técnico
+                            <input type="radio" name="tipo_usuario" id="tecnico" value="1"> Técnico
                         </label>
           </div></p>          
           <p> <label class="labels labelChamadoRightUpper">Matrícula</label>
@@ -116,7 +119,8 @@
                   <td><input type="text" disabled name="email" class="form-control inputChamado inputChamadoRightUpper" value="<?php if($email_busca!=NULL) echo $email_busca ?>"></td>
                 </tr>                
           </table>
-                  <input type="hidden" name="excluirMatricula" value="<?php echo $matricula ?>"> 
+                  <input type="hidden" name="excluirMatricula" value="<?php echo $matricula ?>">
+                  <input type="hidden" name="tipousuario" value="<?php echo $tipoUsuario?>">
        </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -131,23 +135,29 @@
 <div class="modal fade" id="gerenciarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+        <form method="post" action="">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Cadastrar Patrimônio</h4>
+        <h4 class="modal-title" id="myModalLabel">Cadastrar Técnico</h4>
       </div>
       <div class="modal-body">
-            <label class="labels labelChamadoLeftUpper">Código de Patrimônio</label>
-            <input type="text" name="codPatrimonio" id="codPatrimonio" class="form-control inputChamado inputChamadoleftUpper" maxlength="9" >
-            <label class="labels labelChamadoRightUpper">Descrição</label>
-            <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoRightUpper">
-            <label class="labels labelChamadoRightUpper">Marca</label>
-            <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper">
+             <label class="labels labelSubscribeLeft">Nome Completo</label>
+        <input type="text" name="txtName" class="form-control inputSubscribeLeft" tabindex="1" required>
+        <label class="labels labelSubscribeLeft">Matrícula</label>
+        <input type="text" name="txtMatricula" id="txtMatricula" class="form-control inputSubscribeLeft" tabindex="3" required>
+        <label class="labels labelSubscribeLeft">Nome de Usuário</label>
+        <input type="text" name="txtUserName" class="form-control inputSubscribeLeft" tabindex="5" required>
+        <label class="labels labelSubscribeLeft">Email</label>
+        <input type="text" name="txtEmail" class="form-control inputSubscribeLeft" tabindex="5" required>
+        <label class="labels labelSubscribeLeft">Senha</label>
+        <input type="password" name="txtSenha" id="txtSenha" class="form-control inputSubscribeLeft" tabindex="6" required>
         
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="w3-btn w3-teal btn-registrar">Cadastrar</button>
+        <input type="submit" name="cadastroTecnico" class="w3-btn w3-teal btn-registrar" value="Cadastrar">
       </div>
+        </form>
     </div>
   </div>
 </div>

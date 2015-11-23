@@ -17,7 +17,7 @@ if (isset($_POST['cadastrar'])) {
     }
 
     $cadastro = new CadastroController();
-    $registrado = $cadastro->cadastrar($nome, $email, $matricula, $username, $vinculo, $senha);
+    $registrado = $cadastro->cadastrar($nome, $email, $matricula, $username, $vinculo, $senha, 0);
 
     if ($registrado == TRUE) {
         echo "<div class='alert alert-success alert-dismissible feedback-login' role='alert'>

@@ -50,7 +50,7 @@ class SolicitanteDAO {
     
     public function excluirSolicitante($matricula) {
         
-        $sql = "DELETE FROM solicitante WHERE matricula_solicitante = '{$matricula}' ";
+        $sql = "DELETE FROM solicitante WHERE matricula_solicitante = '$matricula' ";
         
         $preparar = $this->conexao->conectar()->prepare($sql);
                     

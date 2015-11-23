@@ -15,7 +15,7 @@
             $this->senha = $senha;
             $this->matricula = $matricula;
         }
-        
+                
         public function getNome() {
             return $this->nome;
         }

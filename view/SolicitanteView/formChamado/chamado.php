@@ -39,12 +39,11 @@ if (isset($_POST['enviar'])) {
     $codigo = $_POST['codPatrimonio'];
     $patrimonio = $patrimonioControl->buscarPatrimonio($codigo);
     
-    $local = new Local($sala, $edificio);
     $solicitanteControl = new SolicitanteController();
     $solicitante = $solicitanteControl->buscar($username);
 
     $chamado = new ChamadoController();
-    $registrado = $chamado->cadastrarChamado($patrimonio, $local, $solicitante, NULL, $descricao);
+    $registrado = $chamado->cadastrarChamado($patrimonio, $sala, $edificio, $solicitante, NULL, $descricao);
 
     if ($registrado == TRUE) {
         echo "<div class='alert alert-success alert-dismissible feedback-login' role='alert'>
