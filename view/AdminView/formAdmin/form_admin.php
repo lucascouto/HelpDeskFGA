@@ -23,6 +23,12 @@
     <span class="menu-text">Gerenciar Técnico</span>
 </div>
 
+<div id="local" data-toggle="modal" data-target="#localModal" class="divButton">
+    <span class="fa fa-map-marker fa-5x opcoes-icons"></span>
+    <p></p>
+    <span class="menu-text">Incluir Local</span>
+</div>
+
 <!-- Modal Cadastro Patrimônio -->
 <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document" >
@@ -66,14 +72,16 @@
             <label class="labels labelChamadoRightUpper">Dado 2</label>
             <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoRightUpper">
             <label class="labels labelChamadoRightUpper">Histórico Geral</label>
-            <table>
-                <?php ?>
+            <table class="table table-condensed">                
+                <?php $i=0;
+                        while ($chamados != NULL){ 
+                            echo '<tr>
+                            <td>'.$chamados[$i][0].'</td>
+                            <td>'.$chamados[$i][1].'</td>
+                        </tr>';
+                        $i++;} ?>                       
             </table>
-            <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper">
-            <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper">
-            <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper">
-            <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper">
-            <input type="text" name="marcaPatrimonio" class="form-control inputChamado inputChamadoRightUpper">
+            
       </div>
       <div class="modal-footer">
         <button type="button" class="w3-btn w3-teal btn-registrar" >Exibir Histórico de Técnico</button>
@@ -103,7 +111,7 @@
                         <label class="btn w3-teal">
                             <input type="radio" name="tipo_usuario" id="tecnico" value="1"> Técnico
                         </label>
-          </div></p>          
+           </div>          
           <p> <label class="labels labelChamadoRightUpper">Matrícula</label>
               <input type="text" name="matricula_busca" class="form-control inputChamado inputChamadoRightUpper"></p>
           <p><button type="submit" class="w3-btn w3-teal btn-registrar" id="buscarUsuario" name="buscarUsuario" data-target="bloquearModal">Buscar</button>
@@ -158,6 +166,38 @@
         <input type="submit" name="cadastroTecnico" class="w3-btn w3-teal btn-registrar" value="Cadastrar">
       </div>
         </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Cadastro Local-->
+<div class="modal fade" id="localModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content" >
+        <form method="post" action="" id="Patrimonio">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Cadastrar Local</h4>
+      </div>
+       
+      <div class="modal-body">
+          
+           <select class="form-control " name="edificio">
+                    <option value="" selected>...</option>
+                    <option value="UAC">UAC</option>
+                    <option value="UED">UED</option>
+                    <option value="MESP">MESP</option>
+                </select>
+                <br>
+                <label class="labels labelLocal">Sala</label>
+                <input type="text" name="sala" class="form-control ">
+            
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="submit" id="cadastroLocal" name="cadastroLocal" class="w3-btn w3-teal btn-registrar">Cadastrar</button>
+      </div>
+    </form>
     </div>
   </div>
 </div>

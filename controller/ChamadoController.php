@@ -26,4 +26,11 @@ class ChamadoController {
         return $resultado;
         
     }
+    
+    public function cadastrarLocal($idLocal, $sala, $edificio){
+        $localDAO = new LocalDAO;
+        $local = new Local($idLocal, $sala, $edificio);
+        $resultado = $localDAO->inserirLocal($local);
+        return $resultado;
+    }
 }

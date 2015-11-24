@@ -1,9 +1,12 @@
 <?php
 
-Class HistoricoUsuarioController implements Historico{
+Class HistoricoUsuarioController implements HistoricoController{
     
-    public function listarChamados() {
+    public function listarChamados(Usuario $usuario) {
+        $dao = new ChamadoDAO; 
+        $chamados = $dao->buscarChamadosSolicitante($solicitante);
         
+        return $chamados;
     }
     
 }

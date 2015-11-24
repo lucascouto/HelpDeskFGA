@@ -1,7 +1,7 @@
 <?php
 
 require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Local.php");
-require_once ($_SERVER["DOCUMENT_ROOT"] .  "/HelpDeskFGA/dao/conecta.class.php");
+require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/dao/conecta.class.php");
 
 class LocalDAO {
     
@@ -12,11 +12,17 @@ class LocalDAO {
 	}
         
     public function inserirLocal(Local $local){
-		$sql = "INSERT INTO local (sala,edificio)
-                        VALUES ()";
+                $sql = "INSERT INTO local (id, sala, edificio)
+                        VALUES (:id, :sala , :edificio)";
+
+            $preparar = $this->conexao->conectar()->prepare($sql);
+
+            $preparar->bindValue(":id", $local->getId());
+            $preparar->bindValue(":sala", $local->getSala());
+            $preparar->bindValue(":edificio", $local->getEdificio());
                            
-		$resultado = $this->conexao->conectar()->Execute( $sql );
-		return $resultado;
+            $resultado = $preparar->execute();
+            return $resultado;
 	}
         
         public function buscarLocal($edificio, $sala){

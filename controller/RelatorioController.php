@@ -1,6 +1,11 @@
 <?php
 
-class Relatorio {
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/HistoricoGeralController.php");
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/HistoricoTecnicoController.php");
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/HistoricoUsuarioController.php");
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/HistoricoController.php");
+
+class RelatorioController {
     private $strategy = NULL; 
 
     public function __construct($estrategia) {
@@ -20,15 +25,12 @@ class Relatorio {
       return $this->strategy->listarChamados();
     }
     
-    public function calculaUsuario(){
-        return numeroUsuarios;  
-    }
-    
-    public function calculaTecnico(){
-        return numeroTecnico;  
-    }
-    
     public function calculaChamados(){
+        $dao = new ChamadoDAO; 
+        $chamados = $dao->buscarChamados();
+        
+        $numeroChamados = count($chamados);
+        
         return numeroChamados;  
     }
 }

@@ -1,21 +1,12 @@
 <?php
 
-Class HistoricoTecnicoController implements Historico{
+Class HistoricoTecnicoController implements HistoricoController{
     
-    public function listarChamados(Tecnico $tecnico) {
+    public function listarChamados(Usuario $usuario) {
         $dao = new ChamadoDAO; 
-        $chamados[][] = $dao->buscarChamados();
+        $chamados = $dao->buscarChamadosTecnico($tecnico);
         
-        for ($i=1; $verificaChamado!=''; $i++){
-            if ($tecnico == $chamados[n][0]) {
-                $verificaChamado = $chamados[0][0];
-                for ($j; $j<5; $j++){
-                    $listaChamados[$i][$j] = $chamados[$i][$j];
-                }
-            }
-        }
-        
-        return $listaChamados;
+        return $chamados;
     }
     
 }

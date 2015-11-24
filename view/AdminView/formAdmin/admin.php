@@ -2,12 +2,17 @@
 
 include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/PatrimonioController.php");
 include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/CadastroController.php");
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/ChamadoController.php");
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/controller/RelatorioController.php");
 include_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/model/Patrimonio.php");
 
 $matricula = "";
 $nome_busca = "";
 $tipoUsuario = "";
 $email_busca = "";
+
+$relatorio = new RelatorioController(1);
+$chamados = $relatorio->mostrarHistorico();
 
 if (isset($_POST['cadastrarPatrimonio'])) {
        
@@ -97,4 +102,52 @@ $registrado = $cadastro->cadastrar($nome, $email, $matricula, $username, 0, $sen
                 <strong>Oh não!</strong> Seu cadastro não pode ser efetuado. Verifique suas informações, ou entre em contato com o administrador.
                 </div>";
     }
+}
+
+if (isset($_POST['cadastroLocal'])){
+    
+    $edificio = $_POST['edificio'];
+    $sala = $_POST['sala'];
+    switch ($edificio){
+        default :
+            $idEdificio = '0';
+            break;
+            
+        case "UED":
+            $idEdificio = '1';
+            break;
+        
+        case "MESP":
+            $idEdificio = '2';
+            break;
+    }
+    
+    if (strpos($sala, 'S') == FALSE){
+        $andar = '1';
+    }else{
+        $andar = '2';
+    }
+    
+    $idSala = 00;
+    $idSala = filter_var($sala, FILTER_SANITIZE_NUMBER_INT);
+    
+    if ($idSala<10)
+        $idLocal = $idEdificio . $andar .'0'. $idSala;
+    else {
+        $idLocal = $idEdificio . $andar . $idSala;
+    }
+    $control = new ChamadoController;
+    $registrado = $control->cadastrarLocal($idLocal, $sala, $edificio);
+
+    if ($registrado == TRUE) {
+        echo "<div class='alert alert-success alert-dismissible feedback-login' role='alert'>
+                <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                <strong>Sucesso!</strong> Cadastro efetuado com sucesso.
+                </div>";
+    }elseif ($registrado == FALSE){
+        echo "<div class='alert alert-danger alert-dismissible feedback-login' role='alert'>
+                <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                <strong>Oh não!</strong> Seu cadastro não pode ser efetuado. Verifique suas informações, ou entre em contato com o administrador.
+                </div>";
+    } 
 }

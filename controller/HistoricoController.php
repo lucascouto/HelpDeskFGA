@@ -1,5 +1,5 @@
 <?php
 
-interface Historico {
-    public function listarChamados();
+interface HistoricoController {
+    public function listarChamados(Usuario $usuario);
 }

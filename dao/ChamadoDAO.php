@@ -26,9 +26,7 @@ class ChamadoDAO {
         $preparar->bindValue(":cod_patrimonio", $chamado->getPatrimonio()->getCodigo());
         $preparar->bindValue(":local", $chamado->getLocal()->getId());
         $preparar->bindValue(":solicitante", $solicitante->buscar($_COOKIE['nome_usuario'])->getMatricula());
-        //$preparar->bindValue(":tecnico", $chamado->getTecnico());
-
-
+        
         $resultado = $preparar->execute();
        
         return $resultado;
@@ -56,6 +54,16 @@ class ChamadoDAO {
         $resultado = $this->conexao->conectar()->query($sql);
         $chamados = $resultado->fetchAll();
         return $chamados;
+    }
+    
+    public function inserirTecnico(Chamado $chamado, Tecnico $tecnico) {
+        $idChamado = $chamado->getId();
+        $sql = "UPDATE `helpdesk`.`chamado` SET `tecnico` = '$tecnico' "
+                . "WHERE `chamado`.`id_chamado` = '$idChamado'";
+        
+        $resultado = $this->conexao->conectar()->execute($sql);
+        return $resultado;
+        
     }
 
 }
