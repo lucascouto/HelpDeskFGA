@@ -67,19 +67,26 @@
         <h4 class="modal-title" id="myModalLabel">Relatório</h4>
       </div>
       <div class="modal-body">
-            <label class="labels labelChamadoLeftUpper">Dado 1</label>
-            <input type="text" name="codPatrimonio" id="codPatrimonio" class="form-control inputChamado inputChamadoleftUpper" maxlength="9" >
-            <label class="labels labelChamadoRightUpper">Dado 2</label>
-            <input type="text" name="nomePatrimonio" class="form-control inputChamado inputChamadoRightUpper">
-            <label class="labels labelChamadoRightUpper">Histórico Geral</label>
-            <table class="table table-condensed">                
-                <?php $i=0;
-                        while ($chamados != NULL){ 
-                            echo '<tr>
-                            <td>'.$chamados[$i][0].'</td>
-                            <td>'.$chamados[$i][1].'</td>
-                        </tr>';
-                        $i++;} ?>                       
+          <p><label class="labels labelChamadoLeftUpper">Número de Chamados:</strong></label>
+              <label class="labels labelChamadoLeftUpper"><?php echo count($chamados); ?></label></p>
+        
+          <label class="labels labelChamadoRightUpper"><strong>Histórico Geral</strong></label>
+            <table class="table table-striped"><tr>
+                    <td><strong>Número</strong></td>
+                    <td><strong>Descrição</strong></td>
+                </tr>
+                <?php
+                $rows = count($chamados);
+                for ($row = 0; $row < $rows; $row++) {
+                    echo "<tr>";
+                     for($col = 0; $col < 2; $col++ ) {
+                      echo "<td>".
+                       $chamados[$row][$col]."</td>";
+                     }
+                     echo "</tr>";
+                     
+                }
+                 ?>
             </table>
             
       </div>
@@ -114,7 +121,7 @@
            </div>          
           <p> <label class="labels labelChamadoRightUpper">Matrícula</label>
               <input type="text" name="matricula_busca" class="form-control inputChamado inputChamadoRightUpper"></p>
-          <p><button type="submit" class="w3-btn w3-teal btn-registrar" id="buscarUsuario" name="buscarUsuario" data-target="bloquearModal">Buscar</button>
+          <p><button type="submit" class="w3-btn w3-teal btn-registrar" id="buscarUsuario" name="buscarUsuario" data-target="#bloquearModal">Buscar</button>
           </p></div></form><form method="post" action="" id="Confirmar"><div class="modal-body">
             <table class="table table-condensed">
            

@@ -66,7 +66,7 @@ if (isset($_POST['excluirUsuario'])) {
     $matricula = $_POST['excluirMatricula'];
     $tipousuario = $_POST['tipousuario'];
     $cadastro = new CadastroController;
-    $deletado = $cadastro->excluirCadastro($matricula, $tipousuario);
+    $deletado = $cadastro->excluirCadastro($matricula);
 
      if ($deletado == TRUE) {
         echo "<div class='alert alert-success alert-dismissible feedback-login' role='alert'>

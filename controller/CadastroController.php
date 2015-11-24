@@ -41,17 +41,13 @@ class CadastroController {
                
     }
     
-    public function excluirCadastro($matricula, $tipo){
-           if ($tipo == 1){
+    public function excluirCadastro($matricula){
+           
                 $dao = new SolicitanteDAO();
                 $status = $dao->excluirSolicitante($matricula);
                 return $status;
-           }
-            else {
-                $dao = new TecnicoDAO();
-                $status = $dao->excluirTecnico($matricula);
-                return $status;
-            }
+           
+           
            
             
                
