@@ -4,13 +4,6 @@
    <span class="menu-text">Cadastrar Patrimônio</span>
 </div>
 
-<div id="relatorio" data-toggle="modal" data-target="#relatorioModal" class="divButton">
-    <p></p>
-    <span class="fa fa-file-text fa-5x opcoes-icons"></span>
-    <p></p>
-    <span class="menu-text">Relatórios</span>
-</div>
-
 <div id="bloquear" data-toggle="modal" data-target="#bloquearModal" class="divButton">
     <span class="fa fa-ban fa-5x opcoes-icons"></span>
     <br>
@@ -54,46 +47,6 @@
         <button type="submit" id="cadastrarPatrimonio" name="cadastrarPatrimonio" class="w3-btn w3-teal btn-registrar">Cadastrar</button>
       </div>
     </form>
-    </div>
-  </div>
-</div>
-
-<!-- Modal de Relatório -->
-<div class="modal fade" id="relatorioModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Relatório</h4>
-      </div>
-      <div class="modal-body">
-          <p><label class="labels labelChamadoLeftUpper">Número de Chamados:</strong></label>
-              <label class="labels labelChamadoLeftUpper"><?php echo count($chamados); ?></label></p>
-        
-          <label class="labels labelChamadoRightUpper"><strong>Histórico Geral</strong></label>
-            <table class="table table-striped"><tr>
-                    <td><strong>Número</strong></td>
-                    <td><strong>Descrição</strong></td>
-                </tr>
-                <?php
-                $rows = count($chamados);
-                for ($row = 0; $row < $rows; $row++) {
-                    echo "<tr>";
-                     for($col = 0; $col < 2; $col++ ) {
-                      echo "<td>".
-                       $chamados[$row][$col]."</td>";
-                     }
-                     echo "</tr>";
-                     
-                }
-                 ?>
-            </table>
-            
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="w3-btn w3-teal btn-registrar" >Exibir Histórico de Técnico</button>
-        <button type="button" class="w3-btn w3-teal btn-registrar">Exibir Histórico de Solicitante</button>
-      </div>
     </div>
   </div>
 </div>

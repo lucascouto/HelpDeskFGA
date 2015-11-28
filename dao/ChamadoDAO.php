@@ -65,5 +65,15 @@ class ChamadoDAO {
         return $resultado;
         
     }
+    
+    public function atualizarStatus(Chamado $chamado, $status) {
+        $idChamado = $chamado->getId();
+        $sql = "UPDATE `helpdesk`.`chamado` SET `status` = '$status' "
+                . "WHERE `chamado`.`id_chamado` = '$idChamado'";
+        
+        $resultado = $this->conexao->conectar()->execute($sql);
+        return $resultado;
+        
+    }
 
 }

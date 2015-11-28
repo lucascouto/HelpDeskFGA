@@ -13,6 +13,7 @@ $email_busca = "";
 
 $relatorio = new RelatorioController(1);
 $chamados = $relatorio->mostrarHistorico();
+$numChamados = $relatorio->calculaChamados();
 
 if (isset($_POST['cadastrarPatrimonio'])) {
        
@@ -110,30 +111,30 @@ if (isset($_POST['cadastroLocal'])){
     $sala = $_POST['sala'];
     switch ($edificio){
         default :
-            $idEdificio = '0';
+            $idEdificio = '1';
             break;
             
         case "UED":
-            $idEdificio = '1';
+            $idEdificio = '2';
             break;
         
         case "MESP":
-            $idEdificio = '2';
+            $idEdificio = '3';
             break;
     }
     
-    if (strpos($sala, 'S') == FALSE){
+    $letra = substr($sala, 0,1);
+    if ( $letra == 'I'){
         $andar = '1';
     }else{
         $andar = '2';
     }
     
-    $idSala = 00;
     $idSala = filter_var($sala, FILTER_SANITIZE_NUMBER_INT);
     
-    if ($idSala<10)
-        $idLocal = $idEdificio . $andar .'0'. $idSala;
-    else {
+    if ($idSala < 10) {
+        $idLocal = $idEdificio . $andar . '0' . $idSala;
+    } else {
         $idLocal = $idEdificio . $andar . $idSala;
     }
     $control = new ChamadoController;
@@ -147,7 +148,7 @@ if (isset($_POST['cadastroLocal'])){
     }elseif ($registrado == FALSE){
         echo "<div class='alert alert-danger alert-dismissible feedback-login' role='alert'>
                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                <strong>Oh não!</strong> Seu cadastro não pode ser efetuado. Verifique suas informações, ou entre em contato com o administrador.
+                <strong>Oh não!</strong> Seu cadastro não pode ser efetuado. Verifique suas informações.
                 </div>";
     } 
 }

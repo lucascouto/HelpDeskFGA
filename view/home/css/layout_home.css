@@ -1,0 +1,131 @@
+body{
+    min-width: 1160px;
+}
+
+.icones{
+    float: left;
+    margin-right: 3%;
+    margin-top: 10px;
+}
+
+.iconsButtons{
+    position: absolute;
+    right: 5px;
+}
+
+.alert{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: -40px;
+}
+
+#card-principal{
+    width: 60%;
+    height: 530px;  /*VALOR ORIGINAL: 530PX!!!* NOVO VALOR: 300PX*/
+    border: 1px solid #D2D5C1;
+    float: left;
+    position: relative;
+    top: 50px;
+    left: 20px;
+}
+
+#card-acoes{
+    width: 32%;  
+    height:530px;  
+    border: 1px solid #D2D5C1;
+    float: right;
+    margin-right: 2%;
+    margin-top: 50px;
+    position: relative;
+}
+
+#card-config-conta{
+    width: 32%;
+    height:250px;  
+    border: 1px solid #D2D5C1;
+    float: right;
+    position: relative;
+    top: 30px;
+    right: 2%;
+}
+
+.icones{
+    float: left;
+    margin-right: 3%;
+    margin-top: 10px;
+}
+
+.btnConfigConta{
+    width: 50px;
+    position: absolute;
+    bottom: 18%;
+    left: 25%;
+
+}
+
+.btnAlterSenha{
+    margin-top: 30px;
+    width: 180px;
+}
+
+.btnAlterDados{
+    width:180px;
+}
+
+.btnAcoes{
+    width: 30%;
+    position: absolute;
+    top: 35%;
+    left: 26%;	
+}
+
+.iconsButtons{
+    position: absolute;
+    right: 5px;
+}
+
+.btnMensagens{
+    width: 180px;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+
+/************** HISTORICO *********************/
+#card-historico{
+    display: none;
+}
+
+.btnVoltar{
+    position: absolute;
+    top: 90%;
+    left: 2%;
+}
+/**********************************************/
+
+/**************** MENSAGENS *******************/
+
+#caixa-mensagens{
+    display:none;
+}
+
+.botao-voltar-mensagens{ 
+    position: absolute;
+    top:490px;
+    left: 2%; 
+}
+
+/**********************************************/
+
+.alert{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: -40px;
+}

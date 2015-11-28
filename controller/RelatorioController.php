@@ -21,8 +21,8 @@ class RelatorioController {
             break;
         }
     }
-    public function mostrarHistorico() {
-      return $this->strategy->listarChamados();
+    public function mostrarHistorico(Usuario $usuario = NULL) {
+      return $this->strategy->listarChamados($usuario);
     }
     
     public function calculaChamados(){
@@ -31,7 +31,7 @@ class RelatorioController {
         
         $numeroChamados = count($chamados);
         
-        return numeroChamados;  
+        return $numeroChamados;  
     }
 }
 

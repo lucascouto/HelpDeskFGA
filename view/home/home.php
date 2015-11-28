@@ -19,8 +19,11 @@ if (!isset($_COOKIE['nome_usuario']) or ! isset($_COOKIE['senha_usuario'])) {
         <link rel="stylesheet" type="text/css" href="../_css/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../_css/layout_secundario.css">
         <link rel="stylesheet" type="text/css" href="../_css/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="formAdmin/form_admin.php">
-        <link rel="stylesheet" type="text/css" href="formAdmin/layout_admin.css">
+        <link rel="stylesheet" type="text/css" href="../AdminView/formAdmin/form_admin.php">
+        <link rel="stylesheet" type="text/css" href="../AdminView/formAdmin/layout_admin.css">
+        <link rel="stylesheet" type="text/css" href="formChamado/layout_chamado.css">
+        <link rel="stylesheet" type="text/css" href="../SolicitanteView/formAlterarDados/layout_alterar_dados.css">
+        <link rel="stylesheet" type="text/css" href="../SolicitanteView/formMudarSenha/layout_mudar_senha.css">
         <link rel="stylesheet" type="text/css" href="css/layout_home.css">
         <link rel="stylesheet" type="text/css" href="../_css/layout_geral.css">
 
@@ -28,14 +31,15 @@ if (!isset($_COOKIE['nome_usuario']) or ! isset($_COOKIE['senha_usuario'])) {
         <script src="../_js/jquery-2.1.4.min.js"></script>
         <script src="JavaScript/home_scripts.js"></script>
         <script src="../_js/bootstrap-js/bootstrap.min.js"></script>
-        <script src="formChamado/chamado-scripts.js"></script>
-        <script type="text/javascript">
+        <script src="formAdmin/form_admin.php"></script>
+        <script type="text/javascript">        
             $(".alert").alert();
             window.setTimeout(function () {
                 $(".alert").alert('close');
             }, 5000);
             
         </script>
+        
 
         <title>HelpDesk FGA &bull; Home</title>
     </head>
@@ -58,12 +62,20 @@ if (!isset($_COOKIE['nome_usuario']) or ! isset($_COOKIE['senha_usuario'])) {
 
         </header>
         <section id="corpo-principal" class="w3-container">
-            <div class="w3-card-2" id="card-admin">
+            <div class="w3-card-2" id="card-principal">
                 <div class="w3-container w3-teal">
-                    <?php include_once './formAdmin/admin.php'; ?>
-                    <span class="fa fa-commenting fa-3x icones"></span><h2>Administração</h2>
+                    <?php require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/view/home/homeControl.php");?>
                 </div>
-                <?php include_once './formAdmin/form_admin.php'; ?>
+                <?php require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/view/home/formControl.php");?>
+            </div>
+            
+            <div class="w3-card-2" id="card-acoes">
+                <div class="w3-container w3-teal">
+                    <span id="iconeAcao" class="fa fa-list fa-3x icones"></span><h2 id="titleAcoes">Ações</h2>
+                </div>
+                
+                    <?php require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/view/home/acoesControl.php"); ?>
+                    
             </div>
             
         </section>

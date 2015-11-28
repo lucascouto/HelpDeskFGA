@@ -16,10 +16,10 @@ class Chamado {
     private $solicitante;
     private $tecnico;
     private $id;
-
-
+    private $status;
+        
     public function __construct(Patrimonio $patrimonio, Local $local, 
-            Solicitante $solicitante, $tecnico, $descricao = "")
+            Solicitante $solicitante, $tecnico, $descricao = "", $status = "1")
     {
         $this->descricao = $descricao;
         $this->patrimonio = $patrimonio;
@@ -27,8 +27,18 @@ class Chamado {
         $this->solicitante = $solicitante;
         $this->tecnico = $tecnico;
         $this->id = $id;
+        $this->status = $status;
         
     }
+    
+    public function getStatus() {
+        return $this->status;
+    }
+
+    public function setStatus($status) {
+        $this->status = $status;
+    }
+    
     public function getId() {
         return $this->id;
     }

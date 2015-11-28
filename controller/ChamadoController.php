@@ -33,4 +33,18 @@ class ChamadoController {
         $resultado = $localDAO->inserirLocal($local);
         return $resultado;
     }
+    
+     public function atualizarStatus(Chamado $chamado, $status){
+        $chamado->setStatus($status);
+        $dao = new ChamadoDAO;
+        $resultado = $dao->atualizarStatus($chamado, $status);
+        return $resultado;
+    }
+    
+     public function incluirTecnico(Chamado $chamado, $tecnico){
+        $chamado->setTecnico($tecnico);
+        $dao = new ChamadoDAO;
+        $resultado = $dao->inserirTecnico($chamado, $tecnico);
+        return $resultado;
+    }
 }
