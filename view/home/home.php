@@ -21,7 +21,7 @@ if (!isset($_COOKIE['nome_usuario']) or ! isset($_COOKIE['senha_usuario'])) {
         <link rel="stylesheet" type="text/css" href="../_css/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="../AdminView/formAdmin/form_admin.php">
         <link rel="stylesheet" type="text/css" href="../AdminView/formAdmin/layout_admin.css">
-        <link rel="stylesheet" type="text/css" href="formChamado/layout_chamado.css">
+        <link rel="stylesheet" type="text/css" href="../SolicitanteView/formChamado/layout_chamado.css">
         <link rel="stylesheet" type="text/css" href="../SolicitanteView/formAlterarDados/layout_alterar_dados.css">
         <link rel="stylesheet" type="text/css" href="../SolicitanteView/formMudarSenha/layout_mudar_senha.css">
         <link rel="stylesheet" type="text/css" href="css/layout_home.css">
@@ -31,7 +31,7 @@ if (!isset($_COOKIE['nome_usuario']) or ! isset($_COOKIE['senha_usuario'])) {
         <script src="../_js/jquery-2.1.4.min.js"></script>
         <script src="JavaScript/home_scripts.js"></script>
         <script src="../_js/bootstrap-js/bootstrap.min.js"></script>
-        <script src="formAdmin/form_admin.php"></script>
+        <script src="../AdminView/formAdmin/relatorio.js"></script>
         <script type="text/javascript">        
             $(".alert").alert();
             window.setTimeout(function () {
@@ -69,7 +69,7 @@ if (!isset($_COOKIE['nome_usuario']) or ! isset($_COOKIE['senha_usuario'])) {
                 <?php require_once ($_SERVER["DOCUMENT_ROOT"] . "/HelpDeskFGA/view/home/formControl.php");?>
             </div>
             
-            <div class="w3-card-2" id="card-acoes">
+            <div class="w3-card-2" id="card-secundario">
                 <div class="w3-container w3-teal">
                     <span id="iconeAcao" class="fa fa-list fa-3x icones"></span><h2 id="titleAcoes">Ações</h2>
                 </div>

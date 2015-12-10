@@ -85,3 +85,20 @@
     color: #005B4A;
 }
 
+.btns-historico{
+    text-align: center;
+    position: relative;
+    margin-top: 1px;
+}
+
+#historicoGeralTable{
+    position: relative;
+    margin-left: 5%;
+    width: 90%;
+    height: 250px;
+}
+
+#myPager{
+    margin-top: -1px;
+}
+
